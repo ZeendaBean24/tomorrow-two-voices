@@ -35,8 +35,8 @@ const Archive = () => {
   return (
     <section data-section="archive" className="section-root flex min-h-screen flex-col gap-10 pb-24">
       <header className="space-y-4">
-        <h1 className="text-4xl text-slate">Archive of two-voice futures</h1>
-        <p className="max-w-3xl text-lg text-slate/80">
+        <h1 className="glass-heading text-4xl">Archive of two-voice futures</h1>
+        <p className="glass-body max-w-3xl text-lg">
           Filter by themes, cognition markers, and demographics to study how a single seed branches into contrasting possibilities.
         </p>
       </header>
@@ -51,9 +51,11 @@ const Archive = () => {
           <StoryCard key={story.id} story={story} anchorId={story.id} />
         ))}
         {!visibleStories.length && !isLoading && !error && (
-          <p className="rounded-3xl border border-slate/20 bg-paper/90 p-6 text-sm text-slate/80 shadow-card">
-            No stories match the current filters. Try clearing selections or expanding your search.
-          </p>
+          <div className="glass-panel hover:-translate-y-0.5 rounded-3xl border border-white/20 bg-white/18 p-6">
+            <div className="glass-scrim glass-body text-sm">
+              No stories match the current filters. Try clearing selections or expanding your search.
+            </div>
+          </div>
         )}
       </div>
 
@@ -62,7 +64,7 @@ const Archive = () => {
           <button
             type="button"
             onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-            className="rounded-full bg-indigo px-7 py-2 text-sm font-semibold text-white shadow transition-transform duration-300 ease-out hover:-translate-y-1 focus-visible:focus-ring"
+            className="rounded-full bg-indigo-600 px-7 py-2 text-sm font-semibold text-white shadow transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-indigo-700 focus-visible:focus-ring"
           >
             Load more stories
           </button>

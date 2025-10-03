@@ -24,8 +24,10 @@ const Tabs = ({ tabs, activeTab, onChange }: TabsProps) => (
           aria-controls={`${tab.id}-panel`}
           id={`${tab.id}-tab`}
           onClick={() => onChange(tab.id)}
-          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition focus-visible:focus-ring ${
-            isActive ? 'bg-indigo text-white shadow' : 'bg-paper/85 text-slate/70 hover:bg-paper'
+          className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold backdrop-blur-md transition focus-visible:focus-ring ${
+            isActive
+              ? 'border-indigo/60 bg-indigo/30 text-white shadow'
+              : 'border-white/30 bg-white/18 text-slate/75 hover:bg-white/28'
           }`}
         >
           {tab.label}

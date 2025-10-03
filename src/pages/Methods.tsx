@@ -60,8 +60,8 @@ const sections = [
 const Methods = () => (
   <section data-section="methods" className="section-root flex min-h-screen flex-col gap-12 pb-24">
     <header className="max-w-3xl space-y-4">
-      <h1 className="text-4xl text-slate">Methods playbook</h1>
-      <p className="text-lg text-slate/80">
+      <h1 className="glass-text text-4xl text-slate">Methods playbook</h1>
+      <p className="glass-body text-lg">
         Every artifact is a traceable collaboration between human prompts and machine speculation. Our workflow keeps the voices safe, accountable, and remixable.
       </p>
     </header>
@@ -70,12 +70,14 @@ const Methods = () => (
         <section
           key={title}
           aria-labelledby={title.replace(/\s+/g, '-').toLowerCase()}
-          className="rounded-3xl border border-slate/25 bg-paper/95 p-6 shadow-card backdrop-blur"
+          className="glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg hover:ring-indigo-500/30 rounded-3xl border border-white/25 bg-white/18 p-6"
         >
-          <h2 id={title.replace(/\s+/g, '-').toLowerCase()} className="text-2xl text-slate">
-            {title}
-          </h2>
-          <div className="prose prose-slate mt-3 max-w-none text-base">{body}</div>
+          <div className="glass-scrim space-y-3">
+            <h2 id={title.replace(/\s+/g, '-').toLowerCase()} className="glass-heading text-2xl">
+              {title}
+            </h2>
+            <div className="prose prose-slate mt-1 max-w-none text-base glass-body">{body}</div>
+          </div>
         </section>
       ))}
     </div>

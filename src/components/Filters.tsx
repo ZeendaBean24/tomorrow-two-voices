@@ -36,13 +36,13 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
   return (
     <div className="relative z-30">
       <div className="sticky top-24 space-y-4 md:top-28">
-        <div className="flex flex-wrap items-center gap-3 rounded-full border border-slate/25 bg-paper/75 px-5 py-4 text-sm text-slate/80 shadow-card backdrop-blur-sm">
-          <span className="rounded-full bg-indigo/10 px-4 py-1 font-semibold text-indigo" aria-live="polite">
+        <div className="glass-panel flex flex-wrap items-center gap-3 rounded-full border border-white/25 bg-white/20 px-5 py-4 text-sm text-slate/80 hover:-translate-y-0.5 hover:ring-indigo-500/30">
+          <span className="rounded-full border border-indigo/40 bg-indigo/20 px-4 py-1 font-semibold text-indigo" aria-live="polite">
             {resultCount} result{resultCount === 1 ? '' : 's'}
           </span>
           <button
             type="button"
-            className="rounded-full border border-slate/30 px-3 py-1 text-xs font-medium text-slate/70 transition hover:bg-paper focus-visible:focus-ring"
+            className="rounded-full bg-white/18 px-3 py-1 text-xs font-medium text-slate/70 backdrop-blur-md ring-1 ring-white/30 transition hover:bg-white/26 focus-visible:focus-ring"
             onClick={() => onChange({ ...defaultArchiveFilters })}
           >
             Clear all
@@ -57,12 +57,12 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
               value={filters.search ?? ''}
               onChange={(event) => onChange({ ...filters, search: event.target.value })}
               placeholder="Seed or story text"
-              className="w-56 rounded-full border border-slate/30 bg-paper/90 px-3 py-1 text-sm shadow-sm focus-visible:focus-ring"
+              className="w-56 rounded-full bg-white/16 px-3 py-1 text-sm text-slate/80 backdrop-blur-md ring-1 ring-white/25 focus-visible:focus-ring"
             />
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate/20 bg-paper/85 p-4 shadow-card backdrop-blur-sm">
+        <div className="glass-panel rounded-3xl border border-white/25 bg-white/18 p-4">
           <div className="space-y-4 text-xs text-slate/70">
             <fieldset>
               <legend className="mb-2 text-[11px] uppercase tracking-[0.3em] text-slate/50">Themes</legend>
@@ -74,8 +74,10 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
                       key={theme}
                       type="button"
                       onClick={() => onChange(toggleTheme(filters, theme))}
-                      className={`rounded-full px-3 py-1 text-sm font-medium transition focus-visible:focus-ring ${
-                        active ? 'bg-indigo text-white shadow' : 'border border-slate/30 bg-paper/85 hover:bg-paper'
+                      className={`rounded-full px-3 py-1 text-sm font-medium transition focus-visible:focus-ring backdrop-blur-md ring-1 ${
+                        active
+                          ? 'bg-white/28 text-white shadow ring-indigo-500/30'
+                          : 'bg-white/18 text-slate/80 hover:bg-white/24 ring-white/30'
                       }`}
                       aria-pressed={active}
                     >
@@ -105,10 +107,10 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
                         key={value}
                         type="button"
                         onClick={() => handleSingleSelect(key, value)}
-                        className={`rounded-full px-3 py-1 text-sm font-medium transition focus-visible:focus-ring ${
+                        className={`rounded-full px-3 py-1 text-sm font-medium transition focus-visible:focus-ring backdrop-blur-md ring-1 ${
                           active
-                            ? 'bg-emerald/15 text-emerald shadow'
-                            : 'border border-slate/30 bg-paper/85 hover:bg-paper'
+                            ? 'bg-white/28 text-emerald-700/85 shadow ring-emerald/30'
+                            : 'bg-white/18 text-slate/80 hover:bg-white/24 ring-white/30'
                         }`}
                         aria-pressed={active}
                       >

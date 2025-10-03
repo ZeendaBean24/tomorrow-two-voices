@@ -12,7 +12,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 const baseChipClasses =
-  'inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium shadow-sm';
+  'inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium backdrop-blur-md shadow-sm transition ring-1 ring-white/30 hover:bg-white/28';
 
 type ChipProps = {
   label: string;
@@ -23,9 +23,9 @@ type ChipProps = {
 
 export const ThemeChip = ({ label, title, tone = 'slate', icon }: ChipProps) => {
   const palette = {
-    hope: 'border-emerald/40 bg-emerald/10 text-emerald',
-    caution: 'border-rust/40 bg-rust/10 text-rust',
-    slate: 'border-slate/25 bg-paper/85 text-slate',
+    hope: 'bg-white/24 text-emerald-700/85 ring-[rgba(16,185,129,0.35)]',
+    caution: 'bg-white/24 text-rust-600/85 ring-[rgba(180,83,9,0.35)]',
+    slate: 'bg-white/24 text-slate/85',
   }[tone];
 
   return (
@@ -88,8 +88,8 @@ export const CogSciChip = ({ type, value }: { type: CogSciType; value: string })
 );
 
 export const MetaPill = ({ label, value }: { label: string; value: string }) => (
-  <span className="inline-flex items-center rounded-full border border-slate/25 bg-paper/85 px-3 py-1 text-xs text-slate/70">
-    <span className="font-semibold uppercase tracking-wide text-slate/50">{label}</span>
-    <span className="ml-2 font-medium text-slate">{value}</span>
+  <span className="inline-flex items-center rounded-full bg-white/24 px-3 py-1 text-xs text-slate/85 backdrop-blur-md shadow transition hover:bg-white/28 ring-1 ring-white/30">
+    <span className="font-semibold uppercase tracking-wide text-slate/60">{label}</span>
+    <span className="ml-2 font-medium text-slate/90">{value}</span>
   </span>
 );

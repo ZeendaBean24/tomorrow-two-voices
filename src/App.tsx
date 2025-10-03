@@ -35,7 +35,7 @@ const App = () => {
         <Header />
         <main
           id="main-content"
-          className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-4 pb-24 pt-16"
+          className="relative z-50 mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-4 pb-24 pt-16"
           role="main"
         >
           <Suspense fallback={<p className="text-center text-slate-600">Loading...</p>}>

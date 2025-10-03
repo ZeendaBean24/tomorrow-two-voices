@@ -7,6 +7,7 @@ import { CogSciChip, MetaPill, ThemeChip } from './Chips';
 import { splitSentences } from '../lib/sentenceSplit';
 import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion';
 import type { Influence, Story } from '../lib/types';
+import { useTilt } from '../lib/useTilt';
 
 const tabs = [
   { id: 'story', label: 'Narrative' },
@@ -54,9 +55,9 @@ const StoryPane = ({
         highlightEnabled && activeInfluences.some((influence) => influence.story === storyKey && influence.sent_idx === index);
       const highlightStyles = highlight
         ? storyKey === 'hopeful'
-          ? 'border border-emerald/50 bg-emerald/10 ring-2 ring-emerald/25'
-          : 'border border-rust/50 bg-rust/10 ring-2 ring-rust/25'
-        : 'border border-slate/20 bg-paper/95';
+          ? 'border border-emerald/45 bg-emerald/18 backdrop-blur-lg shadow-lg'
+          : 'border border-rust/45 bg-rust/18 backdrop-blur-lg shadow-lg'
+        : 'border border-white/25 bg-white/12 backdrop-blur-lg shadow';
       const sentenceKey = `${storyId}-${storyKey}-s${index}`;
       return (
         <div
@@ -66,7 +67,7 @@ const StoryPane = ({
           <button
             type="button"
             className={`absolute -left-3 top-3 rounded-full px-2 py-1 text-[11px] font-semibold text-slate/70 transition focus-visible:focus-ring ${
-              highlight ? 'bg-indigo text-white shadow' : 'bg-paper/80 shadow-sm'
+              highlight ? 'bg-indigo/80 text-white shadow-lg' : 'bg-white/30 backdrop-blur text-slate/80 shadow'
             }`}
             onMouseEnter={() => onSentenceFocus(storyKey, index)}
             onFocus={() => onSentenceFocus(storyKey, index)}
@@ -77,13 +78,13 @@ const StoryPane = ({
           >
             [s{index}]
           </button>
-          <p className="text-sm text-slate/85">{sentence}</p>
+          <p className="text-sm glass-body">{sentence}</p>
         </div>
       );
     })}
-    {!sentences.length && <p className="text-sm text-slate/60">This story is awaiting transcription.</p>}
+    {!sentences.length && <p className="text-sm glass-body">This story is awaiting transcription.</p>}
     {highlightEnabled && activeHighlightKey && (
-      <p className="text-xs text-slate/60">
+      <p className="text-xs text-slate/65">
         Highlighting trace: {activeHighlightKey.replace(`${storyId}-`, '').replace(/-/g, ' ')}
       </p>
     )}
@@ -106,6 +107,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
   const [blend, setBlend] = useState(0);
   const prefersReducedMotion = usePrefersReducedMotion();
   const sliderId = useId();
+  const tiltRef = useTilt({ maxDeg: 5, baseShadow: '0.08', activeShadow: '0.2' });
 
   const hopefulSentences = useMemo(() => splitSentences(story.ai.hopeful), [story.ai.hopeful]);
   const cautionarySentences = useMemo(() => splitSentences(story.ai.cautionary), [story.ai.cautionary]);
@@ -162,9 +164,8 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
     }
   };
 
-  const cardClasses = `group relative grid gap-6 rounded-3xl border border-slate/20 bg-paper/95 p-8 shadow-card ${
-    prefersReducedMotion ? '' : 'transition duration-400 ease-out-quart hover:shadow-cardHover'
-  }`;
+  const motionClass = prefersReducedMotion ? '' : 'transition duration-400 ease-out-quart';
+  const cardClasses = `group relative grid gap-6 rounded-3xl tilt-layer glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg hover:ring-white/60 p-8 ring-0 ${motionClass}`;
 
   const effectiveBlend = prefersReducedMotion ? (blend >= 0.5 ? 1 : 0) : blend;
   const hopefulOpacity = 1 - effectiveBlend;
@@ -177,6 +178,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
 
   return (
     <article
+      ref={tiltRef}
       id={anchorId ?? story.id}
       className={cardClasses}
       style={{ backgroundImage: 'url(/assets/paper-texture.svg)' }}
@@ -188,11 +190,12 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
         <div className={`space-y-6 ${
           prefersReducedMotion ? '' : 'transform-gpu transition duration-400 ease-out-quart group-hover:-translate-y-1.5 group-hover:-translate-x-1'
         }`}>
-          <header className="space-y-3">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate/50">Raw seed</p>
-            <h2 className="text-2xl text-slate">{story.seed.text}</h2>
-          </header>
-          <div className="space-y-3 text-xs text-slate/75">
+          <div className="glass-scrim space-y-4">
+            <header className="space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-slate/60">Raw seed</p>
+              <h2 className="glass-heading text-2xl">{story.seed.text}</h2>
+            </header>
+          <div className="space-y-3 text-xs glass-body">
             <div className="flex flex-wrap gap-2">
               <MetaPill label="ID" value={story.id} />
               <MetaPill
@@ -216,20 +219,21 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
               <CogSciChip type="risk" value={story.tags.risk} />
             </div>
           </div>
-          <div className="flex flex-wrap gap-2 text-xs">
+          <div className="flex flex-wrap gap-2 text-xs glass-body">
             <button
               type="button"
               onClick={handleCopyLink}
-              className="rounded-full border border-slate/25 px-3 py-1 font-medium text-slate/75 transition hover:bg-paper focus-visible:focus-ring"
+              className="rounded-full border border-white/30 bg-white/18 px-3 py-1 font-medium text-slate/80 backdrop-blur-md transition hover:bg-white/28 focus-visible:focus-ring"
             >
               {copied ? 'Link copied' : 'Copy link'}
             </button>
             <a
               href={`mailto:tomorrowvoices@example.com?subject=Removal request for ${story.id}`}
-              className="rounded-full border border-oxblood/40 px-3 py-1 font-medium text-oxblood transition hover:bg-oxblood/10 focus-visible:focus-ring"
+              className="rounded-full border border-oxblood/50 bg-oxblood/20 px-3 py-1 font-medium text-oxblood transition hover:bg-oxblood/30 focus-visible:focus-ring"
             >
               Report / Remove
             </a>
+          </div>
           </div>
         </div>
 
@@ -241,8 +245,9 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
             id={`${activeTab}-panel`}
             role="tabpanel"
             aria-labelledby={`${activeTab}-tab`}
-            className="rounded-3xl border border-slate/20 bg-paper/95 p-5"
+            className="glass-panel rounded-3xl border border-white/20 bg-white/18 p-5"
           >
+            <div className="glass-scrim space-y-5">
             {activeTab === 'story' && (
               <div className="space-y-5">
                 <div className="space-y-3">
@@ -322,6 +327,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
               />
             )}
             {activeTab === 'metrics' && <MetricsPanel story={story} />}
+            </div>
           </div>
           {activeTab !== 'evidence' && (
             <p className="text-xs text-slate/60">

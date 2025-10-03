@@ -37,8 +37,9 @@ const EvidencePanel = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-slate/20 bg-paper/95 p-4 shadow-sm">
-        <span className="rounded-full bg-indigo/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-indigo">
+      <div className="glass-panel hover:-translate-y-0.5 flex flex-wrap items-center gap-3 rounded-2xl border border-white/25 bg-white/18 p-4 hover:ring-indigo-500/30">
+        <div className="glass-scrim flex w-full flex-wrap items-center gap-3">
+        <span className="rounded-full border border-indigo/40 bg-indigo/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-indigo">
           Trace coverage: {coverageCount}
         </span>
         <div className="flex flex-wrap gap-2" aria-label="Evidence legend">
@@ -52,8 +53,10 @@ const EvidencePanel = ({
               <button
                 key={key}
                 type="button"
-                className={`rounded-full px-3 py-1 text-xs font-medium transition focus-visible:focus-ring ${
-                  isActive ? 'bg-indigo text-white shadow-sm' : 'border border-slate/25 bg-paper/85 text-slate/80 hover:bg-paper'
+                className={`rounded-full border px-3 py-1 text-xs font-medium backdrop-blur-md transition focus-visible:focus-ring ${
+                  isActive
+                    ? 'border-indigo/60 bg-indigo/30 text-white shadow'
+                    : 'border-white/30 bg-white/18 text-slate/80 hover:bg-white/24'
                 }`}
                 onMouseEnter={() => onActivateHighlight(key, item.influences)}
                 onFocus={() => onActivateHighlight(key, item.influences)}
@@ -69,7 +72,7 @@ const EvidencePanel = ({
             );
           })}
         </div>
-        <label className="ml-auto flex items-center gap-2 text-xs font-medium text-slate/70">
+        <label className="glass-body ml-auto flex items-center gap-2 text-xs">
           <span>Highlight influences in story</span>
           <button
             type="button"
@@ -78,8 +81,8 @@ const EvidencePanel = ({
             onClick={() => onHighlightToggle(!highlightEnabled)}
             className={`h-7 w-12 rounded-full border transition ${
               highlightEnabled
-                ? 'border-indigo bg-indigo/20'
-                : 'border-slate/30 bg-paper'
+                ? 'border-indigo bg-indigo/25'
+                : 'border-white/30 bg-white/18'
             }`}
           >
             <span
@@ -89,6 +92,7 @@ const EvidencePanel = ({
             />
           </button>
         </label>
+        </div>
       </div>
 
       <div className="space-y-4">
@@ -107,7 +111,7 @@ const EvidencePanel = ({
           const isExpanded = expanded[key];
 
           return (
-            <div key={key} className="rounded-2xl border border-slate/20 bg-paper/95 shadow-sm">
+            <div key={key} className="glass-panel hover:-translate-y-0.5 rounded-2xl border border-white/20 bg-white/18 hover:ring-white/60">
               <button
                 type="button"
                 id={`${key}-trigger`}
@@ -117,7 +121,7 @@ const EvidencePanel = ({
                 aria-controls={`${key}-panel`}
               >
                 <span className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-indigo/10 px-3 py-1 text-xs font-semibold text-indigo">
+                  <span className="rounded-full border border-indigo/40 bg-indigo/20 px-3 py-1 text-xs font-semibold text-indigo">
                     {item.seed_phrase}
                   </span>
                   <span className="text-xs text-slate/60">{targetLabel}</span>
@@ -128,10 +132,10 @@ const EvidencePanel = ({
                 id={`${key}-panel`}
                 role="region"
                 aria-labelledby={`${key}-trigger`}
-                className={`${isExpanded ? 'grid' : 'hidden'} gap-3 border-t border-slate/15 px-4 py-3 text-sm text-slate/75`}
+                className={`${isExpanded ? 'grid' : 'hidden'} gap-3 border-t border-white/15 px-4 py-3 text-sm text-slate/75`}
               >
-                {item.why && <p className="font-mono text-xs text-slate/60">Why: {item.why}</p>}
-                <ul className="space-y-1 text-xs text-slate/60">
+            {item.why && <p className="font-mono text-xs text-slate/60">Why: {item.why}</p>}
+            <ul className="space-y-1 text-xs glass-body">
                   {item.influences.map((influence, index) => (
                     <li key={`${key}-${influence.story}-${influence.sent_idx}-${index}`}>
                       ↳ {influence.story === 'hopeful' ? 'Hopeful' : 'Cautionary'} sentence s
