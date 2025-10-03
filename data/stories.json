@@ -1,0 +1,43 @@
+[
+  {
+    "id": "S-0001",
+    "submitted_at": "2025-10-01",
+    "seed": {
+      "text": "In 2050, I bike to a hybrid school-work campus near the river...",
+      "age_band": "15-18"
+    },
+    "ai": {
+      "hopeful": "On the river path, the morning smells like...",
+      "cautionary": "The river path is fenced this year...",
+      "evidence": [
+        {
+          "seed_phrase": "bike to a hybrid school-work campus",
+          "influences": [
+            { "story": "hopeful", "sent_idx": 0 },
+            { "story": "hopeful", "sent_idx": 3 }
+          ],
+          "why": "Anchors the commute + campus setting."
+        },
+        {
+          "seed_phrase": "near the river",
+          "influences": [
+            { "story": "hopeful", "sent_idx": 0 },
+            { "story": "cautionary", "sent_idx": 1 }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "themes": ["Mobility","Education"],
+      "construal": "Near",
+      "agency": "Shared",
+      "affect": "Mixed",
+      "risk": "Medium"
+    },
+    "metrics": {
+      "fidelity": { "entity_coverage_pct": 82, "contradictions": 0 },
+      "concreteness": { "time_refs": 2, "place_refs": 3, "object_refs": 6, "sensory_terms": 5 },
+      "hallucinations": { "new_proper_nouns": 1 }
+    }
+  }
+]

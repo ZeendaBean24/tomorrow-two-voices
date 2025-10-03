@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+a {
+  @apply underline-offset-4 decoration-indigo-400 hover:decoration-indigo-600;
+}
+
+.skip-link {
+  @apply absolute left-4 top-4 z-50 -translate-y-20 rounded-md bg-focus px-4 py-2 text-sm font-semibold text-white transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-focus;
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-focus ring-offset-2 ring-offset-base-light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
