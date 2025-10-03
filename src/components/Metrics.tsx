@@ -10,7 +10,7 @@ const Gauge = ({ label, value, max, description }: { label: string; value: numbe
   const percentage = Math.min(100, Math.round((value / denominator) * 100));
   return (
     <div
-      className="space-y-2 rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm"
+      className="space-y-2 rounded-2xl border border-slate/20 bg-paper/95 p-4 shadow"
       role="group"
       aria-label={`${label}: ${value} of ${denominator}`}
     >
@@ -18,21 +18,21 @@ const Gauge = ({ label, value, max, description }: { label: string; value: numbe
         <span>{label}</span>
         <span className="font-mono text-slate-600">{value}</span>
       </div>
-      <div className="h-2 rounded-full bg-slate-200" role="img" aria-label={`${percentage}% full`}>
+      <div className="h-2 rounded-full bg-slate/20" role="img" aria-label={`${percentage}% full`}>
         <div
-          className="h-full rounded-full bg-gradient-to-r from-hope via-focus to-sunrise"
+          className="h-full rounded-full bg-gradient-to-r from-emerald via-indigo to-gold"
           style={{ width: `${percentage}%` }}
         />
       </div>
-      {description && <p className="text-[11px] text-slate-500">{description}</p>}
+      {description && <p className="text-[11px] text-slate/60">{description}</p>}
     </div>
   );
 };
 
 const MetricsPanel = ({ story }: MetricsPanelProps) => (
-  <div className="space-y-6">
+  <div className="space-y-6 text-slate/80">
     <section aria-labelledby="fidelity-metrics" className="space-y-3">
-      <h3 id="fidelity-metrics" className="font-display text-lg text-slate-900">
+      <h3 id="fidelity-metrics" className="text-lg text-slate">
         Fidelity
       </h3>
       <div className="grid gap-3 sm:grid-cols-2">
@@ -43,7 +43,7 @@ const MetricsPanel = ({ story }: MetricsPanelProps) => (
     </section>
 
     <section aria-labelledby="concreteness-metrics" className="space-y-3">
-      <h3 id="concreteness-metrics" className="font-display text-lg text-slate-900">
+      <h3 id="concreteness-metrics" className="text-lg text-slate">
         Concreteness
       </h3>
       <div className="grid gap-3 sm:grid-cols-2">
@@ -54,7 +54,7 @@ const MetricsPanel = ({ story }: MetricsPanelProps) => (
     </section>
 
     <section aria-labelledby="hallucination-metrics" className="space-y-3">
-      <h3 id="hallucination-metrics" className="font-display text-lg text-slate-900">
+      <h3 id="hallucination-metrics" className="text-lg text-slate">
         Hallucinations
       </h3>
       <div className="grid gap-3 sm:grid-cols-2">

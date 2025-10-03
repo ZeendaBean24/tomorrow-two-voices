@@ -37,8 +37,8 @@ const EvidencePanel = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4">
-        <span className="rounded-full bg-focus/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-focus">
+      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-slate/20 bg-paper/95 p-4 shadow-sm">
+        <span className="rounded-full bg-indigo/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-indigo">
           Trace coverage: {coverageCount}
         </span>
         <div className="flex flex-wrap gap-2" aria-label="Evidence legend">
@@ -52,8 +52,8 @@ const EvidencePanel = ({
               <button
                 key={key}
                 type="button"
-                className={`rounded-full px-3 py-1 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-focus ${
-                  isActive ? 'bg-focus text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                className={`rounded-full px-3 py-1 text-xs font-medium transition focus-visible:focus-ring ${
+                  isActive ? 'bg-indigo text-white shadow-sm' : 'border border-slate/25 bg-paper/85 text-slate/80 hover:bg-paper'
                 }`}
                 onMouseEnter={() => onActivateHighlight(key, item.influences)}
                 onFocus={() => onActivateHighlight(key, item.influences)}
@@ -69,7 +69,7 @@ const EvidencePanel = ({
             );
           })}
         </div>
-        <label className="ml-auto flex items-center gap-2 text-xs font-medium text-slate-600">
+        <label className="ml-auto flex items-center gap-2 text-xs font-medium text-slate/70">
           <span>Highlight influences in story</span>
           <button
             type="button"
@@ -78,13 +78,13 @@ const EvidencePanel = ({
             onClick={() => onHighlightToggle(!highlightEnabled)}
             className={`h-7 w-12 rounded-full border transition ${
               highlightEnabled
-                ? 'border-focus bg-focus/20'
-                : 'border-slate-300 bg-white'
+                ? 'border-indigo bg-indigo/20'
+                : 'border-slate/30 bg-paper'
             }`}
           >
             <span
               className={`block h-5 w-5 translate-x-1 rounded-full bg-white shadow transition ${
-                highlightEnabled ? 'translate-x-6 bg-focus' : 'bg-slate-300'
+                highlightEnabled ? 'translate-x-6 bg-indigo' : 'bg-slate/40'
               }`}
             />
           </button>
@@ -107,31 +107,31 @@ const EvidencePanel = ({
           const isExpanded = expanded[key];
 
           return (
-            <div key={key} className="rounded-2xl border border-slate-200 bg-white/90">
+            <div key={key} className="rounded-2xl border border-slate/20 bg-paper/95 shadow-sm">
               <button
                 type="button"
                 id={`${key}-trigger`}
-                className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-focus"
+                className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left text-sm font-medium text-slate/80 focus-visible:focus-ring"
                 onClick={() => toggleExpand(key)}
                 aria-expanded={isExpanded}
                 aria-controls={`${key}-panel`}
               >
                 <span className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-focus/10 px-3 py-1 text-xs font-semibold text-focus">
+                  <span className="rounded-full bg-indigo/10 px-3 py-1 text-xs font-semibold text-indigo">
                     {item.seed_phrase}
                   </span>
-                  <span className="text-xs text-slate-500">{targetLabel}</span>
+                  <span className="text-xs text-slate/60">{targetLabel}</span>
                 </span>
-                <span className="text-xs uppercase tracking-wide text-slate-400">{indicesLabel}</span>
+                <span className="text-xs uppercase tracking-[0.25em] text-slate/50">{indicesLabel}</span>
               </button>
               <div
                 id={`${key}-panel`}
                 role="region"
                 aria-labelledby={`${key}-trigger`}
-                className={`${isExpanded ? 'grid' : 'hidden'} gap-3 border-t border-slate-100 px-4 py-3 text-sm text-slate-600`}
+                className={`${isExpanded ? 'grid' : 'hidden'} gap-3 border-t border-slate/15 px-4 py-3 text-sm text-slate/75`}
               >
-                {item.why && <p className="font-mono text-xs text-slate-500">Why: {item.why}</p>}
-                <ul className="space-y-1 text-xs text-slate-500">
+                {item.why && <p className="font-mono text-xs text-slate/60">Why: {item.why}</p>}
+                <ul className="space-y-1 text-xs text-slate/60">
                   {item.influences.map((influence, index) => (
                     <li key={`${key}-${influence.story}-${influence.sent_idx}-${index}`}>
                       ↳ {influence.story === 'hopeful' ? 'Hopeful' : 'Cautionary'} sentence s

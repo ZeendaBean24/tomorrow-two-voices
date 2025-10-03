@@ -2,20 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
+@layer base {
+  :root {
+    color-scheme: light;
+    --wash-bg: radial-gradient(1200px 600px at 50% -10%, var(--wash-color, #10B981) 0%, transparent 70%);
+  }
+
+  body {
+    @apply bg-paper font-body text-slate antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-slate;
+  }
+
+  a {
+    @apply underline-offset-4 decoration-indigo/70 transition-colors hover:decoration-indigo;
+  }
 }
 
-a {
-  @apply underline-offset-4 decoration-indigo-400 hover:decoration-indigo-600;
+@layer components {
+  .skip-link {
+    @apply absolute left-4 top-4 z-[999] -translate-y-20 rounded-md bg-indigo px-4 py-2 text-sm font-semibold text-white shadow transition-transform focus:translate-y-0 focus-visible:focus-ring;
+  }
 }
 
-.skip-link {
-  @apply absolute left-4 top-4 z-50 -translate-y-20 rounded-md bg-focus px-4 py-2 text-sm font-semibold text-white transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-focus;
+@layer utilities {
+  .bg-paper {
+    background-color: #F8F7F4;
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-indigo ring-offset-2 ring-offset-paper;
+  }
+
+  .wash-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: var(--wash-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    transition: background-image 400ms linear, opacity 200ms ease, filter 200ms ease;
+  }
+
+  .mask-wavy {
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 600' preserveAspectRatio='none'><path d='M50,0 C65,60 35,120 50,180 C65,240 35,300 50,360 C65,420 35,480 50,540 L50,600 L0,600 L0,0 Z' fill='black'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 600' preserveAspectRatio='none'><path d='M50,0 C65,60 35,120 50,180 C65,240 35,300 50,360 C65,420 35,480 50,540 L50,600 L0,600 L0,0 Z' fill='black'/></svg>");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: var(--mask-position, 50% 0);
+    mask-position: var(--mask-position, 50% 0);
+  }
+
+  .type-caret::after {
+    content: '';
+    @apply ml-1 inline-block h-8 w-[2px] bg-indigo align-middle animate-caret;
+  }
 }
 
 :focus-visible {
-  @apply outline-none ring-2 ring-focus ring-offset-2 ring-offset-base-light;
+  @apply focus-ring;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26,5 +80,9 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .wash-layer {
+    transition: none !important;
   }
 }

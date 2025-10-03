@@ -6,7 +6,7 @@ export type TabItem = {
 };
 
 type TabsProps = {
-  tabs: TabItem[];
+  tabs: ReadonlyArray<TabItem>;
   activeTab: string;
   onChange: (id: string) => void;
 };
@@ -24,8 +24,8 @@ const Tabs = ({ tabs, activeTab, onChange }: TabsProps) => (
           aria-controls={`${tab.id}-panel`}
           id={`${tab.id}-tab`}
           onClick={() => onChange(tab.id)}
-          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-focus ${
-            isActive ? 'bg-focus text-white shadow' : 'bg-white/70 text-slate-600 hover:bg-slate-100'
+          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition focus-visible:focus-ring ${
+            isActive ? 'bg-indigo text-white shadow' : 'bg-paper/85 text-slate/70 hover:bg-paper'
           }`}
         >
           {tab.label}
@@ -33,7 +33,7 @@ const Tabs = ({ tabs, activeTab, onChange }: TabsProps) => (
           {index === 0 && tabs.length > 1 && (
             <span
               aria-hidden="true"
-              className="ml-2 h-6 w-[2px] bg-gradient-to-b from-hope via-focus to-caution opacity-0 transition group-hover:opacity-100 group-hover:animate-gradient-slide"
+              className="ml-2 h-6 w-[2px] bg-gradient-to-b from-emerald via-indigo to-rust opacity-0 transition group-hover:opacity-100 group-hover:animate-gradient-slide"
             />
           )}
         </button>

@@ -43,7 +43,7 @@ const sections = [
     title: 'Removal process',
     body: (
       <p>
-        Email <a href="mailto:tomorrowvoices@example.com" className="font-medium text-focus">tomorrowvoices@example.com</a> with the artifact ID and reason for removal. We acknowledge within 48 hours and scrub traces in the next dataset push.
+        Email <a href="mailto:tomorrowvoices@example.com" className="font-medium text-indigo">tomorrowvoices@example.com</a> with the artifact ID and reason for removal. We acknowledge within 48 hours and scrub traces in the next dataset push.
       </p>
     ),
   },
@@ -58,17 +58,21 @@ const sections = [
 ];
 
 const Methods = () => (
-  <section className="space-y-10">
+  <section data-section="methods" className="section-root flex min-h-screen flex-col gap-12 pb-24">
     <header className="max-w-3xl space-y-4">
-      <h1 className="font-display text-3xl text-slate-900">Methods playbook</h1>
-      <p className="text-lg text-slate-700">
+      <h1 className="text-4xl text-slate">Methods playbook</h1>
+      <p className="text-lg text-slate/80">
         Every artifact is a traceable collaboration between human prompts and machine speculation. Our workflow keeps the voices safe, accountable, and remixable.
       </p>
     </header>
     <div className="grid gap-6">
       {sections.map(({ title, body }) => (
-        <section key={title} aria-labelledby={title.replace(/\s+/g, '-').toLowerCase()} className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm">
-          <h2 id={title.replace(/\s+/g, '-').toLowerCase()} className="font-display text-2xl text-slate-900">
+        <section
+          key={title}
+          aria-labelledby={title.replace(/\s+/g, '-').toLowerCase()}
+          className="rounded-3xl border border-slate/25 bg-paper/95 p-6 shadow-card backdrop-blur"
+        >
+          <h2 id={title.replace(/\s+/g, '-').toLowerCase()} className="text-2xl text-slate">
             {title}
           </h2>
           <div className="prose prose-slate mt-3 max-w-none text-base">{body}</div>

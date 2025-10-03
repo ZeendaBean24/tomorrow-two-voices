@@ -2,21 +2,17 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        base: {
-          light: '#F8F7F4',
-          dark: '#0B1020',
-        },
-        hope: '#10B981',
-        sunrise: '#F59E0B',
+        paper: '#F8F7F4',
+        emerald: '#10B981',
+        indigo: '#4F46E5',
+        gold: '#F59E0B',
         cyan: '#06B6D4',
-        caution: '#B45309',
-        oxblood: '#7F1D1D',
         slate: '#64748B',
-        focus: '#4F46E5',
+        rust: '#B45309',
+        oxblood: '#7F1D1D',
       },
       fontFamily: {
         display: ['"Playfair Display"', '"Merriweather"', 'serif'],
@@ -24,26 +20,34 @@ const config: Config = {
         mono: ['"JetBrains Mono"', '"IBM Plex Mono"', 'monospace'],
       },
       boxShadow: {
-        artifact: '0 15px 35px rgba(11, 16, 32, 0.12)',
-        artifactHover: '0 20px 45px rgba(11, 16, 32, 0.18)',
+        card: '0 20px 40px rgba(10, 15, 35, 0.12)',
+        cardHover: '0 26px 55px rgba(10, 15, 35, 0.18)',
       },
       backgroundImage: {
         paper: 'url(/assets/paper-texture.svg)',
-        splitGradient: 'linear-gradient(90deg, rgba(16,185,129,0.15) 0%, rgba(79,70,229,0.25) 50%, rgba(244,158,11,0.15) 100%)',
+        wash: 'radial-gradient(1200px 600px at 50% -10%, var(--wash-color, #10B981) 0%, rgba(248, 247, 244, 0) 70%)',
+        noise:
+          "url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 200 200\\'><filter id=\\'n\\'><feTurbulence type=\\'fractalNoise\\' baseFrequency=\\'.9\\' numOctaves=\\'4\\' stitchTiles=\\'stitch\\'/></filter><rect width=\\'200\\' height=\\'200\\' filter=\\'url(#n)\\' opacity=\\'.08'/></svg>')",
+      },
+      transitionDuration: {
+        400: '400ms',
+      },
+      transitionTimingFunction: {
+        'ease-out-quart': 'cubic-bezier(0.165, 0.84, 0.44, 1)',
       },
       keyframes: {
-        'hover-shift': {
-          '0%': { transform: 'translateY(0px)' },
-          '100%': { transform: 'translateY(-4px)' },
+        caret: {
+          '0%, 40%': { opacity: '1' },
+          '60%, 100%': { opacity: '0' },
         },
-        'gradient-slide': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '100%': { backgroundPosition: '100% 50%' },
+        parallax: {
+          '0%': { transform: 'translate3d(0, 0, 0)' },
+          '100%': { transform: 'translate3d(0, -4px, 0)' },
         },
       },
       animation: {
-        'hover-shift': 'hover-shift 350ms ease forwards',
-        'gradient-slide': 'gradient-slide 2s ease infinite alternate',
+        caret: 'caret 1s steps(1, end) infinite',
+        parallax: 'parallax 600ms ease-out forwards',
       },
     },
   },

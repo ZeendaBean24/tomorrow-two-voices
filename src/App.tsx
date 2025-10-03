@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { StoriesProvider } from './lib/StoriesContext';
+import BackgroundWash from './components/BackgroundWash';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const ArchivePage = lazy(() => import('./pages/Archive'));
@@ -29,9 +30,14 @@ const App = () => {
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
-      <div className="min-h-screen bg-base-light text-slate-900">
+      <div className="relative min-h-screen bg-paper text-slate">
+        <BackgroundWash />
         <Header />
-        <main id="main-content" className="mx-auto flex max-w-6xl flex-1 flex-col gap-12 px-4 pb-16 pt-8" role="main">
+        <main
+          id="main-content"
+          className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-4 pb-24 pt-16"
+          role="main"
+        >
           <Suspense fallback={<p className="text-center text-slate-600">Loading...</p>}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -42,7 +48,7 @@ const App = () => {
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
-        </main> 
+        </main>
         <Footer />
       </div>
     </StoriesProvider>

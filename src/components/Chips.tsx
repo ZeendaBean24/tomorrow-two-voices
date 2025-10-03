@@ -23,9 +23,9 @@ type ChipProps = {
 
 export const ThemeChip = ({ label, title, tone = 'slate', icon }: ChipProps) => {
   const palette = {
-    hope: 'border-hope/40 bg-hope/10 text-hope',
-    caution: 'border-caution/40 bg-caution/10 text-caution',
-    slate: 'border-slate-300 bg-white/70 text-slate-700',
+    hope: 'border-emerald/40 bg-emerald/10 text-emerald',
+    caution: 'border-rust/40 bg-rust/10 text-rust',
+    slate: 'border-slate/25 bg-paper/85 text-slate',
   }[tone];
 
   return (
@@ -88,8 +88,8 @@ export const CogSciChip = ({ type, value }: { type: CogSciType; value: string })
 );
 
 export const MetaPill = ({ label, value }: { label: string; value: string }) => (
-  <span className="inline-flex items-center rounded-full border border-slate-300 bg-white/70 px-3 py-1 text-xs text-slate-600">
-    <span className="font-semibold uppercase tracking-wide text-slate-400">{label}</span>
-    <span className="ml-2 font-medium text-slate-700">{value}</span>
+  <span className="inline-flex items-center rounded-full border border-slate/25 bg-paper/85 px-3 py-1 text-xs text-slate/70">
+    <span className="font-semibold uppercase tracking-wide text-slate/50">{label}</span>
+    <span className="ml-2 font-medium text-slate">{value}</span>
   </span>
 );

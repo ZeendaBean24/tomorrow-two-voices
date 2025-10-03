@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import type { CSSProperties } from 'react';
+import { useId, useMemo, useState } from 'react';
 import EvidencePanel from './EvidencePanel';
 import MetricsPanel from './Metrics';
 import Tabs from './Tabs';
@@ -8,8 +9,7 @@ import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion';
 import type { Influence, Story } from '../lib/types';
 
 const tabs = [
-  { id: 'hopeful', label: 'Hopeful' },
-  { id: 'cautionary', label: 'Cautionary' },
+  { id: 'story', label: 'Narrative' },
   { id: 'evidence', label: 'Evidence' },
   { id: 'metrics', label: 'Metrics' },
 ] as const;
@@ -23,6 +23,10 @@ type StoryPaneProps = {
   activeInfluences: Influence[];
   onSentenceFocus: (storyKey: 'hopeful' | 'cautionary', index: number) => void;
   onSentenceClear: (key: string) => void;
+  className?: string;
+  style?: CSSProperties;
+  pointerActive?: boolean;
+  ariaHidden?: boolean;
 };
 
 const StoryPane = ({
@@ -34,26 +38,35 @@ const StoryPane = ({
   activeInfluences,
   onSentenceFocus,
   onSentenceClear,
+  className,
+  style,
+  pointerActive = true,
+  ariaHidden,
 }: StoryPaneProps) => (
-  <div className="space-y-4" aria-live="polite">
+  <div
+    className={`space-y-4 ${className ?? ''}`}
+    style={pointerActive ? style : { ...style, pointerEvents: 'none' }}
+    aria-live="polite"
+    aria-hidden={ariaHidden}
+  >
     {sentences.map((sentence, index) => {
       const highlight =
         highlightEnabled && activeInfluences.some((influence) => influence.story === storyKey && influence.sent_idx === index);
       const highlightStyles = highlight
         ? storyKey === 'hopeful'
-          ? 'border border-hope/60 bg-hope/10 ring-2 ring-hope/40'
-          : 'border border-caution/60 bg-caution/10 ring-2 ring-caution/30'
-        : 'border border-slate-200 bg-white/80';
+          ? 'border border-emerald/50 bg-emerald/10 ring-2 ring-emerald/25'
+          : 'border border-rust/50 bg-rust/10 ring-2 ring-rust/25'
+        : 'border border-slate/20 bg-paper/95';
       const sentenceKey = `${storyId}-${storyKey}-s${index}`;
       return (
         <div
           key={sentenceKey}
-          className={`relative rounded-2xl p-4 transition ${highlightStyles}`}
+          className={`relative rounded-2xl p-4 text-left transition ${highlightStyles}`}
         >
           <button
             type="button"
-            className={`absolute -left-3 top-3 rounded-full px-2 py-1 text-[11px] font-semibold text-slate-500 focus:outline-none focus:ring-2 focus:ring-focus ${
-              highlight ? 'bg-focus text-white' : 'bg-slate-200'
+            className={`absolute -left-3 top-3 rounded-full px-2 py-1 text-[11px] font-semibold text-slate/70 transition focus-visible:focus-ring ${
+              highlight ? 'bg-indigo text-white shadow' : 'bg-paper/80 shadow-sm'
             }`}
             onMouseEnter={() => onSentenceFocus(storyKey, index)}
             onFocus={() => onSentenceFocus(storyKey, index)}
@@ -64,13 +77,13 @@ const StoryPane = ({
           >
             [s{index}]
           </button>
-          <p className="text-sm text-slate-700">{sentence}</p>
+          <p className="text-sm text-slate/85">{sentence}</p>
         </div>
       );
     })}
-    {!sentences.length && <p className="text-sm text-slate-500">This story is awaiting transcription.</p>}
+    {!sentences.length && <p className="text-sm text-slate/60">This story is awaiting transcription.</p>}
     {highlightEnabled && activeHighlightKey && (
-      <p className="text-xs text-slate-500">
+      <p className="text-xs text-slate/60">
         Highlighting trace: {activeHighlightKey.replace(`${storyId}-`, '').replace(/-/g, ' ')}
       </p>
     )}
@@ -82,13 +95,17 @@ type StoryCardProps = {
   anchorId?: string;
 };
 
+const clampBlend = (value: number) => Math.min(1, Math.max(0, Number(value.toFixed(2))));
+
 const StoryCard = ({ story, anchorId }: StoryCardProps) => {
-  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]['id']>('hopeful');
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]['id']>('story');
   const [highlightEnabled, setHighlightEnabled] = useState(true);
   const [activeHighlightKey, setActiveHighlightKey] = useState<string | null>(null);
   const [activeInfluences, setActiveInfluences] = useState<Influence[]>([]);
   const [copied, setCopied] = useState(false);
+  const [blend, setBlend] = useState(0);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const sliderId = useId();
 
   const hopefulSentences = useMemo(() => splitSentences(story.ai.hopeful), [story.ai.hopeful]);
   const cautionarySentences = useMemo(() => splitSentences(story.ai.cautionary), [story.ai.cautionary]);
@@ -125,6 +142,13 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
     }
   };
 
+  const handleTabChange = (id: string) => {
+    const allowedIds = tabs.map((tab) => tab.id);
+    if (allowedIds.includes(id as (typeof tabs)[number]['id'])) {
+      setActiveTab(id as (typeof tabs)[number]['id']);
+    }
+  };
+
   const handleCopyLink = async () => {
     try {
       if (!navigator.clipboard) return;
@@ -138,9 +162,18 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
     }
   };
 
-  const cardClasses = `group relative grid gap-6 rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-artifact ${
-    prefersReducedMotion ? '' : 'transition hover:shadow-artifactHover'
+  const cardClasses = `group relative grid gap-6 rounded-3xl border border-slate/20 bg-paper/95 p-8 shadow-card ${
+    prefersReducedMotion ? '' : 'transition duration-400 ease-out-quart hover:shadow-cardHover'
   }`;
+
+  const effectiveBlend = prefersReducedMotion ? (blend >= 0.5 ? 1 : 0) : blend;
+  const hopefulOpacity = 1 - effectiveBlend;
+  const cautionaryOpacity = effectiveBlend;
+  const sliderValue = blend;
+
+  const handleSliderChange = (value: number) => {
+    setBlend(clampBlend(value));
+  };
 
   return (
     <article
@@ -149,15 +182,17 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
       style={{ backgroundImage: 'url(/assets/paper-texture.svg)' }}
       aria-label={`Story artifact ${story.id}`}
     >
-      <div className={`grid gap-6 lg:grid-cols-[minmax(220px,1fr)_minmax(0,2fr)] ${
-        prefersReducedMotion ? '' : 'transition-transform group-hover:-translate-y-0.5'
+      <div className={`grid gap-6 lg:grid-cols-[minmax(240px,1fr)_minmax(0,2fr)] ${
+        prefersReducedMotion ? '' : 'transition-transform duration-400 ease-out-quart group-hover:-translate-y-1'
       }`}>
-        <div className={`space-y-4 ${prefersReducedMotion ? '' : 'transform-gpu transition duration-300 group-hover:-translate-y-1 group-hover:-translate-x-1'}`}>
+        <div className={`space-y-6 ${
+          prefersReducedMotion ? '' : 'transform-gpu transition duration-400 ease-out-quart group-hover:-translate-y-1.5 group-hover:-translate-x-1'
+        }`}>
           <header className="space-y-3">
-            <p className="text-xs uppercase tracking-wide text-slate-400">Raw seed</p>
-            <h2 className="font-display text-2xl text-slate-900">{story.seed.text}</h2>
+            <p className="text-xs uppercase tracking-[0.3em] text-slate/50">Raw seed</p>
+            <h2 className="text-2xl text-slate">{story.seed.text}</h2>
           </header>
-          <div className="space-y-3 text-xs text-slate-600">
+          <div className="space-y-3 text-xs text-slate/75">
             <div className="flex flex-wrap gap-2">
               <MetaPill label="ID" value={story.id} />
               <MetaPill
@@ -185,50 +220,91 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
             <button
               type="button"
               onClick={handleCopyLink}
-              className="rounded-full border border-slate-300 px-3 py-1 font-medium text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-focus"
+              className="rounded-full border border-slate/25 px-3 py-1 font-medium text-slate/75 transition hover:bg-paper focus-visible:focus-ring"
             >
               {copied ? 'Link copied' : 'Copy link'}
             </button>
             <a
               href={`mailto:tomorrowvoices@example.com?subject=Removal request for ${story.id}`}
-              className="rounded-full border border-caution/50 px-3 py-1 font-medium text-caution hover:bg-caution/10 focus:outline-none focus:ring-2 focus:ring-focus"
+              className="rounded-full border border-oxblood/40 px-3 py-1 font-medium text-oxblood transition hover:bg-oxblood/10 focus-visible:focus-ring"
             >
               Report / Remove
             </a>
           </div>
         </div>
 
-        <div className={`space-y-5 ${prefersReducedMotion ? '' : 'transform-gpu transition duration-300 group-hover:-translate-y-1.5 group-hover:translate-x-1'}`}>
-          <Tabs tabs={tabs} activeTab={activeTab} onChange={setActiveTab} />
+        <div className={`space-y-6 ${
+          prefersReducedMotion ? '' : 'transform-gpu transition duration-400 ease-out-quart group-hover:-translate-y-2 group-hover:translate-x-1'
+        }`}>
+          <Tabs tabs={tabs} activeTab={activeTab} onChange={handleTabChange} />
           <div
             id={`${activeTab}-panel`}
             role="tabpanel"
             aria-labelledby={`${activeTab}-tab`}
-            className="rounded-3xl border border-slate-200 bg-white/80 p-5"
+            className="rounded-3xl border border-slate/20 bg-paper/95 p-5"
           >
-            {activeTab === 'hopeful' && (
-              <StoryPane
-                storyId={story.id}
-                storyKey="hopeful"
-                sentences={hopefulSentences}
-                highlightEnabled={highlightEnabled}
-                activeHighlightKey={activeHighlightKey}
-                activeInfluences={activeInfluences}
-                onSentenceFocus={handleSentenceFocus}
-                onSentenceClear={handleSentenceClear}
-              />
-            )}
-            {activeTab === 'cautionary' && (
-              <StoryPane
-                storyId={story.id}
-                storyKey="cautionary"
-                sentences={cautionarySentences}
-                highlightEnabled={highlightEnabled}
-                activeHighlightKey={activeHighlightKey}
-                activeInfluences={activeInfluences}
-                onSentenceFocus={handleSentenceFocus}
-                onSentenceClear={handleSentenceClear}
-              />
+            {activeTab === 'story' && (
+              <div className="space-y-5">
+                <div className="space-y-3">
+                  <label
+                    htmlFor={sliderId}
+                    className="flex items-center justify-between text-[11px] uppercase tracking-[0.35em] text-slate/60"
+                  >
+                    <span>Hopeful</span>
+                    <span>Cautionary</span>
+                  </label>
+                  <input
+                    id={sliderId}
+                    type="range"
+                    role="slider"
+                    min={0}
+                    max={1}
+                    step={0.05}
+                    value={sliderValue}
+                    aria-valuemin={0}
+                    aria-valuemax={1}
+                    aria-valuenow={Number(sliderValue.toFixed(2))}
+                    aria-label="Blend hopeful and cautionary story"
+                    className="h-[3px] w-full appearance-none rounded-full bg-slate/20 accent-indigo focus-visible:focus-ring"
+                    onChange={(event) => handleSliderChange(Number(event.target.value))}
+                  />
+                </div>
+
+                <div className="relative">
+                  <StoryPane
+                    storyId={story.id}
+                    storyKey="hopeful"
+                    sentences={hopefulSentences}
+                    highlightEnabled={highlightEnabled}
+                    activeHighlightKey={activeHighlightKey}
+                    activeInfluences={activeInfluences}
+                    onSentenceFocus={handleSentenceFocus}
+                    onSentenceClear={handleSentenceClear}
+                    className="transition-opacity duration-400 ease-out-quart"
+                    style={{ opacity: hopefulOpacity }}
+                    pointerActive={hopefulOpacity >= 0.4}
+                    ariaHidden={cautionaryOpacity > 0.6}
+                  />
+                  <StoryPane
+                    storyId={story.id}
+                    storyKey="cautionary"
+                    sentences={cautionarySentences}
+                    highlightEnabled={highlightEnabled}
+                    activeHighlightKey={activeHighlightKey}
+                    activeInfluences={activeInfluences}
+                    onSentenceFocus={handleSentenceFocus}
+                    onSentenceClear={handleSentenceClear}
+                    className="mask-wavy absolute inset-0 border-l border-rust/25 bg-rust/5 pl-6 transition-opacity duration-400 ease-out-quart"
+                  style={{
+                    opacity: cautionaryOpacity,
+                    '--mask-position': `${Math.round(effectiveBlend * 100)}% 0`,
+                    pointerEvents: cautionaryOpacity > 0.4 ? 'auto' : 'none',
+                  } as CSSProperties}
+                    pointerActive={cautionaryOpacity > 0.4}
+                    ariaHidden={cautionaryOpacity <= 0.05}
+                  />
+                </div>
+              </div>
             )}
             {activeTab === 'evidence' && (
               <EvidencePanel
@@ -248,7 +324,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
             {activeTab === 'metrics' && <MetricsPanel story={story} />}
           </div>
           {activeTab !== 'evidence' && (
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-slate/60">
               Tip: Switch to the Evidence tab to trace how the seed shapes each sentence.
             </p>
           )}
