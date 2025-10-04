@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import logo from '@assets/logo.svg';
+import { NavLink } from 'react-router-dom'
+import logo from '@assets/logo.svg'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -7,7 +7,7 @@ const links = [
   { to: '/insights', label: 'Insights' },
   { to: '/methods', label: 'Methods' },
   { to: '/submit', label: 'Submit' },
-];
+]
 
 export const Header = () => (
   <header className="glass-panel sticky top-0 z-60 rounded-none border-b border-white/25 bg-white/18 backdrop-blur-xl">
@@ -16,10 +16,15 @@ export const Header = () => (
         <img src={logo} alt="Tomorrow, In Two Voices" className="h-10 w-auto" />
         <div className="leading-tight">
           <p className="glass-heading text-lg">Tomorrow, In Two Voices</p>
-          <p className="text-xs text-slate/75">2050 imagined through hopeful and cautionary futures</p>
+          <p className="text-xs text-slate/75">
+            2050 imagined through hopeful and cautionary futures
+          </p>
         </div>
       </div>
-      <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-2">
+      <nav
+        aria-label="Main navigation"
+        className="flex flex-wrap items-center gap-2"
+      >
         {links.map(({ to, label }) => (
           <NavLink
             key={to}
@@ -38,6 +43,6 @@ export const Header = () => (
       </nav>
     </div>
   </header>
-);
+)
 
-export default Header;
+export default Header

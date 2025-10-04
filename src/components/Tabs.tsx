@@ -1,20 +1,24 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
 export type TabItem = {
-  id: string;
-  label: string;
-  badge?: ReactNode;
-};
+  id: string
+  label: string
+  badge?: ReactNode
+}
 
 type TabsProps = {
-  tabs: ReadonlyArray<TabItem>;
-  activeTab: string;
-  onChange: (id: string) => void;
-};
+  tabs: ReadonlyArray<TabItem>
+  activeTab: string
+  onChange: (id: string) => void
+}
 
 const Tabs = ({ tabs, activeTab, onChange }: TabsProps) => (
-  <div className="group relative flex items-center gap-2" role="tablist" aria-label="Story perspectives">
+  <div
+    className="group relative flex items-center gap-2"
+    role="tablist"
+    aria-label="Story perspectives"
+  >
     {tabs.map((tab, index) => {
-      const isActive = tab.id === activeTab;
+      const isActive = tab.id === activeTab
       return (
         <button
           key={tab.id}
@@ -39,9 +43,9 @@ const Tabs = ({ tabs, activeTab, onChange }: TabsProps) => (
             />
           )}
         </button>
-      );
+      )
     })}
   </div>
-);
+)
 
-export default Tabs;
+export default Tabs

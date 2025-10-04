@@ -28,7 +28,7 @@
       ]
     },
     "tags": {
-      "themes": ["Mobility","Education"],
+      "themes": ["Mobility", "Education"],
       "construal": "Near",
       "agency": "Shared",
       "affect": "Mixed",
@@ -36,7 +36,12 @@
     },
     "metrics": {
       "fidelity": { "entity_coverage_pct": 82, "contradictions": 0 },
-      "concreteness": { "time_refs": 2, "place_refs": 3, "object_refs": 6, "sensory_terms": 5 },
+      "concreteness": {
+        "time_refs": 2,
+        "place_refs": 3,
+        "object_refs": 6,
+        "sensory_terms": 5
+      },
       "hallucinations": { "new_proper_nouns": 1 }
     }
   }

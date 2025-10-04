@@ -1,83 +1,93 @@
-import type { PointerEvent as ReactPointerEvent } from 'react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import heroTexture from '@assets/paper-texture.svg';
-import { useStories } from '../lib/StoriesContext';
-import { getSeedsCount, getStoriesCount } from '../lib/metrics';
-import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion';
-import { useTilt } from '../lib/useTilt';
-import HomeParallax from '../components/HomeParallax';
+import type { PointerEvent as ReactPointerEvent } from 'react'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import heroTexture from '@assets/paper-texture.svg'
+import { useStories } from '../lib/StoriesContext'
+import { getSeedsCount, getStoriesCount } from '../lib/metrics'
+import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion'
+import { useTilt } from '../lib/useTilt'
+import HomeParallax from '../components/HomeParallax'
 
-const TITLE = 'Tomorrow, In Two Voices';
+const TITLE = 'Tomorrow, In Two Voices'
 
 const TypewriterTitle = () => {
-  const prefersReducedMotion = usePrefersReducedMotion();
-  const [displayed, setDisplayed] = useState(prefersReducedMotion ? TITLE : '');
-  const [isDeleting, setIsDeleting] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const [displayed, setDisplayed] = useState(prefersReducedMotion ? TITLE : '')
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     if (prefersReducedMotion) {
-      setDisplayed(TITLE);
-      setIsDeleting(false);
+      setDisplayed(TITLE)
+      setIsDeleting(false)
     } else {
-      setDisplayed('');
-      setIsDeleting(false);
+      setDisplayed('')
+      setIsDeleting(false)
     }
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion])
 
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion) return
 
-    let timeout: ReturnType<typeof setTimeout> | undefined;
+    let timeout: ReturnType<typeof setTimeout> | undefined
 
     if (!isDeleting && displayed.length < TITLE.length) {
       timeout = window.setTimeout(() => {
-        setDisplayed(TITLE.slice(0, displayed.length + 1));
-      }, 80);
+        setDisplayed(TITLE.slice(0, displayed.length + 1))
+      }, 80)
     } else if (!isDeleting && displayed.length === TITLE.length) {
       timeout = window.setTimeout(() => {
-        setIsDeleting(true);
-      }, 5000);
+        setIsDeleting(true)
+      }, 5000)
     } else if (isDeleting && displayed.length > 0) {
       timeout = window.setTimeout(() => {
-        setDisplayed(TITLE.slice(0, displayed.length - 1));
-      }, 45);
+        setDisplayed(TITLE.slice(0, displayed.length - 1))
+      }, 45)
     } else if (isDeleting && displayed.length === 0) {
       timeout = window.setTimeout(() => {
-        setIsDeleting(false);
-      }, 1200);
+        setIsDeleting(false)
+      }, 1200)
     }
 
     return () => {
-      if (timeout) window.clearTimeout(timeout);
-    };
-  }, [displayed, isDeleting, prefersReducedMotion]);
+      if (timeout) window.clearTimeout(timeout)
+    }
+  }, [displayed, isDeleting, prefersReducedMotion])
 
   return (
-    <span className={!prefersReducedMotion ? 'type-caret' : ''}>{displayed}</span>
-  );
-};
+    <span className={!prefersReducedMotion ? 'type-caret' : ''}>
+      {displayed}
+    </span>
+  )
+}
 
 const Home = () => {
-  const { stories, isLoading, error } = useStories();
-  const heroTiltRef = useTilt({ maxDeg: 6, baseShadow: '0.12', activeShadow: '0.28' });
+  const { stories, isLoading, error } = useStories()
+  const heroTiltRef = useTilt({
+    maxDeg: 6,
+    baseShadow: '0.12',
+    activeShadow: '0.28',
+  })
 
-  const seedsCount = getSeedsCount(stories);
-  const storiesCount = getStoriesCount(stories);
+  const seedsCount = getSeedsCount(stories)
+  const storiesCount = getStoriesCount(stories)
   const updateSpotlight = (event: ReactPointerEvent<HTMLElement>) => {
-    const { currentTarget } = event;
-    const rect = currentTarget.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    currentTarget.style.setProperty('--hero-spot-x', `${x.toFixed(1)}%`);
-    currentTarget.style.setProperty('--hero-spot-y', `${y.toFixed(1)}%`);
-  };
+    const { currentTarget } = event
+    const rect = currentTarget.getBoundingClientRect()
+    const x = ((event.clientX - rect.left) / rect.width) * 100
+    const y = ((event.clientY - rect.top) / rect.height) * 100
+    currentTarget.style.setProperty('--hero-spot-x', `${x.toFixed(1)}%`)
+    currentTarget.style.setProperty('--hero-spot-y', `${y.toFixed(1)}%`)
+  }
 
-  const resetSpotlight = (event: ReactPointerEvent<HTMLElement>, x = '50%', y = '35%') => {
-    const { currentTarget } = event;
-    currentTarget.style.setProperty('--hero-spot-x', x);
-    currentTarget.style.setProperty('--hero-spot-y', y);
-  };
+  const resetSpotlight = (
+    event: ReactPointerEvent<HTMLElement>,
+    x = '50%',
+    y = '35%',
+  ) => {
+    const { currentTarget } = event
+    currentTarget.style.setProperty('--hero-spot-x', x)
+    currentTarget.style.setProperty('--hero-spot-y', y)
+  }
 
   const workflow = [
     {
@@ -90,13 +100,14 @@ const Home = () => {
     },
     {
       title: 'Generate',
-      description: 'Paired hopeful and cautionary stories co-authored with Gemini.',
+      description:
+        'Paired hopeful and cautionary stories co-authored with Gemini.',
     },
     {
       title: 'Publish',
       description: 'Stories land here as auditable artefacts for the archive.',
     },
-  ];
+  ]
 
   const stats = [
     { label: 'Seeds', value: seedsCount.toLocaleString('en-US') },
@@ -104,7 +115,7 @@ const Home = () => {
     { label: 'Letters processed', value: '48,205' },
     { label: 'Words processed', value: '128,940' },
     { label: 'Sentences processed', value: '7,320' },
-  ];
+  ]
 
   return (
     <section
@@ -131,9 +142,14 @@ const Home = () => {
               <TypewriterTitle />
             </h1>
             <p className="glass-body hero-ink-body max-w-2xl text-lg">
-              One seed, two futures. Explore how AI imagines 2050 through hopeful and cautionary retellings of citizen prompts.
+              One seed, two futures. Explore how AI imagines 2050 through
+              hopeful and cautionary retellings of citizen prompts.
             </p>
-            <div className="flex flex-wrap gap-3" role="group" aria-label="Primary actions">
+            <div
+              className="flex flex-wrap gap-3"
+              role="group"
+              aria-label="Primary actions"
+            >
               <Link
                 to="/archive"
                 className="rounded-full bg-indigo-600 px-6 py-2 text-sm font-semibold text-white shadow transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-indigo-700 focus-visible:focus-ring"
@@ -160,20 +176,32 @@ const Home = () => {
               <h2 id="metrics" className="hero-ink-heading hero-metrics-title">
                 Quick stats
               </h2>
-              <p className="hero-ink-muted hero-metrics-summary">A snapshot of the archive in motion.</p>
+              <p className="hero-ink-muted hero-metrics-summary">
+                A snapshot of the archive in motion.
+              </p>
             </header>
             {!isLoading && !error && (
               <dl className="hero-metrics-grid">
                 {stats.map(({ label, value }) => (
                   <div key={label} className="hero-stat-tile">
                     <dt className="hero-ink-muted hero-stat-label">{label}</dt>
-                    <dd className="hero-ink-heading hero-stat-value">{value}</dd>
+                    <dd className="hero-ink-heading hero-stat-value">
+                      {value}
+                    </dd>
                   </div>
                 ))}
               </dl>
             )}
-            {isLoading && <p className="hero-ink-body hero-stat-loading">Loading archive metrics…</p>}
-            {error && !isLoading && <p className="hero-ink-body hero-stat-error">Unable to load stories: {error}</p>}
+            {isLoading && (
+              <p className="hero-ink-body hero-stat-loading">
+                Loading archive metrics…
+              </p>
+            )}
+            {error && !isLoading && (
+              <p className="hero-ink-body hero-stat-error">
+                Unable to load stories: {error}
+              </p>
+            )}
           </div>
 
           <div
@@ -186,7 +214,9 @@ const Home = () => {
               aria-hidden="true"
             />
             <div className="glass-scrim relative flex flex-col items-center text-center gap-3">
-              <h2 className="glass-heading hero-ink-heading hero-workflow-title">How does it work?</h2>
+              <h2 className="glass-heading hero-ink-heading hero-workflow-title">
+                How does it work?
+              </h2>
               <p className="glass-body hero-ink-body hero-workflow-subtitle">
                 Four touchpoints that carry every seed from spark to story.
               </p>
@@ -202,10 +232,16 @@ const Home = () => {
                 onPointerLeave={(event) => resetSpotlight(event, '50%', '45%')}
               >
                 <div className="hero-workflow-card-inner">
-                  <p className="hero-ink-heading hero-workflow-step">0{index + 1}</p>
+                  <p className="hero-ink-heading hero-workflow-step">
+                    0{index + 1}
+                  </p>
                   <div className="hero-workflow-card-copy">
-                    <p className="hero-ink-heading hero-workflow-card-title">{title}</p>
-                    <p className="hero-ink-body hero-workflow-card-description">{description}</p>
+                    <p className="hero-ink-heading hero-workflow-card-title">
+                      {title}
+                    </p>
+                    <p className="hero-ink-body hero-workflow-card-description">
+                      {description}
+                    </p>
                   </div>
                 </div>
               </li>
@@ -214,7 +250,7 @@ const Home = () => {
         </section>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

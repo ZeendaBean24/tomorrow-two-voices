@@ -1,7 +1,7 @@
-import backgroundLayer from '@assets/background.svg';
-import midgroundLayer from '@assets/midground.svg';
-import foregroundLayer from '@assets/foreground.svg';
-import { useParallax } from '../lib/useParallax';
+import backgroundLayer from '@assets/background.svg'
+import midgroundLayer from '@assets/midground.svg'
+import foregroundLayer from '@assets/foreground.svg'
+import { useParallax } from '../lib/useParallax'
 
 const layers = [
   {
@@ -34,13 +34,16 @@ const layers = [
     endOffset: 90,
     zIndex: 'z-30',
   },
-];
+]
 
 const HomeParallax = () => {
-  const { registerLayer } = useParallax();
+  const { registerLayer } = useParallax()
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 h-screen w-screen overflow-hidden" aria-hidden="true">
+    <div
+      className="pointer-events-none fixed inset-0 z-0 h-screen w-screen overflow-hidden"
+      aria-hidden="true"
+    >
       {layers.map((layer, index) => (
         <img
           key={layer.id}
@@ -49,15 +52,18 @@ const HomeParallax = () => {
           data-scale={layer.scale}
           data-min-scale={layer.minScale ?? layer.scale}
           data-start-offset={layer.startOffset ?? 0}
-          data-end-offset={layer.endOffset ?? (layer.startOffset ?? 0)}
+          data-end-offset={layer.endOffset ?? layer.startOffset ?? 0}
           src={layer.src}
           alt=""
           className={`absolute inset-0 h-full w-full object-cover ${layer.zIndex}`}
-          style={{ transform: `translate3d(0, 0, 0) scale(${layer.scale})`, transformOrigin: '50% 50%' }}
+          style={{
+            transform: `translate3d(0, 0, 0) scale(${layer.scale})`,
+            transformOrigin: '50% 50%',
+          }}
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default HomeParallax;
+export default HomeParallax

@@ -1,9 +1,9 @@
-const splitter = /(?<=[.!?])\s+(?=[A-Z0-9"\[])/g;
+const splitter = /(?<=[.!?])\s+(?=[A-Z0-9"\[])/g
 
 export const splitSentences = (text: string): string[] => {
-  if (!text) return [];
+  if (!text) return []
   return text
     .split(splitter)
     .map((sentence) => sentence.trim())
-    .filter(Boolean);
-};
+    .filter(Boolean)
+}
