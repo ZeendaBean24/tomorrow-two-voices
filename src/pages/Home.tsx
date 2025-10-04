@@ -177,17 +177,21 @@ const Home = () => {
           </div>
 
           <div
-            className="tilt-layer hero-ink-panel hero-heading-pane relative overflow-hidden rounded-3xl"
+            className="tilt-layer hero-ink-panel glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg hover:ring-white/60 relative overflow-hidden rounded-3xl p-10 mx-auto w-full max-w-[640px]"
             onPointerMove={updateSpotlight}
             onPointerLeave={(event) => resetSpotlight(event, '52%', '44%')}
           >
-            <div className="hero-heading-background" aria-hidden="true" />
-            <div className="hero-heading-frame">
-              <h2 className="hero-ink-heading hero-workflow-title">How does it work?</h2>
-              <p className="hero-ink-body hero-workflow-subtitle">Four touchpoints that carry every seed from spark to story.</p>
+            <div
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_-20%,rgba(16,185,129,0.18),transparent_55%),radial-gradient(circle_at_80%_20%,rgba(79,70,229,0.15),transparent_60%),url(/assets/paper-texture.svg)]"
+              aria-hidden="true"
+            />
+            <div className="glass-scrim relative flex flex-col items-center text-center gap-3">
+              <h2 className="glass-heading hero-ink-heading hero-workflow-title">How does it work?</h2>
+              <p className="glass-body hero-ink-body hero-workflow-subtitle">
+                Four touchpoints that carry every seed from spark to story.
+              </p>
             </div>
           </div>
-
           <ol className="hero-workflow-list">
             {workflow.map(({ title, description }, index) => (
               <li
