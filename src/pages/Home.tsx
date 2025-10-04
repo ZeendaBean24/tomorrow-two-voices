@@ -152,7 +152,7 @@ const Home = () => {
 
         <section aria-labelledby="metrics" className="flex flex-col gap-16">
           <div
-            className="hero-ink-panel glass-panel hero-metrics-panel hover:-translate-y-0.5 hover:bg-white/24 hover:backdrop-blur-[28px] hover:ring-white/50 relative overflow-hidden rounded-3xl p-10"
+            className="hero-ink-panel hero-glass-pane hero-metrics-panel relative overflow-hidden rounded-3xl p-10"
             onPointerMove={updateSpotlight}
             onPointerLeave={(event) => resetSpotlight(event, '50%', '48%')}
           >
@@ -177,19 +177,22 @@ const Home = () => {
           </div>
 
           <div
-            className="hero-ink-panel glass-panel hero-workflow-heading"
+            className="tilt-layer hero-ink-panel hero-heading-pane relative overflow-hidden rounded-3xl"
             onPointerMove={updateSpotlight}
-            onPointerLeave={(event) => resetSpotlight(event, '50%', '50%')}
+            onPointerLeave={(event) => resetSpotlight(event, '52%', '44%')}
           >
-            <h2 className="hero-ink-heading hero-workflow-title">How does it work?</h2>
-            <p className="hero-ink-body hero-workflow-subtitle">Four touchpoints that carry every seed from spark to story.</p>
+            <div className="hero-heading-background" aria-hidden="true" />
+            <div className="hero-heading-frame">
+              <h2 className="hero-ink-heading hero-workflow-title">How does it work?</h2>
+              <p className="hero-ink-body hero-workflow-subtitle">Four touchpoints that carry every seed from spark to story.</p>
+            </div>
           </div>
 
           <ol className="hero-workflow-list">
             {workflow.map(({ title, description }, index) => (
               <li
                 key={title}
-                className="hero-ink-panel glass-panel hero-workflow-card"
+                className="hero-ink-panel hero-glass-pane-lite hero-workflow-card"
                 style={{ animationDelay: `${index * 0.12}s` }}
                 onPointerMove={updateSpotlight}
                 onPointerLeave={(event) => resetSpotlight(event, '50%', '45%')}

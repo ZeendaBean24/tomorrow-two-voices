@@ -420,11 +420,11 @@
     margin-inline: auto;
     width: min(100%, 640px);
     padding: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    box-shadow: 0 20px 46px -24px rgba(15, 23, 42, 0.5);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-radius: 2rem;
     animation: hero-workflow-float 580ms ease forwards;
     opacity: 0;
@@ -479,14 +479,151 @@
   .hero-workflow-card:hover,
   .hero-workflow-card:focus-within {
     transform: translateY(-6px);
-    box-shadow: 0 26px 60px -20px rgba(59, 130, 246, 0.35);
-    border-color: rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.24);
   }
 
   .hero-workflow-card:hover .hero-workflow-card-inner,
   .hero-workflow-card:focus-within .hero-workflow-card-inner {
     transform: translateY(-4px);
+  }
+
+  .hero-glass-pane {
+    position: relative;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.04) 55%, rgba(148, 163, 184, 0.08) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(46px);
+    -webkit-backdrop-filter: blur(46px);
+    box-shadow: 0 18px 42px -24px rgba(15, 23, 42, 0.5);
+    overflow: hidden;
+    transition: transform 220ms ease, backdrop-filter 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .hero-glass-pane::before {
+    content: '';
+    position: absolute;
+    inset: -30% -40% auto -30%;
+    height: 65%;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.45), transparent 60%);
+    opacity: 0.7;
+    transform: rotate(8deg);
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+
+  .hero-glass-pane::after {
+    content: '';
+    position: absolute;
+    inset: auto -20% -45% -10%;
+    height: 70%;
+    background: radial-gradient(circle at bottom, rgba(148, 163, 184, 0.28), transparent 70%);
+    opacity: 0.8;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+  }
+
+  .hero-glass-pane:hover,
+  .hero-glass-pane:focus-within {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-color: rgba(255, 255, 255, 0.46);
+    box-shadow: 0 32px 72px -28px rgba(15, 23, 42, 0.52), 0 0 22px rgba(255, 255, 255, 0.35);
+    transform: translate3d(0, -3px, 0) scale(1.01);
+  }
+
+  .hero-glass-pane-lite {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 14px 34px -22px rgba(15, 23, 42, 0.4);
+    transition: transform 200ms ease, backdrop-filter 200ms ease, box-shadow 200ms ease, border-color 200ms ease, background 200ms ease;
+  }
+
+  .hero-glass-pane-lite:hover,
+  .hero-glass-pane-lite:focus-within {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 22px 46px -24px rgba(59, 130, 246, 0.35);
+  }
+
+  .hero-ink-panel.hero-glass-pane:hover .hero-ink-heading,
+  .hero-ink-panel.hero-glass-pane:focus-within .hero-ink-heading,
+  .hero-ink-panel.hero-glass-pane:hover .hero-ink-body,
+  .hero-ink-panel.hero-glass-pane:focus-within .hero-ink-body,
+  .hero-ink-panel.hero-glass-pane:hover .hero-ink-muted,
+  .hero-ink-panel.hero-glass-pane:focus-within .hero-ink-muted {
+    color: rgba(24, 31, 44, 0.96);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.55);
+  }
+
+  .hero-ink-panel.hero-glass-pane-lite:hover .hero-ink-heading,
+  .hero-ink-panel.hero-glass-pane-lite:focus-within .hero-ink-heading,
+  .hero-ink-panel.hero-glass-pane-lite:hover .hero-ink-body,
+  .hero-ink-panel.hero-glass-pane-lite:focus-within .hero-ink-body,
+  .hero-ink-panel.hero-glass-pane-lite:hover .hero-ink-muted,
+  .hero-ink-panel.hero-glass-pane-lite:focus-within .hero-ink-muted {
+    color: rgba(24, 31, 44, 0.96);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  }
+
+  .hero-heading-pane:hover .hero-ink-heading,
+  .hero-heading-pane:focus-within .hero-ink-heading,
+  .hero-heading-pane:hover .hero-ink-body,
+  .hero-heading-pane:focus-within .hero-ink-body {
+    color: rgba(24, 31, 44, 0.96);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+
+  .hero-heading-pane {
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.2) 0%, rgba(15, 23, 42, 0.1) 100%);
+    box-shadow: 0 26px 60px -32px rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(36px);
+    -webkit-backdrop-filter: blur(36px);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    width: min(100%, 640px);
+    margin-inline: auto;
+  }
+
+  .hero-heading-pane:hover,
+  .hero-heading-pane:focus-within {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 34px 72px -30px rgba(15, 23, 42, 0.6);
+    transform: translate3d(0, -4px, 0) scale(1.01);
+  }
+
+  .hero-heading-pane .hero-heading-background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 0%, rgba(158, 227, 255, 0.28), transparent 55%),
+      radial-gradient(circle at 90% 12%, rgba(79, 70, 229, 0.28), transparent 60%),
+      url(/assets/paper-texture.svg);
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .hero-heading-pane::after {
+    content: '';
+    position: absolute;
+    inset: 12% 6%;
+    border-radius: calc(1.6rem - 0.25rem);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0.65;
+    pointer-events: none;
+  }
+
+  .hero-heading-frame {
+    position: relative;
+    border-radius: calc(1.6rem - 0.4rem);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: clamp(1.4rem, 4vw, 2rem) clamp(1.2rem, 4vw, 2.3rem);
+    box-shadow: inset 0 18px 30px -28px rgba(255, 255, 255, 0.8);
   }
 
   @keyframes hero-workflow-float {
