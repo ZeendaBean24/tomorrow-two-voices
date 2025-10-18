@@ -3,15 +3,15 @@
     "id": "S-RGvYAQv",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "Clean air",
+      "central_actor": "Me",
+      "hope": "Clean AIr",
       "worry": "Food scarcity",
-      "ai_future": "As a society we are dumbing down",
+      "ai_future": "as a society we are dumbing down",
       "anchors": {
         "technology": "biotechnology",
         "object": "shoes",
         "place": "near a mountain",
-        "time": "03:00",
+        "time": "3:00 AM",
         "person_or_role": "friend",
         "value": "truth",
         "sensory_detail": "smell"
@@ -27,17 +27,17 @@
     "id": "S-rjGdlZp",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "Freedom from tyranny",
       "worry": "Oppression and war",
-      "ai_future": "Blade runner meets 1984",
+      "ai_future": "Blade Runner meets 1984",
       "anchors": {
-        "technology": "wheel",
-        "object": "cup",
+        "technology": "The wheel",
+        "object": "A cup",
         "place": "Central North America",
-        "time": "12:00",
+        "time": "12:00 PM",
         "person_or_role": "Son",
-        "value": "safety",
+        "value": "Safety",
         "sensory_detail": "Burnt smell"
       },
       "themes": [
@@ -51,15 +51,15 @@
     "id": "S-GxXBpXO",
     "seed_canonical": {
       "language": "中文",
-      "central_actor": "ai tools",
+      "central_actor": "AI tools",
       "hope": "还没有死。我也想要六个孩子。",
       "worry": "我很担心我们地球，因为我们的地球会死。",
-      "ai_future": "很不好。有很多人用ai作弊。",
+      "ai_future": "很不好。有很多人用AI作弊。",
       "anchors": {
         "technology": "手机",
         "object": "桌子",
         "place": "监狱",
-        "time": "13:67",
+        "time": "13:67 am",
         "person_or_role": "Jerry",
         "value": "happiness",
         "sensory_detail": "smell of stinky cheese"
@@ -75,15 +75,15 @@
     "id": "S-9qpJQKE",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope for a sucsessful business",
-      "worry": "Prices of things and ai",
-      "ai_future": "Uncertain because ai is starting to take over us",
+      "central_actor": "Me",
+      "hope": "i hope for a sucsessful business",
+      "worry": "prices of things and AI",
+      "ai_future": "uncertain because Ai is starting to take over us",
       "anchors": {
         "technology": "glasses computer",
         "object": "notebook",
         "place": "miami condo",
-        "time": "18:37",
+        "time": "6:37 PM",
         "person_or_role": "classmate",
         "value": "privacy",
         "sensory_detail": "smell of good food"
@@ -99,15 +99,15 @@
     "id": "S-9qpJdZ5",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "ai tools",
+      "central_actor": "AI tools",
       "hope": "No time to think",
-      "worry": "Weaponized propaganda",
-      "ai_future": "Scary because people trust it more than themselves",
+      "worry": "weaponized propaganda",
+      "ai_future": "scary because people trust it more than themselves",
       "anchors": {
         "technology": "phone",
         "object": "pen",
         "place": "office",
-        "time": "19:41",
+        "time": "7:41 PM",
         "person_or_role": "wife",
         "value": "kindness",
         "sensory_detail": "bright stars"
@@ -123,10 +123,10 @@
     "id": "S-LZvM0p2",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
-      "hope": "I hope i'm still alive, for one thing! i",
+      "central_actor": "Family/Peers",
+      "hope": "I hope I'm still alive, for one thing! I",
       "worry": "I worry that current global trends will continue and the world will be less safe.",
-      "ai_future": "Exciting but also very scary.",
+      "ai_future": "exciting but also very scary.",
       "anchors": {
         "technology": "Electric vehicles",
         "object": "some kind of digital reader",
@@ -146,17 +146,17 @@
     "id": "S-9qpJvJG",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Having my own sailboat",
-      "worry": "Unemployment",
-      "ai_future": "Artificial",
+      "worry": "unemployment",
+      "ai_future": "artificial",
       "anchors": {
         "technology": "AR glasses",
         "object": "Holo phone",
         "place": "Atlantic ocean",
-        "time": "17:00",
+        "time": "5PM",
         "person_or_role": "Friend",
-        "value": "fun",
+        "value": "Fun",
         "sensory_detail": "Heavy wind"
       },
       "themes": [
@@ -169,17 +169,17 @@
     "id": "S-ja59Gl4",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "To be able to fully support my family.",
       "worry": "Regretting old decisions",
       "ai_future": "Fake",
       "anchors": {
-        "technology": "phone",
+        "technology": "a phone",
         "object": "Lacrosse stick",
         "place": "My Old farm",
-        "time": "17:00",
+        "time": "5:00 pm",
         "person_or_role": "team mate",
-        "value": "trueness",
+        "value": "Trueness",
         "sensory_detail": "smell"
       },
       "themes": [
@@ -193,15 +193,15 @@
     "id": "S-81ApjPA",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "To be rich",
-      "worry": "That i am not rich",
-      "ai_future": "Cool",
+      "worry": "That i AM not rich",
+      "ai_future": "cool",
       "anchors": {
         "technology": "AI",
         "object": "AI",
         "place": "AI PLACE",
-        "time": "63:00",
+        "time": "630 AI",
         "person_or_role": "MY AI",
         "value": "artificial",
         "sensory_detail": "inteligence"
@@ -216,15 +216,15 @@
     "id": "S-NpMBPNO",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
-      "hope": "To have more freedom",
-      "worry": "Too much going on at once and there are lots of different activities and just to much stuff.",
-      "ai_future": "Like it can go in any direction because of how fast it can develop.",
+      "central_actor": "Family/Peers",
+      "hope": "to have more freedom",
+      "worry": "too much going on at once and there are lots of different activities and just to much stuff.",
+      "ai_future": "like it can go in any direction because of how fast it can develop.",
       "anchors": {
         "technology": "laptops",
         "object": "pen",
         "place": "house",
-        "time": "13:27",
+        "time": "1:27 pm",
         "person_or_role": "lawyer",
         "value": "honesty",
         "sensory_detail": "cold running water"
@@ -240,15 +240,15 @@
     "id": "S-aQKrldW",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "ai tools",
-      "hope": "Being a trillionare",
+      "central_actor": "AI tools",
+      "hope": "being a trillionare",
       "worry": "Ill ask chatgpt.",
-      "ai_future": "Wonderful because i say thank you to chat gpt so i will be safe from the taking over of ai.",
+      "ai_future": "wonderful because I say thank you to chat gpt so I will be safe from the taking over of AI.",
       "anchors": {
         "technology": "VR headset controlling me",
         "object": "food condensed into a cube",
         "place": "living in my moms basement",
-        "time": "04:20",
+        "time": "4:20",
         "person_or_role": "AI moderater",
         "value": "moneypowerpoliticalstance",
         "sensory_detail": "the feeling of bread"
@@ -264,15 +264,15 @@
     "id": "S-QKvBjdl",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "teacher/employer",
-      "hope": "I make a lot of money",
-      "worry": "I'm unemployed",
-      "ai_future": "Bleak",
+      "central_actor": "Teacher/Employer",
+      "hope": "i make a lot of money",
+      "worry": "i'm unemployed",
+      "ai_future": "bleak",
       "anchors": {
         "technology": "bidet",
         "object": "water bottle",
-        "place": "park",
-        "time": "05:00",
+        "place": "the park",
+        "time": "5 am",
         "person_or_role": "Son",
         "value": "justice",
         "sensory_detail": "BOOM"
@@ -287,15 +287,15 @@
     "id": "S-VLv1d0J",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope that wars in sudan, gaza, and ukraine to all have peaceful and diplomatic endings so that no lives are lost.",
+      "central_actor": "Me",
+      "hope": "I hope that wars in Sudan, Gaza, and Ukraine to all have peaceful and diplomatic endings so that no lives are lost.",
       "worry": "I worry about climate change, and whether or not it will change the world for the worse by 2050.",
-      "ai_future": "Extremely uncertain, but also hopeful - hopeful that ai will be used to augment society instead of cause harms.",
+      "ai_future": "Extremely uncertain, but also hopeful - hopeful that AI will be used to augment society instead of cause harms.",
       "anchors": {
         "technology": "Computer",
         "object": "Paintbrush",
         "place": "Hospital",
-        "time": "20:00",
+        "time": "8:00 PM",
         "person_or_role": "doctor",
         "value": "equity",
         "sensory_detail": "sounds of footsteps"
@@ -311,17 +311,17 @@
     "id": "S-GxXByyO",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope to go to bed having arrived closer to my goals than i woke up",
-      "worry": "I worry about experiencing a day where i don't arrive any closer to my goals than i started",
-      "ai_future": "Concerning, - i am not satisfied that there are enough guardrails to prevent it from abusing its involvement",
+      "central_actor": "Me",
+      "hope": "I hope to go to bed having arrived closer to my goals than I woke up",
+      "worry": "I worry about experiencing a day where I don't arrive any closer to my goals than I started",
+      "ai_future": "Concerning, - I am not satisfied that there are enough guardrails to prevent it from abusing its involvement",
       "anchors": {
         "technology": "Hoverboard",
         "object": "Audemars Piguet",
         "place": "Dubai",
-        "time": "midnight",
+        "time": "Midnight",
         "person_or_role": "Homeboy",
-        "value": "fun",
+        "value": "Fun",
         "sensory_detail": "view of bright city at night"
       },
       "themes": [
@@ -335,7 +335,7 @@
     "id": "S-7R19Al9",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "More free time for my hobbies, for example, volleyball and valorant",
       "worry": "Not having a job",
       "ai_future": "Uncertain, as many jobs will be focussed on the development of ai",
@@ -343,9 +343,9 @@
         "technology": "Vr glasses",
         "object": "Laptop",
         "place": "My room",
-        "time": "19:30",
+        "time": "7:30 PM",
         "person_or_role": "Best Friend",
-        "value": "uncertainty",
+        "value": "Uncertainty",
         "sensory_detail": "Light pollution"
       },
       "themes": [
@@ -359,7 +359,7 @@
     "id": "S-2E1x26p",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Be rich",
       "worry": "Not being rich",
       "ai_future": "Always changing",
@@ -367,7 +367,7 @@
         "technology": "solar drone",
         "object": "phone",
         "place": "work",
-        "time": "03:00",
+        "time": "3:00",
         "person_or_role": "Granpa",
         "value": "priva",
         "sensory_detail": "Smell"
@@ -382,17 +382,17 @@
     "id": "S-LZvMQg1",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Better at flute",
       "worry": "Not enough money",
-      "ai_future": "Like they will do all the work",
+      "ai_future": "like they will do all the work",
       "anchors": {
         "technology": "Self-driving car",
         "object": "Computer",
         "place": "Park",
-        "time": "21:12",
+        "time": "9:12 PM",
         "person_or_role": "Mother",
-        "value": "honesty",
+        "value": "Honesty",
         "sensory_detail": "See"
       },
       "themes": [
@@ -406,17 +406,17 @@
     "id": "S-xX404eE",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Improved technology around the home.",
       "worry": "The overall health of the planet.",
-      "ai_future": "Bright as ai could solve lots of problems",
+      "ai_future": "bright as AI could solve lots of problems",
       "anchors": {
         "technology": "flying car",
         "object": "computer",
         "place": "My house",
-        "time": "19:45",
+        "time": "7:45 PM",
         "person_or_role": "President",
-        "value": "fairness",
+        "value": "Fairness",
         "sensory_detail": "smell of coffee"
       },
       "themes": [
@@ -430,17 +430,17 @@
     "id": "S-5B8lPe6",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I hope for a raise at the corrupt corp, profiting off unpaid cyberware, guarded by steel-flesh abominations.",
       "worry": "I don’t get jumped by gangs and lose my cyberware—without my music chip, 19-hour days are pure torture.",
-      "ai_future": "Bleak and hopeless—people toil in misery, fearing expired augments. miss payments, and you'll lose yourself.",
+      "ai_future": "Bleak and hopeless—people toil in misery, fearing expired augments. Miss payments, and you'll lose yourself.",
       "anchors": {
         "technology": "Brain chips grants abilities",
-        "object": "taser. its good for defence",
-        "place": "my rooftop. peaceful here.",
-        "time": "18:00",
+        "object": "A taser. its good for defence",
+        "place": "On my rooftop. peaceful here.",
+        "time": "6:00 pm—work ends, sun sets",
         "person_or_role": "Ricket, my chip contact.",
-        "value": "discipline is working on time.",
+        "value": "Discipline is working on time.",
         "sensory_detail": "neon lights flash afar"
       },
       "themes": [
@@ -453,10 +453,10 @@
     "id": "S-9qp2GaY",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "I hope to still have social aspects in life, allowing us to build connections with other human beings.",
       "worry": "I worry about having zero privacy on technology to the point where anyone can see what you do online.",
-      "ai_future": "Unknown because we have no clue as to what will happen with ai advancing so quickly.",
+      "ai_future": "Unknown because we have no clue as to what will happen with AI advancing so quickly.",
       "anchors": {
         "technology": "flying cars",
         "object": "book",
@@ -477,10 +477,10 @@
     "id": "S-2E1OEXj",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "I hope for a sustainable world where communities thrive in harmony with nature and everyone has equal opportunities.",
       "worry": "I worry about climate change in 2050—its impact on the environment, communities, and global stability is concerning.",
-      "ai_future": "The future feels exciting and full of possibilities, but it also raises important ethical questions we must address.",
+      "ai_future": "the future feels exciting and full of possibilities, but it also raises important ethical questions we must address.",
       "anchors": {
         "technology": "flying cars",
         "object": "book",
@@ -501,10 +501,10 @@
     "id": "S-vGEqYD8",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "community",
+      "central_actor": "Community",
       "hope": "I hope for a good future, with humans and technology working together.",
       "worry": "Use of tech by governments and companies to track people.",
-      "ai_future": "Uncertain as it can be used for both good and bad.",
+      "ai_future": "uncertain as it can be used for both good and bad.",
       "anchors": {
         "technology": "AI robot",
         "object": "scythe",
@@ -525,15 +525,15 @@
     "id": "S-RGv84Xj",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "People are happy",
-      "worry": "Creativity as ai will reduce creativity with its knowledge",
-      "ai_future": "Uncertain, as it depends on how ai progresses and its future in our lives.",
+      "central_actor": "Shared (human + AI)",
+      "hope": "People are Happy",
+      "worry": "Creativity as AI will reduce creativity with its knowledge",
+      "ai_future": "Uncertain, as it depends on how AI progresses and its future in our lives.",
       "anchors": {
         "technology": "Laptop",
         "object": "keyboard",
         "place": "Office",
-        "time": "19:56",
+        "time": "7:56pm",
         "person_or_role": "Engineer",
         "value": "safety",
         "sensory_detail": "Cold Air"
@@ -548,17 +548,17 @@
     "id": "S-NpM8MpW",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "ai tools",
-      "hope": "Successful job with good relationships with family and friends. no financial problems that lead to stress in life.",
-      "worry": "Difficulty existing in a world where humans lack importance due to ai and the world is divided politically.",
+      "central_actor": "AI tools",
+      "hope": "Successful job with good relationships with family and friends. No financial problems that lead to stress in life.",
+      "worry": "Difficulty existing in a world where humans lack importance due to AI and the world is divided politically.",
       "ai_future": "Human necessity is a thing of the past",
       "anchors": {
         "technology": "Personal AI assistant",
         "object": "Driverless car",
         "place": "Personal garden",
-        "time": "03:23",
+        "time": "3:23",
         "person_or_role": "Client",
-        "value": "happiness",
+        "value": "Happiness",
         "sensory_detail": "Crisp air on a fall morning"
       },
       "themes": [
@@ -572,17 +572,17 @@
     "id": "S-9qp2rxY",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "To own my own private equity firm and have a loving wife.",
-      "worry": "I worry that i might not be successful.",
-      "ai_future": "Very uncertain because everything is moving so fast.",
+      "worry": "I worry that I might not be successful.",
+      "ai_future": "very uncertain because everything is moving so fast.",
       "anchors": {
         "technology": "communication glasses",
         "object": "Iphone",
         "place": "Big office in dowtown",
-        "time": "00:00",
+        "time": "12:00 am",
         "person_or_role": "Wife",
-        "value": "love",
+        "value": "Love",
         "sensory_detail": "nice summer breeze"
       },
       "themes": [
@@ -596,15 +596,15 @@
     "id": "S-68ApO5A",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Most diseases and sickness will hopefully have cures, and will prevent many deaths because of that.",
       "worry": "Artificial intelligence being weaponized and used in warfare.",
-      "ai_future": "Uncertain, because it is impossible to know exactly what ai is capable of.",
+      "ai_future": "Uncertain, because it is impossible to know exactly what AI is capable of.",
       "anchors": {
         "technology": "Translation glasses",
         "object": "water bottle",
         "place": "cloning bay",
-        "time": "19:30",
+        "time": "7:30 pm",
         "person_or_role": "doctor",
         "value": "intelligence",
         "sensory_detail": "neon lights"
@@ -619,15 +619,15 @@
     "id": "S-obKkqWx",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "More green space and fresher food",
       "worry": "Industrialization",
       "ai_future": "Full of possibility as well as doubt",
       "anchors": {
         "technology": "Teleporter",
         "object": "Shoes",
-        "place": "ocean",
-        "time": "11:15",
+        "place": "The ocean",
+        "time": "11:15 (night)",
         "person_or_role": "robot dog",
         "value": "independance",
         "sensory_detail": "the feeling of dirt"
@@ -642,17 +642,17 @@
     "id": "S-ZjvDVlA",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "To be succesful.",
       "worry": "If we're still alive.",
-      "ai_future": "Uncertain, due to the fact ai is still in it's early stages.",
+      "ai_future": "Uncertain, due to the fact AI is still in it's early stages.",
       "anchors": {
         "technology": "cerebral implants",
         "object": "cooking pot",
         "place": "Office",
-        "time": "12:00",
+        "time": "12:00 a.m. midnight",
         "person_or_role": "Engineer",
-        "value": "focus",
+        "value": "Focus",
         "sensory_detail": "Warm air"
       },
       "themes": [
@@ -666,15 +666,15 @@
     "id": "S-KYvkJaV",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "To spend time with family.",
       "worry": "Global warming",
-      "ai_future": "Like it will be taken over by bots",
+      "ai_future": "like it will be taken over by bots",
       "anchors": {
         "technology": "Computer",
         "object": "chair",
         "place": "Home",
-        "time": "17:00",
+        "time": "5:00 pm",
         "person_or_role": "classmate",
         "value": "safety",
         "sensory_detail": "smell of food"
@@ -690,15 +690,15 @@
     "id": "S-obKvl6X",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Have money, be happy with family and friends",
       "worry": "Cybersecurity issues emerging with quantum computing; climate changes",
-      "ai_future": "Variable; it could lead to so many new opportunities but it's going to change so much;",
+      "ai_future": "variable; it could lead to so many new opportunities but it's going to change so much;",
       "anchors": {
         "technology": "Biochips",
         "object": "cyberware",
         "place": "Rooftop",
-        "time": "midnight",
+        "time": "Midnight",
         "person_or_role": "friend",
         "value": "safety",
         "sensory_detail": "Stars in the night sky"
@@ -714,17 +714,17 @@
     "id": "S-zx2L2eZ",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "To live happily, enjoy life, and still have a strong purpose in life.",
-      "worry": "If i would still recognize the world, if i am still in line with the world.",
+      "worry": "If I would still recognize the world, if I am still in line with the world.",
       "ai_future": "Scary, but promising, and a little exciting.",
       "anchors": {
         "technology": "Phone",
         "object": "Book",
         "place": "My room",
-        "time": "19:00",
+        "time": "7:00pm",
         "person_or_role": "Friend",
-        "value": "love",
+        "value": "Love",
         "sensory_detail": "the sound of quiet raindrops"
       },
       "themes": [
@@ -737,17 +737,17 @@
     "id": "S-yPjzjB6",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Happy family with freedom like financial",
       "worry": "Being poor in 2050",
-      "ai_future": "Dangerous because ais will take over humanity",
+      "ai_future": "Dangerous because AIs will take over humanity",
       "anchors": {
         "technology": "Solar drone",
         "object": "Lunchbox",
         "place": "Mcdonalds",
-        "time": "06:45",
+        "time": "6:45",
         "person_or_role": "Businessman",
-        "value": "equality",
+        "value": "Equality",
         "sensory_detail": "Cold air"
       },
       "themes": [
@@ -761,15 +761,15 @@
     "id": "S-xX4vR5G",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I hope for flying carz",
       "worry": "Overpopulation",
       "ai_future": "Less daunting",
       "anchors": {
         "technology": "computers",
         "object": "zipper",
-        "place": "streets",
-        "time": "01:00",
+        "place": "the streets",
+        "time": "1am",
         "person_or_role": "donald trump",
         "value": "privacy",
         "sensory_detail": "sour smell of dough"
@@ -784,17 +784,17 @@
     "id": "S-D4AMM2j",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "I hope to be rich.",
       "worry": "I worry about health.",
-      "ai_future": "With ai, the future feels limitless—where creativity, connection, and problem-solving expand beyond today’s horizons.",
+      "ai_future": "With AI, the future feels limitless—where creativity, connection, and problem-solving expand beyond today’s horizons.",
       "anchors": {
         "technology": "Car",
         "object": "Chopsticks",
         "place": "House",
-        "time": "08:29",
+        "time": "8:29",
         "person_or_role": "Lawyer",
-        "value": "fairness",
+        "value": "Fairness",
         "sensory_detail": "Taste of Skittles"
       },
       "themes": [
@@ -808,7 +808,7 @@
     "id": "S-aQKvv5W",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Cure for cancer.",
       "worry": "World war 3",
       "ai_future": "Uncertain",
@@ -816,9 +816,9 @@
         "technology": "Phone",
         "object": "Fidget Spinner",
         "place": "Canada",
-        "time": "06:70",
+        "time": "6:70",
         "person_or_role": "President of the United States",
-        "value": "leadership",
+        "value": "Leadership",
         "sensory_detail": "Stinky"
       },
       "themes": [
@@ -832,17 +832,17 @@
     "id": "S-Xx1zzgV",
     "seed_canonical": {
       "language": "Russian",
-      "central_actor": "family/peers",
-      "hope": "Я хочу быть богатым адвокатом! я думаю что там будет очень много денег.",
-      "worry": "Я думаю что погода будет очень плохая! мне уже не нравится жара, я даже не знаю как будет в этом году (2050).",
-      "ai_future": "Я думаю что будущее очень неясное! но, если наши лидеры используют этот ресурс умно и прагматично, все будет хорошо.",
+      "central_actor": "Family/Peers",
+      "hope": "Я хочу быть богатым адвокатом! Я думаю что там будет очень много денег.",
+      "worry": "Я думаю что погода будет очень плохая! Мне уже не нравится жара, я даже не знаю как будет в этом году (2050).",
+      "ai_future": "Я думаю что будущее очень неясное! Но, если наши лидеры используют этот ресурс умно и прагматично, все будет хорошо.",
       "anchors": {
         "technology": "Видео на инстаграме.",
         "object": "Моя ручка.",
         "place": "Дома, на диване.",
-        "time": "06:07",
+        "time": "6:07",
         "person_or_role": "Адвокат",
-        "value": "эмпатия",
+        "value": "Эмпатия",
         "sensory_detail": "Будет пахнуть от газов."
       },
       "themes": [
@@ -856,17 +856,17 @@
     "id": "S-b5KvAjg",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "Agi",
-      "worry": "My bio-data being tracked and analyzed by ai",
+      "central_actor": "Shared (human + AI)",
+      "hope": "AGI",
+      "worry": "My bio-data being tracked and analyzed by AI",
       "ai_future": "Limitless but uncertain",
       "anchors": {
         "technology": "Augmented Reality",
         "object": "Computer",
         "place": "Lab",
-        "time": "22:00",
+        "time": "10:00PM",
         "person_or_role": "Engineer",
-        "value": "innovation",
+        "value": "Innovation",
         "sensory_detail": "Sound of machinery"
       },
       "themes": [
@@ -880,15 +880,15 @@
     "id": "S-pbRv18y",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
-      "hope": "Family time",
-      "worry": "Ai",
-      "ai_future": "Dystopian",
+      "central_actor": "Family/Peers",
+      "hope": "family time",
+      "worry": "AI",
+      "ai_future": "dystopian",
       "anchors": {
         "technology": "extra arm",
         "object": "water bottle",
         "place": "camping",
-        "time": "19:30",
+        "time": "7:30pm",
         "person_or_role": "friend",
         "value": "happiness",
         "sensory_detail": "taste of mac n cheese"
@@ -904,17 +904,17 @@
     "id": "S-D4AMEYl",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "Having a cool life with a cool job and family",
-      "worry": "Whether i'll have a cool job life and family",
-      "ai_future": "Intriguing, historically significant",
+      "worry": "Whether I'll have a cool job life and family",
+      "ai_future": "intriguing, historically significant",
       "anchors": {
         "technology": "Mobile device",
-        "object": "car",
-        "place": "my home",
-        "time": "13:00",
+        "object": "A car",
+        "place": "At my home",
+        "time": "1:00 PM",
         "person_or_role": "Elon Musk",
-        "value": "empathy",
+        "value": "Empathy",
         "sensory_detail": "Sight of a screen"
       },
       "themes": [
@@ -928,15 +928,15 @@
     "id": "S-GxX5Nq2",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "An ai-automated utopia (ai-powered work/labor, humans just focus on relationships)",
+      "central_actor": "Shared (human + AI)",
+      "hope": "An AI-automated utopia (AI-powered work/labor, humans just focus on relationships)",
       "worry": "Increased human greed",
-      "ai_future": "Uncertain- it can go in any direction; for the betterment or worse of society",
+      "ai_future": "uncertain- it can go in any direction; for the betterment or worse of society",
       "anchors": {
         "technology": "Delivery drones",
         "object": "Water bottle",
         "place": "Floating island above Seoul",
-        "time": "07:05",
+        "time": "7:05 AM",
         "person_or_role": "brother",
         "value": "fairness",
         "sensory_detail": "see"
@@ -952,15 +952,15 @@
     "id": "S-Ekv6zNN",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Some time to relax and enjoy activities with friends and loved ones.",
       "worry": "The earth will be a burning disaster.",
       "ai_future": "Like we really have to change the way that education prepares people for the future.",
       "anchors": {
         "technology": "Electric toothbrush",
-        "object": "communication device",
-        "place": "my bedroom",
-        "time": "23:45",
+        "object": "A communication device",
+        "place": "In my bedroom",
+        "time": "11:45 pm",
         "person_or_role": "scuba diver",
         "value": "safety",
         "sensory_detail": "the water on my skin"
@@ -976,15 +976,15 @@
     "id": "S-KYvGYJg",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "Everyday tasks become easier and people's lives become less stressed.",
-      "worry": "Too much control/surveillance by ai.",
-      "ai_future": "Exiting because ai creates new ways of learning and innovation.",
+      "worry": "Too much control/surveillance by AI.",
+      "ai_future": "exiting because AI creates new ways of learning and innovation.",
       "anchors": {
         "technology": "AI Glasses",
         "object": "laptop",
         "place": "Cottage",
-        "time": "09:11",
+        "time": "9:11 AM",
         "person_or_role": "Lawyer",
         "value": "privacy",
         "sensory_detail": "touch"
@@ -999,9 +999,9 @@
     "id": "S-eqKz5G0",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
-      "hope": "Health",
-      "worry": "Job market",
+      "central_actor": "Family/Peers",
+      "hope": "health",
+      "worry": "job market",
       "ai_future": "Uncertain because the job market and life itself is changing so much.",
       "anchors": {
         "technology": "Iron man suit",
@@ -1023,7 +1023,7 @@
     "id": "S-2E1oB09",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "More time with extended family.",
       "worry": "Tracking and listening from devices.",
       "ai_future": "Confusing because everything is changing, but also innovative because it is something new and useful.",
@@ -1031,7 +1031,7 @@
         "technology": "advanced phone",
         "object": "book",
         "place": "my house",
-        "time": "04:12",
+        "time": "4:12",
         "person_or_role": "Jeff",
         "value": "safety",
         "sensory_detail": "petrichor"
@@ -1046,10 +1046,10 @@
     "id": "S-BzAeDyN",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "More empathy in society",
-      "worry": "Fomo individualistic behaviour is rampant",
-      "ai_future": "Uneasy",
+      "worry": "FOMO individualistic behaviour is rampant",
+      "ai_future": "uneasy",
       "anchors": {
         "technology": "smart AR glasses w/ HUD",
         "object": "espresso machine",
@@ -1069,10 +1069,10 @@
     "id": "S-eqKzYNx",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope i become succesful and be able to play sports at least once a week.",
+      "central_actor": "Me",
+      "hope": "I hope I become succesful and be able to play sports at least once a week.",
       "worry": "The start of aging.",
-      "ai_future": "Uncertain, but if i do something with ai-related it might be alright",
+      "ai_future": "uncertain, but if I do something with AI-related it might be alright",
       "anchors": {
         "technology": "thermal powered fan",
         "object": "books",
@@ -1093,17 +1093,17 @@
     "id": "S-5B8OZxP",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "community",
-      "hope": "I hope that i will have a stable and peaceful life with a loving and caring family.",
+      "central_actor": "Community",
+      "hope": "I hope that I will have a stable and peaceful life with a loving and caring family.",
       "worry": "I worry that technology will take us away from the constant human interactions that we have with our friends and family.",
-      "ai_future": "Promising yet unpredictable",
+      "ai_future": "promising yet unpredictable",
       "anchors": {
         "technology": "Flying cars",
         "object": "shoes",
         "place": "Sky city",
-        "time": "04:20",
+        "time": "4:20",
         "person_or_role": "Girlfriend",
-        "value": "romance",
+        "value": "Romance",
         "sensory_detail": "sunny"
       },
       "themes": [
@@ -1116,7 +1116,7 @@
     "id": "S-ODdVPOA",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "To have a nice family.",
       "worry": "The unexpected",
       "ai_future": "Different and uncertain",
@@ -1124,9 +1124,9 @@
         "technology": "AI",
         "object": "Shoes",
         "place": "Washroom",
-        "time": "07:32",
+        "time": "7:32",
         "person_or_role": "Teacher",
-        "value": "loyalty",
+        "value": "Loyalty",
         "sensory_detail": "Touch"
       },
       "themes": [
@@ -1139,10 +1139,10 @@
     "id": "S-81A2Lqz",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
-      "hope": "I hope i am able to be proud of what i have accomplished so far and continue to pursue my own hobbies",
+      "central_actor": "Family/Peers",
+      "hope": "I hope I am able to be proud of what I have accomplished so far and continue to pursue my own hobbies",
       "worry": "I worry about the state of the world considering the current tensions around the world right now",
-      "ai_future": "Uncertain not because of its applications but because of our growing over reliance on ai.",
+      "ai_future": "uncertain not because of its applications but because of our growing over reliance on AI.",
       "anchors": {
         "technology": "holographic displays",
         "object": "headphones",
@@ -1163,7 +1163,7 @@
     "id": "S-kdK10qo",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Mclaren 720s",
       "worry": "Getting a job",
       "ai_future": "Uncertain as it could replace jobs",
@@ -1171,9 +1171,9 @@
         "technology": "Self driving car",
         "object": "Phone",
         "place": "NYC",
-        "time": "03:00",
+        "time": "3:00AM",
         "person_or_role": "student",
-        "value": "reliability",
+        "value": "Reliability",
         "sensory_detail": "Smell of Dirt"
       },
       "themes": [
@@ -1186,15 +1186,15 @@
     "id": "S-QKvP2Np",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "Happiness and the safety of my children and grandchildren",
       "worry": "Climate issues",
-      "ai_future": "Uncertain, because everything is changing",
+      "ai_future": "uncertain, because everything is changing",
       "anchors": {
         "technology": "health tracking device",
         "object": "book",
         "place": "backyard",
-        "time": "06:00",
+        "time": "6:00 am",
         "person_or_role": "grandfather",
         "value": "safety",
         "sensory_detail": "smell of flowers"
@@ -1210,15 +1210,15 @@
     "id": "S-RGbWRBp",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "In 2050 i strive to watch the news and see peace, see people embracing each other.",
-      "worry": "I worry about war and difference driving people apart. i worry about people not fighting together.",
-      "ai_future": "Uncertain because we don't know how people will use it. how it can be leveraged. if ai can be autonomous.",
+      "central_actor": "Me",
+      "hope": "In 2050 I strive to watch the news and see peace, see people embracing each other.",
+      "worry": "I worry about war and difference driving people apart. I worry about people not fighting together.",
+      "ai_future": "uncertain because we don't know how people will use it. How it can be leveraged. If AI can be autonomous.",
       "anchors": {
         "technology": "translation galsses",
         "object": "television",
         "place": "kitchen",
-        "time": "06:30",
+        "time": "6:30 AM",
         "person_or_role": "classmate",
         "value": "privacy",
         "sensory_detail": "smell of pollution"
@@ -1233,7 +1233,7 @@
     "id": "S-J9e1VOR",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Getting a flying car.",
       "worry": "Worrying about promotions or the wife stuff.",
       "ai_future": "Better because there will be robots to help us with everyday things.",
@@ -1241,9 +1241,9 @@
         "technology": "Ar metaverse glasses.",
         "object": "Hologram",
         "place": "Magnetic floating island",
-        "time": "sunset 8:30",
+        "time": "Sunset 8:30",
         "person_or_role": "Warden",
-        "value": "advancement",
+        "value": "Advancement",
         "sensory_detail": "Sight of flying cars"
       },
       "themes": [
@@ -1257,15 +1257,15 @@
     "id": "S-gDJbO01",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Time with parents and a stable income.",
-      "worry": "How much ai has control over my life.",
-      "ai_future": "Uncertain as human enter a new era.",
+      "worry": "How much AI has control over my life.",
+      "ai_future": "uncertain as human enter a new era.",
       "anchors": {
         "technology": "Self-driving car",
         "object": "Water bottle",
         "place": "my house",
-        "time": "07:00",
+        "time": "7:00 AM",
         "person_or_role": "Parents",
         "value": "wealth",
         "sensory_detail": "Smell of grass"
@@ -1281,15 +1281,15 @@
     "id": "S-aQAO1Kv",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "My goal is to be retired by then, without having to worry about whether or not i will be fired the next day.",
-      "worry": "I think 2050 should be around when i start getting a mid-life crisis.",
+      "central_actor": "Me",
+      "hope": "My goal is to be retired by then, without having to worry about whether or not I will be fired the next day.",
+      "worry": "I think 2050 should be around when I start getting a mid-life crisis.",
       "ai_future": "Both exciting and ominous.",
       "anchors": {
         "technology": "robotic hand",
         "object": "computer",
         "place": "rooftop",
-        "time": "01:00",
+        "time": "1 AM",
         "person_or_role": "ai assistant",
         "value": "equality, privacy",
         "sensory_detail": "neon lights"
@@ -1305,7 +1305,7 @@
     "id": "S-9qRBOqp",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Obtained important accomplishments and have a healthy lifestyle.",
       "worry": "Balance of friendship and family with personal goals.",
       "ai_future": "Uncertain and unpredictable.",
@@ -1313,9 +1313,9 @@
         "technology": "Virtual reality",
         "object": "Water bottle",
         "place": "Europe",
-        "time": "20:30",
+        "time": "8:30 pm",
         "person_or_role": "Pilot",
-        "value": "empathy",
+        "value": "Empathy",
         "sensory_detail": "Fresh air"
       },
       "themes": [
@@ -1329,15 +1329,15 @@
     "id": "S-KYWzP5M",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I hope that all forms of cancer can be cured by 2050 - ambitious but possible.",
       "worry": "I am worried about political rifts deepening to the point where major national powers are in civil war by 2050.",
-      "ai_future": "Exciting due to possibly making major scientific advances with ai, but also frightening as ai could be used harmfully.",
+      "ai_future": "exciting due to possibly making major scientific advances with AI, but also frightening as AI could be used harmfully.",
       "anchors": {
         "technology": "AI medicine",
         "object": "coffee cup",
         "place": "harbourfront",
-        "time": "08:00",
+        "time": "8:00am",
         "person_or_role": "doctor",
         "value": "equality",
         "sensory_detail": "soft waves lapping"
@@ -1353,15 +1353,15 @@
     "id": "S-RGbMovQ",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "Greatly accelerated travel from point a to b.",
-      "worry": "A loss of human creativity due to ai",
-      "ai_future": "Unstable because technological advancements arrive at such a fast pace.",
+      "central_actor": "Shared (human + AI)",
+      "hope": "Greatly accelerated travel from point A to B.",
+      "worry": "A loss of human creativity due to AI",
+      "ai_future": "unstable because technological advancements arrive at such a fast pace.",
       "anchors": {
         "technology": "hyperloop",
         "object": "smartphone",
         "place": "city apartment",
-        "time": "00:00",
+        "time": "0:00h | midnight",
         "person_or_role": "custodian",
         "value": "fairness",
         "sensory_detail": "sense of dullness"
@@ -1377,17 +1377,17 @@
     "id": "S-9qR9vb1",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Self improvement",
       "worry": "Jobs",
-      "ai_future": "Innovative",
+      "ai_future": "innovative",
       "anchors": {
         "technology": "Flying cars",
         "object": "Ruler",
         "place": "Home",
-        "time": "23:00",
+        "time": "11PM",
         "person_or_role": "engineer",
-        "value": "intelligence",
+        "value": "Intelligence",
         "sensory_detail": "Sweet"
       },
       "themes": [
@@ -1400,17 +1400,17 @@
     "id": "S-QKzel17",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "Advanced technology",
-      "worry": "Ai takeover",
+      "worry": "AI takeover",
       "ai_future": "Uncertain and vastly changing",
       "anchors": {
         "technology": "Phone",
         "object": "Toaster",
         "place": "Home",
-        "time": "06:30",
+        "time": "6:30",
         "person_or_role": "Doctor",
-        "value": "privacy",
+        "value": "Privacy",
         "sensory_detail": "Smell"
       },
       "themes": [
@@ -1423,17 +1423,17 @@
     "id": "S-Y5J0lbd",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Grow taller in university",
       "worry": "Getting separated from my loved ones.",
-      "ai_future": "Exciting to work together with ai to develop advanced technology",
+      "ai_future": "Exciting to work together with AI to develop advanced technology",
       "anchors": {
         "technology": "Teleportation",
         "object": "Computer",
         "place": "Bowling center",
         "time": "12:00",
         "person_or_role": "classmate",
-        "value": "safety",
+        "value": "Safety",
         "sensory_detail": "Smell of apple"
       },
       "themes": [
@@ -1447,15 +1447,15 @@
     "id": "S-ob5ejye",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Time w family +good career",
-      "worry": "Ai use, not having a meaningful life",
-      "ai_future": "Uncertain because of the constant growing and development of ai",
+      "worry": "AI use, not having a meaningful life",
+      "ai_future": "uncertain because of the constant growing and development of AI",
       "anchors": {
         "technology": "flying car",
         "object": "phone",
         "place": "my home",
-        "time": "07:00",
+        "time": "7 am",
         "person_or_role": "gardener",
         "value": "patience",
         "sensory_detail": "taste of chicken"
@@ -1471,10 +1471,10 @@
     "id": "S-jaJoZy6",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "More peace, health and financial stability, staying connected with my friends",
-      "worry": "Not being able to see landscapes because of pollution, a very divided world because of politics, no privacy",
-      "ai_future": "Hazy, uncertain and unpredictable",
+      "central_actor": "Me",
+      "hope": "more peace, health and financial stability, staying connected with my friends",
+      "worry": "not being able to see landscapes because of pollution, a very divided world because of politics, no privacy",
+      "ai_future": "hazy, uncertain and unpredictable",
       "anchors": {
         "technology": "smartphone",
         "object": "pen",
@@ -1495,15 +1495,15 @@
     "id": "S-Pdb95lb",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
-      "hope": "I’ll be settled into a good position job-wise. i’m married to the love of my life for 37 years.",
-      "worry": "I am not accomplished and i am not doing well.",
-      "ai_future": "Scary. what if it takes over? what if it replaces human intelligence and people stop putting in effort to learn?",
+      "central_actor": "Family/Peers",
+      "hope": "i’ll be settled into a good position job-wise. I’m married to the love of my life for 37 years.",
+      "worry": "I am not accomplished and I am not doing well.",
+      "ai_future": "Scary. What if it takes over? What if it replaces human intelligence and people stop putting in effort to learn?",
       "anchors": {
         "technology": "translation glasses",
         "object": "phone",
         "place": "Japan appartment",
-        "time": "07:59",
+        "time": "7:59",
         "person_or_role": "Doctor",
         "value": "safety",
         "sensory_detail": "fresh nights"
@@ -1519,15 +1519,15 @@
     "id": "S-0QZ8x4j",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "Happiness and fulfillment.",
       "worry": "Not sure",
-      "ai_future": "Like it's full of possibilities, since we're all uncertain.",
+      "ai_future": "like it's full of possibilities, since we're all uncertain.",
       "anchors": {
         "technology": "AI robot",
         "object": "phone",
         "place": "community bbq rooftop",
-        "time": "18:00",
+        "time": "6PM",
         "person_or_role": "friend",
         "value": "fairness, happiness",
         "sensory_detail": "smell of bbq"
@@ -1543,17 +1543,17 @@
     "id": "S-J9elXKR",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope i can be a history teacher and have a stable family",
+      "central_actor": "Me",
+      "hope": "I hope I can be a history teacher and have a stable family",
       "worry": "Not enough money",
-      "ai_future": "Uncertain, ai is a double-edged sword",
+      "ai_future": "Uncertain, AI is a double-edged sword",
       "anchors": {
         "technology": "Phone",
         "object": "Book",
         "place": "School",
-        "time": "16:20",
+        "time": "4:20pm",
         "person_or_role": "Teacher",
-        "value": "discipline",
+        "value": "Discipline",
         "sensory_detail": "Sight"
       },
       "themes": [
@@ -1567,17 +1567,17 @@
     "id": "S-2ElAgye",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Travel to a lot of different places in the world",
-      "worry": "That ai will take over most of human jobs",
+      "worry": "That AI will take over most of human jobs",
       "ai_future": "Scary but also promising because hopefully it will help us achieve things we cant do",
       "anchors": {
         "technology": "Mini AI telepathic assistant",
         "object": "Phone",
         "place": "Beach in santorini",
-        "time": "sunrise",
+        "time": "Sunrise",
         "person_or_role": "Tourist guide",
-        "value": "happiness",
+        "value": "Happiness",
         "sensory_detail": "Beautiful view"
       },
       "themes": [
@@ -1591,17 +1591,17 @@
     "id": "S-ODbz7NK",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "To live a day filled with purpose, progress, and genuine human connection.",
       "worry": "That technology will disrupt human connection",
-      "ai_future": "Uncertain because ai is growing at a rapid rate. the future feels hopeful, filled with possibilities",
+      "ai_future": "Uncertain because AI is growing at a rapid rate. The future feels hopeful, filled with possibilities",
       "anchors": {
         "technology": "Transition glasses",
         "object": "Phone",
         "place": "Beach",
-        "time": "after sunset",
+        "time": "After sunset",
         "person_or_role": "Grandmother",
-        "value": "safety",
+        "value": "Safety",
         "sensory_detail": "Cold air"
       },
       "themes": [
@@ -1615,17 +1615,17 @@
     "id": "S-dW866Wq",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope to live a relaxed life where i can focus on what interests me and what brings me closer to those that i love.",
+      "central_actor": "Me",
+      "hope": "I hope to live a relaxed life where I can focus on what interests me and what brings me closer to those that I love.",
       "worry": "I worry about the effect climate change is having on our world and the disaster it could lead to if left unchecked.",
-      "ai_future": "Full of possibilities as the ai landscape continues to develop and evolve.",
+      "ai_future": "Full of possibilities as the AI landscape continues to develop and evolve.",
       "anchors": {
         "technology": "Smartwatch",
         "object": "Waterbottle",
         "place": "Outdoors",
-        "time": "10:00",
+        "time": "10:00 AM",
         "person_or_role": "Mother",
-        "value": "accountability",
+        "value": "Accountability",
         "sensory_detail": "Touch of skin"
       },
       "themes": [
@@ -1639,15 +1639,15 @@
     "id": "S-q4JddQk",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I hope that my paycheque will cover my expenses for the next month at least.",
       "worry": "Getting clean water for the family",
-      "ai_future": "Worrying because people are becoming too complacent",
+      "ai_future": "worrying because people are becoming too complacent",
       "anchors": {
         "technology": "internet",
         "object": "backpack",
         "place": "working",
-        "time": "08:30",
+        "time": "8:30 AM",
         "person_or_role": "engineer",
         "value": "hard work",
         "sensory_detail": "hazy air"
@@ -1662,17 +1662,17 @@
     "id": "S-yPo6D0B",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "Hopefully retired",
       "worry": "Major global conflict",
-      "ai_future": "Stable because ai will keep us in check",
+      "ai_future": "Stable because AI will keep us in check",
       "anchors": {
         "technology": "Self driving cars",
         "object": "Calculator",
-        "place": "desk",
-        "time": "17:00",
+        "place": "At desk",
+        "time": "5:00 PM",
         "person_or_role": "Student",
-        "value": "disciplined",
+        "value": "Disciplined",
         "sensory_detail": "Children playing outside"
       },
       "themes": [
@@ -1686,17 +1686,17 @@
     "id": "S-J9e6MjJ",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Have more free time for myself!",
       "worry": "Haven’t really thought about it.",
-      "ai_future": "Something interesting to think about, but stay aware of the potential dangers of ai.",
+      "ai_future": "Something interesting to think about, but stay aware of the potential dangers of AI.",
       "anchors": {
         "technology": "Translation glasses? Not sure",
         "object": "Pencil",
         "place": "Cafe",
-        "time": "09:00",
+        "time": "9:00",
         "person_or_role": "Waiter",
-        "value": "calm/cozy",
+        "value": "Calm/cozy",
         "sensory_detail": "Smell!"
       },
       "themes": [
@@ -1709,15 +1709,15 @@
     "id": "S-ODbzEoM",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "I hope everything will go well for my family, and my grandparents can stay healthy.",
       "worry": "If my sisters can get into schools they want and if they still enjoy high schools as much as they did in middle school.",
-      "ai_future": "More selective, because its knowledge is cumulative and built on datasets far larger than any one human’s experience",
+      "ai_future": "more selective, because its knowledge is cumulative and built on datasets far larger than any one human’s experience",
       "anchors": {
         "technology": "AR glass",
         "object": "Computer",
         "place": "Library",
-        "time": "03:30",
+        "time": "3:30 AM",
         "person_or_role": "Judge",
         "value": "justice",
         "sensory_detail": "sound of rain"
@@ -1733,15 +1733,15 @@
     "id": "S-J9e6oPd",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "teacher/employer",
+      "central_actor": "Teacher/Employer",
       "hope": "Be a doctor",
       "worry": "Not having a job",
-      "ai_future": "Volatile because it's advancing so fast you don't know what is going to still be a viable career in 10 years",
+      "ai_future": "volatile because it's advancing so fast you don't know what is going to still be a viable career in 10 years",
       "anchors": {
         "technology": "flying car",
         "object": "pc",
-        "place": "bed",
-        "time": "09:50",
+        "place": "in bed",
+        "time": "9:50 AM",
         "person_or_role": "doctor",
         "value": "honesty",
         "sensory_detail": "lemon taste"
@@ -1757,7 +1757,7 @@
     "id": "S-q4JdNzk",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Get a great job",
       "worry": "My age",
       "ai_future": "Exciting and insecure",
@@ -1765,9 +1765,9 @@
         "technology": "Phone",
         "object": "Car",
         "place": "Home",
-        "time": "08:30",
+        "time": "8:30am",
         "person_or_role": "My friend",
-        "value": "friend",
+        "value": "Friend",
         "sensory_detail": "Heat waves"
       },
       "themes": [
@@ -1781,17 +1781,17 @@
     "id": "S-0QZx5bQ",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "A stable job and a home with a pet.",
       "worry": "The ability to pay for a home and survive.",
-      "ai_future": "Worrisome for potential unchecked technological advances of ai",
+      "ai_future": "Worrisome for potential unchecked technological advances of AI",
       "anchors": {
         "technology": "Solar panels.",
         "object": "Soy milk",
         "place": "Costco",
-        "time": "12:00",
+        "time": "12pm lunch rush",
         "person_or_role": "Lebron James",
-        "value": "protection",
+        "value": "Protection",
         "sensory_detail": "Bright led lights"
       },
       "themes": [
@@ -1805,7 +1805,7 @@
     "id": "S-Xx8DZVd",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "ai tools",
+      "central_actor": "AI tools",
       "hope": "Equal living conditions",
       "worry": "No privacy",
       "ai_future": "Easier",
@@ -1813,9 +1813,9 @@
         "technology": "Headphones",
         "object": "Water bottle",
         "place": "Kitchen",
-        "time": "sunset",
+        "time": "Sunset",
         "person_or_role": "Professor",
-        "value": "privacy",
+        "value": "Privacy",
         "sensory_detail": "Beach"
       },
       "themes": [
@@ -1829,17 +1829,17 @@
     "id": "S-eq0Bq60",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "I only hope for kind of a universal happiness where my family, friends.",
-      "worry": "I worry about my regrets meaning, do i have any bit regrets when i’m going to be in my forties.",
+      "worry": "I worry about my regrets meaning, do I have any bit regrets when I’m going to be in my forties.",
       "ai_future": "Uncertain, we never know how powerful this tool could get, lots of people could lose their jobs.",
       "anchors": {
         "technology": "High tech glasses",
         "object": "Phone",
         "place": "Bedroom",
-        "time": "morning",
+        "time": "Morning",
         "person_or_role": "Son",
-        "value": "happiness",
+        "value": "Happiness",
         "sensory_detail": "Smell of bbq"
       },
       "themes": [
@@ -1853,7 +1853,7 @@
     "id": "S-WOKAPya",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "More time with friends and family",
       "worry": "Being employed",
       "ai_future": "Ever so changing because constant advances",
@@ -1861,9 +1861,9 @@
         "technology": "Ai",
         "object": "Backpack",
         "place": "Earth",
-        "time": "63:00",
+        "time": "630Am",
         "person_or_role": "Mom and dad",
-        "value": "happiness",
+        "value": "Happiness",
         "sensory_detail": "Hear"
       },
       "themes": [
@@ -1877,17 +1877,17 @@
     "id": "S-jaJBWx4",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope ai takes over every single job and humans just live on big flying spaceships sitting on hovering chairs.",
-      "worry": "I worry that earth becomes so polluted that we have to evacuate and let small robots called wall-e clean up our mess.",
-      "ai_future": "Fun because we might see wall e in real life",
+      "central_actor": "Me",
+      "hope": "I hope AI takes over every single job and humans just live on big flying spaceships sitting on hovering chairs.",
+      "worry": "I worry that Earth becomes so polluted that we have to evacuate and let small robots called Wall-E clean up our mess.",
+      "ai_future": "fun because we might see Wall E in real life",
       "anchors": {
         "technology": "flying axions",
         "object": "Computer",
-        "place": "a flying spacecraft",
-        "time": "night",
+        "place": "On a flying spacecraft",
+        "time": "Night",
         "person_or_role": "Captain",
-        "value": "laziness",
+        "value": "Laziness",
         "sensory_detail": "Smoky dry air"
       },
       "themes": [
@@ -1900,15 +1900,15 @@
     "id": "S-aQABEZv",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "More advanced technology live hover boards",
-      "worry": "Ai controlling more",
-      "ai_future": "Uncertain",
+      "central_actor": "Me",
+      "hope": "more advanced technology live hover boards",
+      "worry": "ai controlling more",
+      "ai_future": "uncertain",
       "anchors": {
         "technology": "phone",
         "object": "fridge",
         "place": "home",
-        "time": "08:00",
+        "time": "8 am",
         "person_or_role": "co worker",
         "value": "trust",
         "sensory_detail": "bright lights"
@@ -1923,17 +1923,17 @@
     "id": "S-aQABDP9",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope to start having a family, settling down, and have no regrets about things that i didn't do while i still had time",
-      "worry": "I dread the feeling of regret. whether it is about the little things, or major things going on in my life.",
-      "ai_future": "The future does not make me feel uncertain with ai, as i would like to pursue business, and economics.",
+      "central_actor": "Me",
+      "hope": "I hope to start having a family, settling down, and have no regrets about things that I didn't do while I still had time",
+      "worry": "I dread the feeling of regret. Whether it is about the little things, or major things going on in my life.",
+      "ai_future": "The future does not make me feel uncertain with AI, as I would like to pursue business, and economics.",
       "anchors": {
         "technology": "AR Assisstant",
         "object": "Laptop",
         "place": "Golf Course",
-        "time": "after sunset looking at stars",
+        "time": "After sunset looking at stars",
         "person_or_role": "Father",
-        "value": "honesty",
+        "value": "Honesty",
         "sensory_detail": "Animated, bright stars"
       },
       "themes": [
@@ -1946,15 +1946,15 @@
     "id": "S-gDJ5WVJ",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I hope for a successful and stable life where i can work from wherever i want.",
+      "central_actor": "Me",
+      "hope": "I hope for a successful and stable life where I can work from wherever I want.",
       "worry": "I'm worried that people will have lost any discipline to do what needs to happen.",
-      "ai_future": "Like we can use it to aid our thoughts.",
+      "ai_future": "like we can use it to aid our thoughts.",
       "anchors": {
         "technology": "I will use AI",
         "object": "cucumber",
-        "place": "private room",
-        "time": "07:40",
+        "place": "a private room",
+        "time": "7:40",
         "person_or_role": "adult actor",
         "value": "privacy",
         "sensory_detail": "soft skin"
@@ -1970,17 +1970,17 @@
     "id": "S-Xx8eNxg",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "Cheaper and improved technology. improved medicine.",
-      "worry": "Proliferation of the middle class. strengthening of the ultra rich. greed, wars.",
+      "central_actor": "Me",
+      "hope": "Cheaper and improved technology. Improved medicine.",
+      "worry": "Proliferation of the middle class. Strengthening of the ultra rich. Greed, wars.",
       "ai_future": "Uncertain, yet hopeful if used correctly.",
       "anchors": {
         "technology": "Improved VR and suit",
         "object": "Laptop",
         "place": "Airport",
-        "time": "19:00",
+        "time": "7:00 pm",
         "person_or_role": "Engineer",
-        "value": "freedom",
+        "value": "Freedom",
         "sensory_detail": "Smell of the sterility"
       },
       "themes": [
@@ -1994,15 +1994,15 @@
     "id": "S-J9eRdYz",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "I just hope the quality of living will be better in 2050, and living standards is avaliable to more people.",
-      "worry": "The main concern i have about 2050 is climate change.",
-      "ai_future": "Ai seems to be replacing more and more jobs, but it hasnt fully phased out any jobs yet.",
+      "worry": "The main concern I have about 2050 is climate change.",
+      "ai_future": "AI seems to be replacing more and more jobs, but it hasnt fully phased out any jobs yet.",
       "anchors": {
         "technology": "Computers",
         "object": "Backpack",
         "place": "Toronto",
-        "time": "09:00",
+        "time": "9:00 am",
         "person_or_role": "Me",
         "value": "determination",
         "sensory_detail": "see"
@@ -2017,15 +2017,15 @@
     "id": "S-ob5BROM",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "ai tools",
+      "central_actor": "AI tools",
       "hope": "I hope to have a family and a great carrier.",
       "worry": "I worry that houses would be too expensive because of inflation.",
-      "ai_future": "Super uncertain because ai is replacing jobs, and it will continue to, and so job insecurity is a real issue.",
+      "ai_future": "super uncertain because AI is replacing jobs, and it will continue to, and so job insecurity is a real issue.",
       "anchors": {
         "technology": "translation glasses",
         "object": "ipad",
         "place": "home",
-        "time": "10:30",
+        "time": "10:30am on a summer night",
         "person_or_role": "physician",
         "value": "safety",
         "sensory_detail": "warm air"
@@ -2041,15 +2041,15 @@
     "id": "S-1ANKxWp",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "community",
+      "central_actor": "Community",
       "hope": "Efficiency.",
-      "worry": "Laziness in the world, and what job i want to pursue as ai is taking jobs.",
-      "ai_future": "Uncertain, almost scary.",
+      "worry": "Laziness in the world, and what job I want to pursue as AI is taking jobs.",
+      "ai_future": "uncertain, almost scary.",
       "anchors": {
         "technology": "AI Glasses",
         "object": "Iphone",
         "place": "Home",
-        "time": "noon",
+        "time": "Noon",
         "person_or_role": "lawyer",
         "value": "pluralism",
         "sensory_detail": "noise of laughter."
@@ -2065,17 +2065,17 @@
     "id": "S-jaJx6k9",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "ai tools",
-      "hope": "Ai will be able to work with humans instead of replacing jobs.",
-      "worry": "Ai will be able to do too many things that humans can to the point where it replaces many jobs.",
-      "ai_future": "Uncertain, there are already many uses of ai that are in the wrong direction.",
+      "central_actor": "AI tools",
+      "hope": "AI will be able to work with humans instead of replacing jobs.",
+      "worry": "AI will be able to do too many things that humans can to the point where it replaces many jobs.",
+      "ai_future": "uncertain, there are already many uses of AI that are in the wrong direction.",
       "anchors": {
         "technology": "Smart Phone",
         "object": "Piano",
         "place": "Toronto",
-        "time": "03:20",
+        "time": "3:20 AM",
         "person_or_role": "Coach",
-        "value": "safety",
+        "value": "Safety",
         "sensory_detail": "hot soup"
       },
       "themes": [
@@ -2089,15 +2089,15 @@
     "id": "S-Me65azl",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "Solve issues of global challenges",
-      "worry": "Ai vs humans happening",
-      "ai_future": "Uncertain and unprecedented possibilities upcoming",
+      "central_actor": "Shared (human + AI)",
+      "hope": "solve issues of global challenges",
+      "worry": "ai vs humans happening",
+      "ai_future": "uncertain and unprecedented possibilities upcoming",
       "anchors": {
         "technology": "brain comp interface",
         "object": "pencil",
         "place": "space station",
-        "time": "14:45",
+        "time": "2:45 PM",
         "person_or_role": "classmate",
         "value": "safety",
         "sensory_detail": "taste of bread"
@@ -2113,7 +2113,7 @@
     "id": "S-1ANE7p4",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "family/peers",
+      "central_actor": "Family/Peers",
       "hope": "More peace and equality",
       "worry": "Worsening economy",
       "ai_future": "Simpler, but also less creative and with less job opportunities",
@@ -2121,9 +2121,9 @@
         "technology": "Map guiding drone",
         "object": "Car",
         "place": "Park",
-        "time": "18:00",
+        "time": "6:00 PM",
         "person_or_role": "Friend",
-        "value": "safety",
+        "value": "Safety",
         "sensory_detail": "Hear"
       },
       "themes": [
@@ -2137,17 +2137,17 @@
     "id": "S-QKz0pAX",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "To be able to spend lots of time with my friends. there doesn't have to be a specific activity we are doing.",
-      "worry": "How will the human race survive especially with the rapid development of ai",
-      "ai_future": "Uncertain. we don't know what the future will look like with the rise of ai",
+      "central_actor": "Me",
+      "hope": "To be able to spend lots of time with my friends. There doesn't have to be a specific activity we are doing.",
+      "worry": "How will the human race survive especially with the rapid development of AI",
+      "ai_future": "Uncertain. We don't know what the future will look like with the rise of AI",
       "anchors": {
         "technology": "AI",
         "object": "Chopstick",
         "place": "Garden",
-        "time": "07:30",
+        "time": "7:30am",
         "person_or_role": "Classmate",
-        "value": "friendship",
+        "value": "Friendship",
         "sensory_detail": "Smell of flowers"
       },
       "themes": [
@@ -2161,15 +2161,15 @@
     "id": "S-2ElrMVD",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "Being able to instantly travel to any place in the world",
-      "worry": "A society where face to face interaction is rare",
-      "ai_future": "Exciting and hopeful because we might be able to solve problems with solutions we can’t yet imagine",
+      "central_actor": "Shared (human + AI)",
+      "hope": "being able to instantly travel to any place in the world",
+      "worry": "a society where face to face interaction is rare",
+      "ai_future": "exciting and hopeful because we might be able to solve problems with solutions we can’t yet imagine",
       "anchors": {
         "technology": "wearable memory recorder",
         "object": "paintbrush",
         "place": "playground",
-        "time": "05:30",
+        "time": "5:30am",
         "person_or_role": "cousin",
         "value": "creativity",
         "sensory_detail": "smell of fresh rain"
@@ -2185,17 +2185,17 @@
     "id": "S-RGbRDOd",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I get accepted into queens commerce and excel in their program and community.",
-      "worry": "Loosing the fiends i currently have when we all split paths to different universities.",
+      "central_actor": "Me",
+      "hope": "I get accepted into Queens Commerce and excel in their program and community.",
+      "worry": "Loosing the fiends I currently have when we all split paths to different universities.",
       "ai_future": "Scary because of job losses",
       "anchors": {
         "technology": "Drones",
         "object": "AirPods",
         "place": "Library",
-        "time": "sunrise",
+        "time": "Sunrise",
         "person_or_role": "Sister",
-        "value": "fairness",
+        "value": "Fairness",
         "sensory_detail": "Warm sun"
       },
       "themes": [
@@ -2208,17 +2208,17 @@
     "id": "S-lbYLYNX",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "One thing i hope to do is being able to relive my childhood with the newest technology.",
-      "worry": "I worry that this new technology might change what i think, and what i do as a result, while reliving my childhood.",
+      "central_actor": "Me",
+      "hope": "One thing I hope to do is being able to relive my childhood with the newest technology.",
+      "worry": "I worry that this new technology might change what I think, and what I do as a result, while reliving my childhood.",
       "ai_future": "Everything is new and fast-paced, so they are all unpredictable and fanciful.",
       "anchors": {
         "technology": "Time machine",
         "object": "Laptop",
         "place": "My room",
-        "time": "midnight",
+        "time": "Midnight",
         "person_or_role": "Childhood friend",
-        "value": "happiness",
+        "value": "Happiness",
         "sensory_detail": "Flashing neon lights at night"
       },
       "themes": [
@@ -2232,7 +2232,7 @@
     "id": "S-vGJ4KD0",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Lots of money for me",
       "worry": "Money not being useful",
       "ai_future": "Like it could be super futuristic",
@@ -2242,7 +2242,7 @@
         "place": "France",
         "time": "12:00",
         "person_or_role": "Mom",
-        "value": "fun",
+        "value": "Fun",
         "sensory_detail": "Smell baguettes chocolate"
       },
       "themes": [
@@ -2256,17 +2256,17 @@
     "id": "S-b5YLvyZ",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I hope for all conflict and tension between people and countries across the globe ends so people can improve as one.",
-      "worry": "The honesty and reality about climate change, ai, and a bunch of other risks towards humanity and the globe.",
-      "ai_future": "Uncertain. ai has done a ton of work that humans used to have to and they’re improving but also harming the future.",
+      "worry": "The honesty and reality about climate change, AI, and a bunch of other risks towards humanity and the globe.",
+      "ai_future": "Uncertain. AI has done a ton of work that humans used to have to and they’re improving but also harming the future.",
       "anchors": {
         "technology": "AI",
         "object": "Computer",
-        "place": "park",
-        "time": "12:30",
+        "place": "The park",
+        "time": "12:30pm",
         "person_or_role": "Classroom",
-        "value": "equality",
+        "value": "Equality",
         "sensory_detail": "Dry air"
       },
       "themes": [
@@ -2280,17 +2280,17 @@
     "id": "S-xXR4OZE",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "Humans on mars",
+      "central_actor": "Shared (human + AI)",
+      "hope": "Humans on Mars",
       "worry": "Restricted laptop use",
-      "ai_future": "Bright and optimistic",
+      "ai_future": "bright and optimistic",
       "anchors": {
         "technology": "Bullet trains",
         "object": "Pencil",
         "place": "Outside",
-        "time": "06:30",
+        "time": "6:30 am",
         "person_or_role": "Astronaut",
-        "value": "equality",
+        "value": "Equality",
         "sensory_detail": "Cricket sounds"
       },
       "themes": [
@@ -2304,10 +2304,10 @@
     "id": "S-vGJJ978",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I would hope for more time to spend with my family, so having a work-life balance.",
-      "worry": "I worry about the influence of ai in our society and work forces.",
-      "ai_future": "Uncertain because everything will be changing rapidly.",
+      "worry": "I worry about the influence of AI in our society and work forces.",
+      "ai_future": "uncertain because everything will be changing rapidly.",
       "anchors": {
         "technology": "smart glasses",
         "object": "water bottle",
@@ -2328,14 +2328,14 @@
     "id": "S-GxqQdge",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
-      "hope": "I wake up and go to bed satisfied and happy with my life",
-      "worry": "Stress from work",
-      "ai_future": "Cooked because we all might lose our jobs",
+      "central_actor": "Me",
+      "hope": "i wake up and go to bed satisfied and happy with my life",
+      "worry": "stress from work",
+      "ai_future": "cooked because we all might lose our jobs",
       "anchors": {
         "technology": "ai brain chip",
         "object": "running shoes",
-        "place": "the beach",
+        "place": "on the beach",
         "time": "golden hour",
         "person_or_role": "advisor",
         "value": "honesty",
@@ -2352,15 +2352,15 @@
     "id": "S-ODbgRP7",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
-      "hope": "I hope that i get to eat very delicious food",
-      "worry": "Worry about the environment and the decline of human intelligence",
-      "ai_future": "Worrying because we may be overthrown by ai.",
+      "central_actor": "Shared (human + AI)",
+      "hope": "I hope that I get to eat very delicious food",
+      "worry": "worry about the environment and the decline of human intelligence",
+      "ai_future": "worrying because we may be overthrown by AI.",
       "anchors": {
         "technology": "neuro data implant",
         "object": "waterbottle",
         "place": "my home",
-        "time": "07:15",
+        "time": "7:15 AM",
         "person_or_role": "doctor",
         "value": "fairness",
         "sensory_detail": "smell freshly baked cookies"
@@ -2376,17 +2376,17 @@
     "id": "S-VLbybDa",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Plenty of free time to relax and enjoy life.",
-      "worry": "Nuclear war. it only takes one unstable individual gaining power.",
-      "ai_future": "Dangerous due to the risk of ai world domination.",
+      "worry": "Nuclear war. It only takes one unstable individual gaining power.",
+      "ai_future": "Dangerous due to the risk of AI world domination.",
       "anchors": {
         "technology": "Neuralink",
         "object": "Window",
         "place": "My house",
-        "time": "midnight",
+        "time": "Midnight",
         "person_or_role": "Father",
-        "value": "safety",
+        "value": "Safety",
         "sensory_detail": "Vertigo"
       },
       "themes": [
@@ -2400,15 +2400,15 @@
     "id": "S-VLbALbl",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "community",
+      "central_actor": "Community",
       "hope": "More renewable energy sources such as algae carbon capture mechanisms.",
       "worry": "Too much pollution, population decline, poor government",
-      "ai_future": "Scary, you don't know what's real or who is going to be replaced soon.",
+      "ai_future": "scary, you don't know what's real or who is going to be replaced soon.",
       "anchors": {
         "technology": "instant oven",
         "object": "Efficient TTC",
         "place": "school garden",
-        "time": "15:30",
+        "time": "3:30 pm afterschool",
         "person_or_role": "mad scientist",
         "value": "change and action",
         "sensory_detail": "bright neon lights"
@@ -2424,17 +2424,17 @@
     "id": "S-xXRLpg5",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "I hope to be able to have a stable job and friends to have fun with",
       "worry": "Having the same monotonous day over and over because of work.",
-      "ai_future": "Innovative i believe that ai will be able to help us advance faster than ever before",
+      "ai_future": "Innovative I believe that AI will be able to help us advance faster than ever before",
       "anchors": {
         "technology": "Holograms",
         "object": "Water bottle",
         "place": "Business office",
-        "time": "20:00",
+        "time": "8pm",
         "person_or_role": "Father",
-        "value": "fairness",
+        "value": "Fairness",
         "sensory_detail": "Cold breeze"
       },
       "themes": [
@@ -2448,7 +2448,7 @@
     "id": "S-kdJPrgR",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "Happiness",
       "worry": "Health",
       "ai_future": "Dystopian",
@@ -2456,9 +2456,9 @@
         "technology": "Teleport machine",
         "object": "Mirror",
         "place": "Italy",
-        "time": "08:27",
+        "time": "8:27",
         "person_or_role": "Mother",
-        "value": "respect",
+        "value": "Respect",
         "sensory_detail": "Smell of rain"
       },
       "themes": [
@@ -2472,17 +2472,17 @@
     "id": "S-jakorz6",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "shared (human + ai)",
+      "central_actor": "Shared (human + AI)",
       "hope": "Spending time with loved ones like my parents, children, and significant other.",
       "worry": "People being too dependent on their screens and losing genuine connection.",
-      "ai_future": "Promising and convenient, but only if we don't misuse ai.",
+      "ai_future": "promising and convenient, but only if we don't misuse AI.",
       "anchors": {
         "technology": "VR glasses",
         "object": "Phone",
         "place": "Japan",
-        "time": "sunset",
+        "time": "Sunset",
         "person_or_role": "Finance",
-        "value": "freedom",
+        "value": "Freedom",
         "sensory_detail": "Smell of rain"
       },
       "themes": [
@@ -2496,10 +2496,10 @@
     "id": "S-dWk0LJq",
     "seed_canonical": {
       "language": "English",
-      "central_actor": "me",
+      "central_actor": "Me",
       "hope": "More time with grandparents",
-      "worry": "Constant tracking at school",
-      "ai_future": "Uncertain because everything is changing",
+      "worry": "constant tracking at school",
+      "ai_future": "uncertain because everything is changing",
       "anchors": {
         "technology": "transitional glasses",
         "object": "lunchbox",
