@@ -21,12 +21,7 @@ def noun_phrase(s):
     return re.sub(r"^(at|in|on|the|a|an)\s+", "", (s or "").strip(), flags=re.I)
 
 def sensory(s):
-    s = (s or "").strip()
-    if not s:
-        return s
-    if " " not in s:
-        return f"smell of {s.lower()}"
-    return s
+    return (s or "").strip()
 
 def title_case_list(xs):
     return [x.strip().title() for x in xs if x.strip()]

@@ -14,7 +14,7 @@
         "time": "03:00",
         "person_or_role": "friend",
         "value": "truth",
-        "sensory_detail": "smell of smell"
+        "sensory_detail": "smell"
       },
       "themes": [
         "Health",
@@ -180,7 +180,7 @@
         "time": "17:00",
         "person_or_role": "team mate",
         "value": "trueness",
-        "sensory_detail": "smell of smell"
+        "sensory_detail": "smell"
       },
       "themes": [
         "Civic Life",
@@ -204,7 +204,7 @@
         "time": "63:00",
         "person_or_role": "MY AI",
         "value": "artificial",
-        "sensory_detail": "smell of inteligence"
+        "sensory_detail": "inteligence"
       },
       "themes": [
         "Care"
@@ -275,7 +275,7 @@
         "time": "05:00",
         "person_or_role": "Son",
         "value": "justice",
-        "sensory_detail": "smell of boom"
+        "sensory_detail": "BOOM"
       },
       "themes": [
         "Work"
@@ -370,7 +370,7 @@
         "time": "03:00",
         "person_or_role": "Granpa",
         "value": "priva",
-        "sensory_detail": "smell of smell"
+        "sensory_detail": "Smell"
       },
       "themes": [
         "Education"
@@ -393,7 +393,7 @@
         "time": "21:12",
         "person_or_role": "Mother",
         "value": "honesty",
-        "sensory_detail": "smell of see"
+        "sensory_detail": "See"
       },
       "themes": [
         "Work",
@@ -819,7 +819,7 @@
         "time": "06:70",
         "person_or_role": "President of the United States",
         "value": "leadership",
-        "sensory_detail": "smell of stinky"
+        "sensory_detail": "Stinky"
       },
       "themes": [
         "Work",
@@ -939,7 +939,7 @@
         "time": "07:05",
         "person_or_role": "brother",
         "value": "fairness",
-        "sensory_detail": "smell of see"
+        "sensory_detail": "see"
       },
       "themes": [
         "Education",
@@ -987,7 +987,7 @@
         "time": "09:11",
         "person_or_role": "Lawyer",
         "value": "privacy",
-        "sensory_detail": "smell of touch"
+        "sensory_detail": "touch"
       },
       "themes": [
         "Creativity"
@@ -1010,7 +1010,7 @@
         "time": "sunrise",
         "person_or_role": "priest",
         "value": "privacy",
-        "sensory_detail": "smell of touch"
+        "sensory_detail": "touch"
       },
       "themes": [
         "Identity",
@@ -1034,7 +1034,7 @@
         "time": "04:12",
         "person_or_role": "Jeff",
         "value": "safety",
-        "sensory_detail": "smell of petrichor"
+        "sensory_detail": "petrichor"
       },
       "themes": [
         "Creativity"
@@ -1080,7 +1080,7 @@
         "time": "sunset",
         "person_or_role": "software engineer",
         "value": "honesty",
-        "sensory_detail": "smell of see"
+        "sensory_detail": "see"
       },
       "themes": [
         "Identity",
@@ -1104,7 +1104,7 @@
         "time": "04:20",
         "person_or_role": "Girlfriend",
         "value": "romance",
-        "sensory_detail": "smell of sunny"
+        "sensory_detail": "sunny"
       },
       "themes": [
         "Identity"
@@ -1127,7 +1127,7 @@
         "time": "07:32",
         "person_or_role": "Teacher",
         "value": "loyalty",
-        "sensory_detail": "smell of touch"
+        "sensory_detail": "Touch"
       },
       "themes": [
         "Care"
@@ -1388,7 +1388,7 @@
         "time": "23:00",
         "person_or_role": "engineer",
         "value": "intelligence",
-        "sensory_detail": "smell of sweet"
+        "sensory_detail": "Sweet"
       },
       "themes": [
         "Work"
@@ -1411,7 +1411,7 @@
         "time": "06:30",
         "person_or_role": "Doctor",
         "value": "privacy",
-        "sensory_detail": "smell of smell"
+        "sensory_detail": "Smell"
       },
       "themes": [
         "Identity"
@@ -1554,7 +1554,7 @@
         "time": "16:20",
         "person_or_role": "Teacher",
         "value": "discipline",
-        "sensory_detail": "smell of sight"
+        "sensory_detail": "Sight"
       },
       "themes": [
         "Education",
@@ -1697,7 +1697,7 @@
         "time": "09:00",
         "person_or_role": "Waiter",
         "value": "calm/cozy",
-        "sensory_detail": "smell of smell!"
+        "sensory_detail": "Smell!"
       },
       "themes": [
         "Health"
@@ -1816,7 +1816,7 @@
         "time": "sunset",
         "person_or_role": "Professor",
         "value": "privacy",
-        "sensory_detail": "smell of beach"
+        "sensory_detail": "Beach"
       },
       "themes": [
         "Health",
@@ -1864,7 +1864,7 @@
         "time": "63:00",
         "person_or_role": "Mom and dad",
         "value": "happiness",
-        "sensory_detail": "smell of hear"
+        "sensory_detail": "Hear"
       },
       "themes": [
         "Care",
@@ -2005,7 +2005,7 @@
         "time": "09:00",
         "person_or_role": "Me",
         "value": "determination",
-        "sensory_detail": "smell of see"
+        "sensory_detail": "see"
       },
       "themes": [
         "Education"
@@ -2124,7 +2124,7 @@
         "time": "18:00",
         "person_or_role": "Friend",
         "value": "safety",
-        "sensory_detail": "smell of hear"
+        "sensory_detail": "Hear"
       },
       "themes": [
         "Care",
@@ -2315,7 +2315,7 @@
         "time": "sunset",
         "person_or_role": "mother",
         "value": "safety",
-        "sensory_detail": "smell of see"
+        "sensory_detail": "see"
       },
       "themes": [
         "Identity",
@@ -2339,7 +2339,7 @@
         "time": "golden hour",
         "person_or_role": "advisor",
         "value": "honesty",
-        "sensory_detail": "smell of laughter"
+        "sensory_detail": "laughter"
       },
       "themes": [
         "Education",
@@ -2387,7 +2387,7 @@
         "time": "midnight",
         "person_or_role": "Father",
         "value": "safety",
-        "sensory_detail": "smell of vertigo"
+        "sensory_detail": "Vertigo"
       },
       "themes": [
         "Civic Life",
