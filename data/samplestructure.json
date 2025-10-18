@@ -1,0 +1,40 @@
+[
+  {
+    "id": "S-0001",
+    "submitted_at": "2025-09-08T12:37:29",
+    "seed": {
+      "respondent_id": "WG7Bxe",
+      "language": "English",
+      "age_band": "50",
+      "consent": true,
+      "hope": "Clean air",
+      "worry": "Food scarcity",
+      "ai_future": "as a society we are dumbing down",
+      "technology": "biotechnology",
+      "object": "shoes",
+      "place": "near a mountain",
+      "time": "3:00 AM",
+      "person_or_role": "friend",
+      "value": "truth",
+      "sensory_detail": "smell",
+      "central_actor": "Me",
+      "themes": ["Health", "Care"]
+    },
+    "ai": {
+      "hopeful": {
+        "title": "The Clear Air of 2050",
+        "text": "At 3:00 AM, I jog near the mountain campus. The air smells of pine and new biotech filters hum beneath the soil..."
+      },
+      "cautionary": {
+        "title": "Smog Beneath the Dome",
+        "text": "By 3:00 AM the mountain is hidden. Synthetic shoes creak as I check the air vents—biotech failed again..."
+      },
+      "balanced": {
+        "title": "Between Filter and Breath",
+        "text": "Sometimes the air is crisp, sometimes heavy, but we still meet to test our biotech shoes by the ridge..."
+      }
+    },
+    "metrics": {
+    }
+  }
+]
