@@ -136,7 +136,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
 
   const frontFace = (
     <section
-      className="flip-face glass-scrim flex h-full flex-col gap-6"
+      className="flip-face glass-scrim flex h-full flex-col gap-4 py-6"
       aria-label="Seed inputs"
       aria-hidden={prefersReducedMotion ? false : isFlipped}
       style={{
@@ -146,16 +146,16 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
         frontRef.current = node
       }}
     >
-      <dl className="grid flex-1 gap-4 sm:grid-cols-2">
+      <dl className="grid flex-1 gap-3 pb-6 sm:grid-cols-2">
         {seedDetails.map(({ label, value }) => (
           <div
             key={label}
-            className="glass-panel flex h-full flex-col justify-between gap-4 rounded-2xl border border-white/20 bg-white/18 p-5 text-sm text-slate/85"
+            className="glass-panel flex h-full flex-col gap-2 rounded-2xl border border-white/20 bg-white/18 p-5 text-sm text-slate/85"
           >
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate/70">
+            <dt className="text-[11px] font-semibold uppercase tracking-[0.3em] !text-indigo-700">
               {label}
             </dt>
-            <dd className="glass-body text-base leading-relaxed text-slate/90">
+            <dd className="glass-body mt-1 text-base leading-relaxed text-slate/90">
               {value}
             </dd>
           </div>
@@ -216,7 +216,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
             />
           </div>
 
-          <div className="relative">
+          <div className="relative flex-1">
             {STORY_ORDER.map((variantKey) => {
               const weight = sliderWeights[variantKey]
               const variant =

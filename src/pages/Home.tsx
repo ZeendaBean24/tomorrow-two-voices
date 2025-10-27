@@ -28,7 +28,7 @@ const TypewriterTitle = () => {
   useEffect(() => {
     if (prefersReducedMotion) return
 
-    let timeout: ReturnType<typeof setTimeout> | undefined
+    let timeout: number | undefined
 
     if (!isDeleting && displayed.length < TITLE.length) {
       timeout = window.setTimeout(() => {
@@ -49,7 +49,7 @@ const TypewriterTitle = () => {
     }
 
     return () => {
-      if (timeout) window.clearTimeout(timeout)
+      if (timeout !== undefined) window.clearTimeout(timeout)
     }
   }, [displayed, isDeleting, prefersReducedMotion])
 

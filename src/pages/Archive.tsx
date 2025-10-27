@@ -67,6 +67,10 @@ const Archive = () => {
   }, [currentPage, totalPages])
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [currentPage])
+
+  useEffect(() => {
     if (location.hash) {
       const elementId = location.hash.replace('#', '')
       window.setTimeout(() => {
@@ -84,8 +88,7 @@ const Archive = () => {
       <header className="space-y-4">
         <h1 className="glass-heading text-4xl">2050 Futures Archive</h1>
         <p className="glass-body max-w-3xl text-lg">
-          Filter by themes, agency, language, age band, or search across seeds
-          and stories to see how each prompt branches into alternate futures.
+          Each story begins with a seed: a glimpse of one person’s imagined 2050. <br />Watch how each seed branches into hopeful, balanced, and cautionary futures.
         </p>
       </header>
 
