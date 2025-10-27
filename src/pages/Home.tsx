@@ -2,8 +2,8 @@ import type { PointerEvent as ReactPointerEvent } from 'react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import heroTexture from '@assets/paper-texture.svg'
+import generalStatsData from '@data/general_stats.json'
 import { useStories } from '../lib/StoriesContext'
-import { getSeedsCount, getStoriesCount } from '../lib/metrics'
 import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion'
 import { useTilt } from '../lib/useTilt'
 import HomeParallax from '../components/HomeParallax'
@@ -61,15 +61,20 @@ const TypewriterTitle = () => {
 }
 
 const Home = () => {
-  const { stories, isLoading, error } = useStories()
+  const statsSource = generalStatsData as {
+    seeds: number
+    stories: number
+    letters: number
+    words: number
+    sentences: number
+  }
+  const { isLoading, error } = useStories()
   const heroTiltRef = useTilt<HTMLDivElement>({
     maxDeg: 6,
     baseShadow: '0.12',
     activeShadow: '0.28',
   })
 
-  const seedsCount = getSeedsCount(stories)
-  const storiesCount = getStoriesCount(stories)
   const updateSpotlight = (event: ReactPointerEvent<HTMLElement>) => {
     const { currentTarget } = event
     const rect = currentTarget.getBoundingClientRect()
@@ -109,12 +114,14 @@ const Home = () => {
     },
   ]
 
+  const statValue = (value: number): string => value.toLocaleString('en-US')
+
   const stats = [
-    { label: 'Seeds', value: seedsCount.toLocaleString('en-US') },
-    { label: 'Stories', value: storiesCount.toLocaleString('en-US') },
-    { label: 'Letters processed', value: '48,205' },
-    { label: 'Words processed', value: '128,940' },
-    { label: 'Sentences processed', value: '7,320' },
+    { label: 'Seeds', value: statValue(statsSource.seeds) },
+    { label: 'Stories', value: statValue(statsSource.stories) },
+    { label: 'Sentences processed', value: statValue(statsSource.sentences) },
+    { label: 'Words processed', value: statValue(statsSource.words) },
+    { label: 'Letters processed', value: statValue(statsSource.letters) },
   ]
 
   return (
@@ -126,7 +133,7 @@ const Home = () => {
       <div className="relative z-50 flex flex-col gap-16">
         <div
           ref={heroTiltRef}
-          className="tilt-layer hero-ink-panel glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg hover:ring-white/60 relative overflow-hidden rounded-3xl p-10"
+          className="tilt-layer hero-ink-panel glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg hover:ring-white/60 relative w-full overflow-hidden rounded-3xl p-10"
           onPointerMove={updateSpotlight}
           onPointerLeave={(event) => resetSpotlight(event, '50%', '35%')}
         >
@@ -141,9 +148,8 @@ const Home = () => {
             <h1 className="glass-heading hero-ink-heading text-4xl leading-tight tracking-tight sm:text-5xl">
               <TypewriterTitle />
             </h1>
-            <p className="glass-body hero-ink-body max-w-2xl text-lg">
-              One seed, three futures. Explore how AI imagines 2050 through
-              hopeful, balanced, and cautionary retellings of citizen prompts.
+            <p className="glass-body hero-ink-body text-lg">
+              One idea. Three possibilities. A dialogue between people and AI about tomorrow.
             </p>
             <div
               className="flex flex-wrap gap-3"
