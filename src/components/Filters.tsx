@@ -67,7 +67,7 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
               onChange={(event) =>
                 onChange({ ...filters, search: event.target.value })
               }
-              placeholder="Keywords across seeds and stories"
+              placeholder="Keywords across seeds"
               className="w-60 rounded-full bg-white/16 px-3 py-1 text-sm text-slate/80 backdrop-blur-md ring-1 ring-white/25 focus-visible:focus-ring"
             />
           </div>

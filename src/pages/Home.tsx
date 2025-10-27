@@ -142,8 +142,8 @@ const Home = () => {
               <TypewriterTitle />
             </h1>
             <p className="glass-body hero-ink-body max-w-2xl text-lg">
-              One seed, two futures. Explore how AI imagines 2050 through
-              hopeful and cautionary retellings of citizen prompts.
+              One seed, three futures. Explore how AI imagines 2050 through
+              hopeful, balanced, and cautionary retellings of citizen prompts.
             </p>
             <div
               className="flex flex-wrap gap-3"
@@ -155,6 +155,18 @@ const Home = () => {
                 className="rounded-full bg-indigo-600 px-6 py-2 text-sm font-semibold text-white shadow transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-indigo-700 focus-visible:focus-ring"
               >
                 Enter the Archive
+              </Link>
+              <Link
+                to="/insights"
+                className="rounded-full border border-white/30 bg-white/20 px-6 py-2 text-sm font-semibold text-slate/85 backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white/28 focus-visible:focus-ring"
+              >
+                Insights
+              </Link>
+              <Link
+                to="/methods"
+                className="rounded-full border border-white/30 bg-white/20 px-6 py-2 text-sm font-semibold text-slate/85 backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white/28 focus-visible:focus-ring"
+              >
+                Methods
               </Link>
               <Link
                 to="/submit"
