@@ -136,7 +136,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
 
   const frontFace = (
     <section
-      className="flip-face glass-scrim flex h-full flex-col gap-5"
+      className="flip-face glass-scrim flex h-full flex-col gap-6"
       aria-label="Seed inputs"
       aria-hidden={prefersReducedMotion ? false : isFlipped}
       style={{
@@ -146,16 +146,18 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
         frontRef.current = node
       }}
     >
-      <dl className="grid gap-3 sm:grid-cols-2">
+      <dl className="grid flex-1 gap-4 sm:grid-cols-2">
         {seedDetails.map(({ label, value }) => (
           <div
             key={label}
-            className="glass-panel flex flex-col gap-1 rounded-2xl border border-white/20 bg-white/18 p-4 text-sm text-slate/85"
+            className="glass-panel flex h-full flex-col justify-between gap-4 rounded-2xl border border-white/20 bg-white/18 p-5 text-sm text-slate/85"
           >
-            <dt className="text-[11px] uppercase tracking-[0.3em] text-slate/50">
+            <dt className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate/70">
               {label}
             </dt>
-            <dd className="glass-body text-sm">{value}</dd>
+            <dd className="glass-body text-base leading-relaxed text-slate/90">
+              {value}
+            </dd>
           </div>
         ))}
       </dl>
@@ -175,7 +177,7 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
         backRef.current = node
       }}
     >
-      <div className="space-y-4">
+      <div className="flex flex-1 flex-col gap-5">
         <header className="space-y-2">
           <p className="text-xs uppercase tracking-[0.3em] text-slate/60">
             AI retellings
@@ -188,8 +190,8 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
           </div>
         </header>
 
-        <div className="space-y-4">
-          <div className="space-y-2">
+        <div className="flex flex-1 flex-col gap-4">
+          <div className="space-y-3">
             <label
               htmlFor={sliderId}
               className="flex items-center justify-between text-[11px] uppercase tracking-[0.35em] text-slate/60"
