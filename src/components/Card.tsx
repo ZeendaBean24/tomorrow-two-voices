@@ -288,7 +288,6 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
       <div className="glass-scrim space-y-6">
         <div className="flex flex-wrap items-center gap-3 text-xs">
           <MetaPill label="Submitted" value={submittedLabel} />
-          <MetaPill label="Language" value={story.seed.language} />
           <MetaPill label="ID" value={story.id} />
         </div>
 

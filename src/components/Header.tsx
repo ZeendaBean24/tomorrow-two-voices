@@ -10,7 +10,7 @@ const links = [
 ]
 
 export const Header = () => (
-  <header className="glass-panel sticky top-0 z-60 rounded-none border-b border-white/25 bg-white/18 backdrop-blur-xl">
+  <header className="glass-panel relative z-60 rounded-none border-b border-white/25 bg-white/18 backdrop-blur-xl">
     <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
       <div className="flex items-center gap-3">
         <img src={logo} alt="Tomorrow, In Two Voices" className="h-10 w-auto" />

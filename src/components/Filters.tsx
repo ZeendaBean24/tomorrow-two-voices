@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import { defaultArchiveFilters } from '../lib/filters'
 import type { ArchiveFilters } from '../lib/filters'
 
@@ -29,13 +30,15 @@ const toggleTheme = (
 }
 
 const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
+  const searchId = useId()
+
   const handleSingleSelect = (key: keyof ArchiveFilters, value?: string) => {
     onChange({ ...filters, [key]: filters[key] === value ? undefined : value })
   }
 
   return (
     <div className="relative z-30">
-      <div className="sticky top-24 space-y-4 md:top-28">
+      <div className="space-y-4">
         <div className="glass-panel flex flex-wrap items-center gap-3 rounded-full border border-white/25 bg-white/20 px-5 py-4 text-sm text-slate/80 hover:-translate-y-0.5 hover:ring-indigo-500/30">
           <span
             className="rounded-full border border-indigo/40 bg-indigo/20 px-4 py-1 font-semibold text-indigo"
@@ -50,6 +53,24 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
           >
             Clear all
           </button>
+          <div className="ml-auto flex items-center gap-2">
+            <label
+              htmlFor={searchId}
+              className="text-xs uppercase tracking-[0.25em] text-slate/60"
+            >
+              Search
+            </label>
+            <input
+              id={searchId}
+              type="search"
+              value={filters.search ?? ''}
+              onChange={(event) =>
+                onChange({ ...filters, search: event.target.value })
+              }
+              placeholder="Keywords across seeds and stories"
+              className="w-60 rounded-full bg-white/16 px-3 py-1 text-sm text-slate/80 backdrop-blur-md ring-1 ring-white/25 focus-visible:focus-ring"
+            />
+          </div>
         </div>
 
         <div className="glass-panel rounded-3xl border border-white/25 bg-white/18 p-4">

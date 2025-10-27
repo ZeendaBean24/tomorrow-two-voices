@@ -7,6 +7,7 @@ export type ArchiveFilters = {
   agency?: MaybeString
   ageBand?: MaybeString
   language?: MaybeString
+  search?: MaybeString
 }
 
 export const defaultArchiveFilters: ArchiveFilters = {
@@ -14,6 +15,7 @@ export const defaultArchiveFilters: ArchiveFilters = {
   agency: undefined,
   ageBand: undefined,
   language: undefined,
+  search: '',
 }
 
 const matchesThemes = (story: Story, selected: string[]) => {
@@ -26,6 +28,34 @@ const matchesValue = (value: string, selected?: MaybeString) => {
   return value.toLowerCase() === selected.toLowerCase()
 }
 
+const matchesSearch = (story: Story, query?: MaybeString) => {
+  const normalized = query?.trim().toLowerCase()
+  if (!normalized) return true
+  const seedParts = [
+    story.seed.hope,
+    story.seed.worry,
+    story.seed.ai_future,
+    story.seed.technology,
+    story.seed.object,
+    story.seed.place,
+    story.seed.time,
+    story.seed.person_or_role,
+    story.seed.value,
+    story.seed.sensory_detail,
+    story.seed.central_actor,
+    story.seed.age_band,
+    story.seed.language,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase()
+  const storyTexts = Object.values(story.ai)
+    .map((variant) => variant?.text ?? '')
+    .join(' ')
+    .toLowerCase()
+  return seedParts.includes(normalized) || storyTexts.includes(normalized)
+}
+
 export const applyArchiveFilters = (
   stories: Story[],
   filters: ArchiveFilters,
@@ -35,7 +65,8 @@ export const applyArchiveFilters = (
       matchesThemes(story, filters.themes) &&
       matchesValue(story.seed.central_actor, filters.agency) &&
       matchesValue(story.seed.age_band, filters.ageBand) &&
-      matchesValue(story.seed.language, filters.language),
+      matchesValue(story.seed.language, filters.language) &&
+      matchesSearch(story, filters.search),
   )
 
 export const collectFilterOptions = (stories: Story[]) => {

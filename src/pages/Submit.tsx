@@ -4,11 +4,9 @@ const Submit = () => (
     className="section-root flex min-h-screen flex-col gap-10 pb-24"
   >
     <header className="max-w-3xl space-y-4">
-      <h1 className="glass-text text-4xl text-slate">Submit a seed</h1>
+      <h1 className="glass-text text-4xl text-slate">Contribute to <b>Tomorrow, In Two Voices!</b></h1>
       <p className="glass-body text-lg">
-        Share a glimpse of your ordinary or extraordinary tomorrow. We
-        especially welcome youth, frontline workers, and caregivers imagining
-        their daily routes in 2050.
+        Whether you are a student, a frontline worker, a caregiver, or <b>anyone</b>, we want to hear <b>YOUR</b> voice. Share a glimpse of your vision of daily life in 2050 by filling out our quick survey!
       </p>
     </header>
     <div className="glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg grid gap-4 rounded-3xl border border-cyan/35 bg-white/18 p-6 text-slate/85">

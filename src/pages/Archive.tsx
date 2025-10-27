@@ -10,7 +10,7 @@ import {
 import type { ArchiveFilters } from '../lib/filters'
 import { useStories } from '../lib/StoriesContext'
 
-const PAGE_SIZE = 6
+const PAGE_SIZE = 10
 
 const Archive = () => {
   const location = useLocation()
@@ -18,10 +18,10 @@ const Archive = () => {
   const [filters, setFilters] = useState<ArchiveFilters>({
     ...defaultArchiveFilters,
   })
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
-    setVisibleCount(PAGE_SIZE)
+    setCurrentPage(1)
   }, [filters])
 
   const options = useMemo(() => collectFilterOptions(stories), [stories])
@@ -29,7 +29,42 @@ const Archive = () => {
     () => applyArchiveFilters(stories, filters),
     [stories, filters],
   )
-  const visibleStories = filteredStories.slice(0, visibleCount)
+  const totalPages = Math.max(1, Math.ceil(filteredStories.length / PAGE_SIZE))
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages)
+    }
+  }, [currentPage, totalPages])
+
+  const pageStart = (currentPage - 1) * PAGE_SIZE
+  const visibleStories = filteredStories.slice(
+    pageStart,
+    pageStart + PAGE_SIZE,
+  )
+
+  const paginationItems = useMemo(() => {
+    const pages = new Set<number>()
+    pages.add(1)
+    pages.add(totalPages)
+    for (let i = currentPage - 1; i <= currentPage + 1; i += 1) {
+      if (i > 1 && i < totalPages) pages.add(i)
+    }
+    const sorted = Array.from(pages).sort((a, b) => a - b)
+    const result: Array<number | 'ellipsis'> = []
+    sorted.forEach((page, index) => {
+      if (index === 0) {
+        result.push(page)
+        return
+      }
+      const prev = sorted[index - 1]
+      if (page - prev > 1) {
+        result.push('ellipsis')
+      }
+      result.push(page)
+    })
+    return result
+  }, [currentPage, totalPages])
 
   useEffect(() => {
     if (location.hash) {
@@ -49,8 +84,8 @@ const Archive = () => {
       <header className="space-y-4">
         <h1 className="glass-heading text-4xl">2050 Futures Archive</h1>
         <p className="glass-body max-w-3xl text-lg">
-          Filter by themes, agency, language, and age band to see how each
-          prompt branches into alternate futures.
+          Filter by themes, agency, language, age band, or search across seeds
+          and stories to see how each prompt branches into alternate futures.
         </p>
       </header>
 
@@ -78,16 +113,46 @@ const Archive = () => {
         )}
       </div>
 
-      {visibleCount < filteredStories.length && (
-        <div className="flex justify-center">
+      {filteredStories.length > PAGE_SIZE && (
+        <nav className="flex flex-wrap items-center justify-center gap-2" aria-label="Archive pagination">
           <button
             type="button"
-            onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-            className="rounded-full bg-indigo-600 px-7 py-2 text-sm font-semibold text-white shadow transition-transform duration-300 ease-out hover:-translate-y-1 hover:bg-indigo-700 focus-visible:focus-ring"
+            onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+            className="rounded-full border border-white/25 bg-white/14 px-3 py-1 text-sm text-slate/75 transition hover:bg-white/24 focus-visible:focus-ring disabled:cursor-not-allowed disabled:opacity-40"
+            disabled={currentPage === 1}
           >
-            Load more stories
+            Previous
           </button>
-        </div>
+          {paginationItems.map((item, index) =>
+            item === 'ellipsis' ? (
+              <span key={`ellipsis-${index}`} className="px-2 text-sm text-slate/60">
+                …
+              </span>
+            ) : (
+              <button
+                key={`page-${item}`}
+                type="button"
+                onClick={() => setCurrentPage(item)}
+                className={`rounded-full px-3 py-1 text-sm font-medium focus-visible:focus-ring ${
+                  item === currentPage
+                    ? 'bg-indigo-600 text-white shadow'
+                    : 'border border-white/25 bg-white/14 text-slate/80 hover:bg-white/24'
+                }`}
+                aria-current={item === currentPage ? 'page' : undefined}
+              >
+                {item}
+              </button>
+            ),
+          )}
+          <button
+            type="button"
+            onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+            className="rounded-full border border-white/25 bg-white/14 px-3 py-1 text-sm text-slate/75 transition hover:bg-white/24 focus-visible:focus-ring disabled:cursor-not-allowed disabled:opacity-40"
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </nav>
       )}
     </section>
   )
