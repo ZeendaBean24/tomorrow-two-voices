@@ -47,7 +47,7 @@ const Archive = () => {
       className="section-root flex min-h-screen flex-col gap-10 pb-24"
     >
       <header className="space-y-4">
-        <h1 className="glass-heading text-4xl">Archive of two-voice futures</h1>
+        <h1 className="glass-heading text-4xl">2050 Futures Archive</h1>
         <p className="glass-body max-w-3xl text-lg">
           Filter by themes, agency, language, and age band to see how each
           prompt branches into alternate futures.
