@@ -4,7 +4,7 @@ import type { StoriesContextValue, Story } from './types'
 
 const StoriesContext = createContext<StoriesContextValue | undefined>(undefined)
 
-const STORIES_URL = '/data/stories.json'
+const STORIES_URL = '/data/stories_skeleton.json'
 
 type StoriesProviderProps = {
   children: ReactNode

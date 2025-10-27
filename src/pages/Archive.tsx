@@ -49,8 +49,8 @@ const Archive = () => {
       <header className="space-y-4">
         <h1 className="glass-heading text-4xl">Archive of two-voice futures</h1>
         <p className="glass-body max-w-3xl text-lg">
-          Filter by themes, cognition markers, and demographics to study how a
-          single seed branches into contrasting possibilities.
+          Filter by themes, agency, language, and age band to see how each
+          prompt branches into alternate futures.
         </p>
       </header>
 

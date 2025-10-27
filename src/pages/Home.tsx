@@ -62,7 +62,7 @@ const TypewriterTitle = () => {
 
 const Home = () => {
   const { stories, isLoading, error } = useStories()
-  const heroTiltRef = useTilt({
+  const heroTiltRef = useTilt<HTMLDivElement>({
     maxDeg: 6,
     baseShadow: '0.12',
     activeShadow: '0.28',

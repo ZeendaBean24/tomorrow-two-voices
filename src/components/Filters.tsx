@@ -1,14 +1,11 @@
-import { useId } from 'react'
 import { defaultArchiveFilters } from '../lib/filters'
 import type { ArchiveFilters } from '../lib/filters'
 
 type FilterOptions = {
   themes: string[]
-  construal: string[]
   agency: string[]
-  affect: string[]
-  risk: string[]
   ageBand: string[]
+  language: string[]
 }
 
 type FiltersProps = {
@@ -32,8 +29,6 @@ const toggleTheme = (
 }
 
 const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
-  const searchId = useId()
-
   const handleSingleSelect = (key: keyof ArchiveFilters, value?: string) => {
     onChange({ ...filters, [key]: filters[key] === value ? undefined : value })
   }
@@ -55,24 +50,6 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
           >
             Clear all
           </button>
-          <div className="ml-auto flex items-center gap-2">
-            <label
-              htmlFor={searchId}
-              className="text-xs uppercase tracking-[0.25em] text-slate/60"
-            >
-              Search
-            </label>
-            <input
-              id={searchId}
-              type="search"
-              value={filters.search ?? ''}
-              onChange={(event) =>
-                onChange({ ...filters, search: event.target.value })
-              }
-              placeholder="Seed or story text"
-              className="w-56 rounded-full bg-white/16 px-3 py-1 text-sm text-slate/80 backdrop-blur-md ring-1 ring-white/25 focus-visible:focus-ring"
-            />
-          </div>
         </div>
 
         <div className="glass-panel rounded-3xl border border-white/25 bg-white/18 p-4">
@@ -105,11 +82,9 @@ const Filters = ({ filters, options, onChange, resultCount }: FiltersProps) => {
 
             {(
               [
-                ['construal', options.construal],
                 ['agency', options.agency],
-                ['affect', options.affect],
-                ['risk', options.risk],
                 ['ageBand', options.ageBand],
+                ['language', options.language],
               ] as const
             ).map(([key, values]) => (
               <fieldset key={key}>

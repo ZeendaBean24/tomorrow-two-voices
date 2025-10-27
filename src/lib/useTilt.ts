@@ -7,13 +7,13 @@ type TiltOptions = {
   activeShadow?: string
 }
 
-export const useTilt = ({
+export const useTilt = <T extends HTMLElement = HTMLElement>({
   maxDeg = 5,
   baseShadow = '0.06',
   activeShadow = '0.18',
 }: TiltOptions = {}) => {
   const prefersReducedMotion = usePrefersReducedMotion()
-  const ref = useRef<HTMLElement | null>(null)
+  const ref = useRef<T | null>(null)
 
   useEffect(() => {
     const element = ref.current

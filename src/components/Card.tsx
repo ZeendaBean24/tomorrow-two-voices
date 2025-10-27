@@ -1,194 +1,82 @@
-import type { CSSProperties } from 'react'
 import { useId, useMemo, useState } from 'react'
-import EvidencePanel from './EvidencePanel'
-import MetricsPanel from './Metrics'
-import Tabs from './Tabs'
-import { CogSciChip, MetaPill, ThemeChip } from './Chips'
-import { splitSentences } from '../lib/sentenceSplit'
-import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion'
-import type { Influence, Story } from '../lib/types'
+import { MetaPill, ThemeChip } from './Chips'
+import type { Story, StoryVariantId } from '../lib/types'
 import { useTilt } from '../lib/useTilt'
+import { usePrefersReducedMotion } from '../lib/usePrefersReducedMotion'
 
-const tabs = [
-  { id: 'story', label: 'Narrative' },
-  { id: 'evidence', label: 'Evidence' },
-  { id: 'metrics', label: 'Metrics' },
-] as const
+const STORY_ORDER: StoryVariantId[] = ['hopeful', 'balanced', 'cautionary']
 
-type StoryPaneProps = {
-  storyId: string
-  storyKey: 'hopeful' | 'cautionary'
-  sentences: string[]
-  highlightEnabled: boolean
-  activeHighlightKey: string | null
-  activeInfluences: Influence[]
-  onSentenceFocus: (storyKey: 'hopeful' | 'cautionary', index: number) => void
-  onSentenceClear: (key: string) => void
-  className?: string
-  style?: CSSProperties
-  pointerActive?: boolean
-  ariaHidden?: boolean
+const VARIANT_LABELS: Record<StoryVariantId, string> = {
+  hopeful: 'Hopeful',
+  balanced: 'Balanced',
+  cautionary: 'Cautionary',
 }
-
-const StoryPane = ({
-  storyId,
-  storyKey,
-  sentences,
-  highlightEnabled,
-  activeHighlightKey,
-  activeInfluences,
-  onSentenceFocus,
-  onSentenceClear,
-  className,
-  style,
-  pointerActive = true,
-  ariaHidden,
-}: StoryPaneProps) => (
-  <div
-    className={`space-y-4 ${className ?? ''}`}
-    style={pointerActive ? style : { ...style, pointerEvents: 'none' }}
-    aria-live="polite"
-    aria-hidden={ariaHidden}
-  >
-    {sentences.map((sentence, index) => {
-      const highlight =
-        highlightEnabled &&
-        activeInfluences.some(
-          (influence) =>
-            influence.story === storyKey && influence.sent_idx === index,
-        )
-      const highlightStyles = highlight
-        ? storyKey === 'hopeful'
-          ? 'border border-emerald/45 bg-emerald/18 backdrop-blur-lg shadow-lg'
-          : 'border border-rust/45 bg-rust/18 backdrop-blur-lg shadow-lg'
-        : 'border border-white/25 bg-white/12 backdrop-blur-lg shadow'
-      const sentenceKey = `${storyId}-${storyKey}-s${index}`
-      return (
-        <div
-          key={sentenceKey}
-          className={`relative rounded-2xl p-4 text-left transition ${highlightStyles}`}
-        >
-          <button
-            type="button"
-            className={`absolute -left-3 top-3 rounded-full px-2 py-1 text-[11px] font-semibold text-slate/70 transition focus-visible:focus-ring ${
-              highlight
-                ? 'bg-indigo/80 text-white shadow-lg'
-                : 'bg-white/30 backdrop-blur text-slate/80 shadow'
-            }`}
-            onMouseEnter={() => onSentenceFocus(storyKey, index)}
-            onFocus={() => onSentenceFocus(storyKey, index)}
-            onMouseLeave={() => onSentenceClear(sentenceKey)}
-            onBlur={() => onSentenceClear(sentenceKey)}
-            aria-pressed={highlight}
-            aria-label={`${storyKey === 'hopeful' ? 'Hopeful' : 'Cautionary'} sentence ${index + 1}`}
-          >
-            [s{index}]
-          </button>
-          <p className="text-sm glass-body">{sentence}</p>
-        </div>
-      )
-    })}
-    {!sentences.length && (
-      <p className="text-sm glass-body">
-        This story is awaiting transcription.
-      </p>
-    )}
-    {highlightEnabled && activeHighlightKey && (
-      <p className="text-xs text-slate/65">
-        Highlighting trace:{' '}
-        {activeHighlightKey.replace(`${storyId}-`, '').replace(/-/g, ' ')}
-      </p>
-    )}
-  </div>
-)
 
 type StoryCardProps = {
   story: Story
   anchorId?: string
 }
 
-const clampBlend = (value: number) =>
-  Math.min(1, Math.max(0, Number(value.toFixed(2))))
+const clampVariantIndex = (value: number) =>
+  Math.min(Math.max(Math.round(value), 0), STORY_ORDER.length - 1)
 
 const StoryCard = ({ story, anchorId }: StoryCardProps) => {
-  const [activeTab, setActiveTab] =
-    useState<(typeof tabs)[number]['id']>('story')
-  const [highlightEnabled, setHighlightEnabled] = useState(true)
-  const [activeHighlightKey, setActiveHighlightKey] = useState<string | null>(
-    null,
-  )
-  const [activeInfluences, setActiveInfluences] = useState<Influence[]>([])
   const [copied, setCopied] = useState(false)
-  const [blend, setBlend] = useState(0)
-  const prefersReducedMotion = usePrefersReducedMotion()
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [variantIndex, setVariantIndex] = useState(0)
   const sliderId = useId()
   const tiltRef = useTilt({
     maxDeg: 5,
     baseShadow: '0.08',
     activeShadow: '0.2',
   })
+  const prefersReducedMotion = usePrefersReducedMotion()
 
-  const hopefulSentences = useMemo(
-    () => splitSentences(story.ai.hopeful),
-    [story.ai.hopeful],
-  )
-  const cautionarySentences = useMemo(
-    () => splitSentences(story.ai.cautionary),
-    [story.ai.cautionary],
-  )
+  const submittedLabel = useMemo(() => {
+    const submitted = story.submitted_at ? new Date(story.submitted_at) : null
+    if (!submitted || Number.isNaN(submitted.valueOf())) return 'Unspecified'
+    return submitted.toLocaleDateString(undefined, {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    })
+  }, [story.submitted_at])
 
-  const influencesForSentence = (
-    storyKey: 'hopeful' | 'cautionary',
-    index: number,
-  ) =>
-    story.ai.evidence
-      .flatMap((item) =>
-        item.influences.map((influence) => ({
-          ...influence,
-          phrase: item.seed_phrase,
-        })),
+  const seedDetails = useMemo(
+    () =>
+      (
+        [
+          ['Hope', story.seed.hope],
+          ['Worry', story.seed.worry],
+          ['AI future', story.seed.ai_future],
+          ['Technology', story.seed.technology],
+          ['Object', story.seed.object],
+          ['Place', story.seed.place],
+          ['Time', story.seed.time],
+          ['Person / role', story.seed.person_or_role],
+          ['Value', story.seed.value],
+          ['Sensory detail', story.seed.sensory_detail],
+        ] as const
       )
-      .filter(
-        (influence) =>
-          influence.story === storyKey && influence.sent_idx === index,
-      )
-      .map(({ story: s, sent_idx }) => ({ story: s, sent_idx }))
+        .filter(([, value]) => Boolean(value?.trim()))
+        .map(([label, value]) => ({ label, value: value.trim() })),
+    [story.seed],
+  )
 
-  const handleSentenceFocus = (
-    storyKey: 'hopeful' | 'cautionary',
-    index: number,
-  ) => {
-    if (!highlightEnabled) return
-    const influences = influencesForSentence(storyKey, index)
-    if (influences.length) {
-      setActiveHighlightKey(`${story.id}-${storyKey}-s${index}`)
-      setActiveInfluences(influences)
-    }
-  }
+  const activeVariantId = STORY_ORDER[variantIndex] ?? 'hopeful'
+  const fallbackVariant = useMemo(
+    () => ({
+      title: `${VARIANT_LABELS[activeVariantId]} story forthcoming`,
+      text: 'This story will be added soon.',
+    }),
+    [activeVariantId],
+  )
+  const activeVariant = story.ai[activeVariantId] ?? fallbackVariant
 
-  const handleHighlightActivate = (key: string, influences: Influence[]) => {
-    if (!highlightEnabled) return
-    setActiveHighlightKey(key)
-    setActiveInfluences(influences)
-  }
-
-  const clearHighlight = () => {
-    setActiveHighlightKey(null)
-    setActiveInfluences([])
-  }
-
-  const handleSentenceClear = (key: string) => {
-    if (activeHighlightKey === key) {
-      clearHighlight()
-    }
-  }
-
-  const handleTabChange = (id: string) => {
-    const allowedIds = tabs.map((tab) => tab.id)
-    if (allowedIds.includes(id as (typeof tabs)[number]['id'])) {
-      setActiveTab(id as (typeof tabs)[number]['id'])
-    }
-  }
+  const metricKeys = useMemo(
+    () => Object.keys(story.metrics ?? {}).filter(Boolean),
+    [story.metrics],
+  )
 
   const handleCopyLink = async () => {
     try {
@@ -203,201 +91,236 @@ const StoryCard = ({ story, anchorId }: StoryCardProps) => {
     }
   }
 
-  const motionClass = prefersReducedMotion
-    ? ''
-    : 'transition duration-400 ease-out-quart'
-  const cardClasses = `group relative grid gap-6 rounded-3xl tilt-layer glass-panel hover:-translate-y-0.5 hover:bg-white/28 hover:backdrop-blur-lg hover:ring-white/60 p-8 ring-0 ${motionClass}`
+  const handleVariantChange = (value: number) => {
+    setVariantIndex(clampVariantIndex(value))
+  }
 
-  const effectiveBlend = prefersReducedMotion ? (blend >= 0.5 ? 1 : 0) : blend
-  const hopefulOpacity = 1 - effectiveBlend
-  const cautionaryOpacity = effectiveBlend
-  const sliderValue = blend
+  const frontFace = (
+    <section
+      className="flip-face glass-scrim flex h-full flex-col gap-5"
+      aria-label="Seed inputs"
+      aria-hidden={prefersReducedMotion ? false : isFlipped}
+      style={{
+        pointerEvents: prefersReducedMotion ? 'auto' : isFlipped ? 'none' : 'auto',
+      }}
+    >
+      <header className="space-y-3">
+        <p className="text-xs uppercase tracking-[0.3em] text-slate/60">
+          Human prompt
+        </p>
+        <h2 className="glass-heading text-2xl">Seed {story.id}</h2>
+      </header>
 
-  const handleSliderChange = (value: number) => {
-    setBlend(clampBlend(value))
+      <dl className="grid gap-3 sm:grid-cols-2">
+        {seedDetails.map(({ label, value }) => (
+          <div
+            key={label}
+            className="glass-panel flex flex-col gap-1 rounded-2xl border border-white/20 bg-white/18 p-4 text-sm text-slate/85"
+          >
+            <dt className="text-[11px] uppercase tracking-[0.3em] text-slate/50">
+              {label}
+            </dt>
+            <dd className="glass-body text-sm">{value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <div className="space-y-3">
+        <p className="text-xs uppercase tracking-[0.3em] text-slate/50">
+          Themes
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {story.seed.themes.map((theme) => (
+            <ThemeChip key={theme} label={theme} tone="slate" />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+
+  const backFace = (
+    <section
+      className="flip-face flip-back glass-scrim flex h-full flex-col gap-6"
+      aria-label="AI stories"
+      aria-hidden={prefersReducedMotion ? !isFlipped : !isFlipped}
+      style={{
+        pointerEvents: prefersReducedMotion ? 'auto' : !isFlipped ? 'none' : 'auto',
+      }}
+    >
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(220px,1fr)]">
+        <div className="space-y-4">
+          <header className="space-y-2">
+            <p className="text-xs uppercase tracking-[0.3em] text-slate/60">
+              AI retellings
+            </p>
+            <div className="flex items-baseline justify-between gap-4">
+              <h3 className="glass-heading text-xl">{activeVariant.title}</h3>
+              <span className="rounded-full bg-white/18 px-3 py-1 text-xs font-medium text-slate/75 ring-1 ring-white/30">
+                {VARIANT_LABELS[activeVariantId]}
+              </span>
+            </div>
+          </header>
+
+          <div className="space-y-3">
+            <label
+              htmlFor={sliderId}
+              className="flex items-center justify-between text-[11px] uppercase tracking-[0.35em] text-slate/60"
+            >
+              <span>Hopeful</span>
+              <span>Balanced</span>
+              <span>Cautionary</span>
+            </label>
+            <input
+              id={sliderId}
+              type="range"
+              min={0}
+              max={STORY_ORDER.length - 1}
+              step={1}
+              value={variantIndex}
+              onChange={(event) => handleVariantChange(Number(event.target.value))}
+              className="h-[3px] w-full appearance-none rounded-full bg-slate/20 accent-indigo focus-visible:focus-ring"
+              aria-valuemin={0}
+              aria-valuemax={STORY_ORDER.length - 1}
+              aria-valuenow={variantIndex}
+              aria-label="Select AI story voice"
+            />
+            <div className="grid grid-cols-3 gap-2 text-center text-[11px] uppercase tracking-[0.2em] text-slate/60">
+              {STORY_ORDER.map((variant, index) => (
+                <button
+                  key={variant}
+                  type="button"
+                  onClick={() => handleVariantChange(index)}
+                  className={`rounded-full px-2 py-1 font-medium transition focus-visible:focus-ring ${
+                    index === variantIndex
+                      ? 'bg-white/28 text-slate shadow ring-emerald/30'
+                      : 'bg-white/10 text-slate/70 hover:bg-white/18'
+                  }`}
+                >
+                  {VARIANT_LABELS[variant]}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <article className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/18 p-6 text-slate/85 shadow-lg">
+            <div
+              className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 opacity-80"
+              aria-hidden="true"
+            />
+            <div className="relative space-y-4">
+              <p className="glass-body whitespace-pre-line text-base leading-relaxed">
+                {activeVariant.text}
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <aside className="grid content-start gap-4 rounded-3xl border border-white/20 bg-white/12 p-5 text-sm text-slate/85 shadow">
+          <div className="space-y-2">
+            <h4 className="glass-heading text-lg">Metrics</h4>
+            {metricKeys.length ? (
+              <ul className="list-disc space-y-1 pl-5 text-sm">
+                {metricKeys.map((key) => (
+                  <li key={key} className="capitalize">
+                    {key.replace(/_/g, ' ')}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-slate/65">
+                Metrics will appear here once analysis is complete.
+              </p>
+            )}
+          </div>
+          <div className="space-y-2">
+            <h4 className="glass-heading text-lg">Seed context</h4>
+            <dl className="space-y-1 text-sm">
+              <div className="flex items-center justify-between gap-4">
+                <dt className="text-slate/60">Language</dt>
+                <dd className="font-medium text-slate">
+                  {story.seed.language}
+                </dd>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <dt className="text-slate/60">Age band</dt>
+                <dd className="font-medium text-slate">
+                  {story.seed.age_band}
+                </dd>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <dt className="text-slate/60">Agency</dt>
+                <dd className="font-medium text-slate">
+                  {story.seed.central_actor}
+                </dd>
+              </div>
+            </dl>
+            <div className="space-y-1">
+              <p className="text-slate/60">Themes</p>
+              <div className="flex flex-wrap gap-2">
+                {story.seed.themes.map((theme) => (
+                  <ThemeChip key={`panel-${theme}`} label={theme} tone="slate" />
+                ))}
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  )
+
+  const renderFaces = () => {
+    if (prefersReducedMotion) {
+      return isFlipped ? backFace : frontFace
+    }
+
+    return (
+      <div className="flip-scene">
+        <div
+          className={`flip-card min-h-[520px] ${isFlipped ? 'is-flipped' : ''}`}
+        >
+          {frontFace}
+          {backFace}
+        </div>
+      </div>
+    )
   }
 
   return (
     <article
       ref={tiltRef}
       id={anchorId ?? story.id}
-      className={cardClasses}
+      className="tilt-layer glass-panel group relative grid gap-6 rounded-3xl bg-white/22 p-8"
       style={{ backgroundImage: 'url(/assets/paper-texture.svg)' }}
-      aria-label={`Story artifact ${story.id}`}
+      aria-label={`Seed ${story.id}`}
     >
-      <div
-        className={`grid gap-6 lg:grid-cols-[minmax(240px,1fr)_minmax(0,2fr)] ${
-          prefersReducedMotion
-            ? ''
-            : 'transition-transform duration-400 ease-out-quart group-hover:-translate-y-1'
-        }`}
-      >
-        <div
-          className={`space-y-6 ${
-            prefersReducedMotion
-              ? ''
-              : 'transform-gpu transition duration-400 ease-out-quart group-hover:-translate-y-1.5 group-hover:-translate-x-1'
-          }`}
-        >
-          <div className="glass-scrim space-y-4">
-            <header className="space-y-3">
-              <p className="text-xs uppercase tracking-[0.3em] text-slate/60">
-                Raw seed
-              </p>
-              <h2 className="glass-heading text-2xl">{story.seed.text}</h2>
-            </header>
-            <div className="space-y-3 text-xs glass-body">
-              <div className="flex flex-wrap gap-2">
-                <MetaPill label="ID" value={story.id} />
-                <MetaPill
-                  label="Submitted"
-                  value={new Date(story.submitted_at).toLocaleDateString(
-                    undefined,
-                    {
-                      month: 'short',
-                      year: 'numeric',
-                    },
-                  )}
-                />
-                <MetaPill label="Age" value={story.seed.age_band} />
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {story.tags.themes.map((theme) => (
-                  <ThemeChip key={theme} label={theme} tone="slate" />
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <CogSciChip type="construal" value={story.tags.construal} />
-                <CogSciChip type="agency" value={story.tags.agency} />
-                <CogSciChip type="affect" value={story.tags.affect} />
-                <CogSciChip type="risk" value={story.tags.risk} />
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2 text-xs glass-body">
-              <button
-                type="button"
-                onClick={handleCopyLink}
-                className="rounded-full border border-white/30 bg-white/18 px-3 py-1 font-medium text-slate/80 backdrop-blur-md transition hover:bg-white/28 focus-visible:focus-ring"
-              >
-                {copied ? 'Link copied' : 'Copy link'}
-              </button>
-              <a
-                href={`mailto:tomorrowvoices@example.com?subject=Removal request for ${story.id}`}
-                className="rounded-full border border-oxblood/50 bg-oxblood/20 px-3 py-1 font-medium text-oxblood transition hover:bg-oxblood/30 focus-visible:focus-ring"
-              >
-                Report / Remove
-              </a>
-            </div>
-          </div>
+      <div className="glass-scrim space-y-4">
+        <div className="flex flex-wrap items-center gap-3 text-xs">
+          <MetaPill label="ID" value={story.id} />
+          <MetaPill label="Submitted" value={submittedLabel} />
+          <MetaPill label="Agency" value={story.seed.central_actor} />
         </div>
-
-        <div
-          className={`space-y-6 ${
-            prefersReducedMotion
-              ? ''
-              : 'transform-gpu transition duration-400 ease-out-quart group-hover:-translate-y-2 group-hover:translate-x-1'
-          }`}
-        >
-          <Tabs tabs={tabs} activeTab={activeTab} onChange={handleTabChange} />
-          <div
-            id={`${activeTab}-panel`}
-            role="tabpanel"
-            aria-labelledby={`${activeTab}-tab`}
-            className="glass-panel rounded-3xl border border-white/20 bg-white/18 p-5"
+        {renderFaces()}
+        <div className="flex flex-wrap gap-3 text-sm">
+          <button
+            type="button"
+            onClick={() => setIsFlipped((current) => !current)}
+            className="rounded-full bg-indigo-600 px-4 py-2 font-semibold text-white shadow transition hover:-translate-y-0.5 hover:bg-indigo-700 focus-visible:focus-ring"
           >
-            <div className="glass-scrim space-y-5">
-              {activeTab === 'story' && (
-                <div className="space-y-5">
-                  <div className="space-y-3">
-                    <label
-                      htmlFor={sliderId}
-                      className="flex items-center justify-between text-[11px] uppercase tracking-[0.35em] text-slate/60"
-                    >
-                      <span>Hopeful</span>
-                      <span>Cautionary</span>
-                    </label>
-                    <input
-                      id={sliderId}
-                      type="range"
-                      role="slider"
-                      min={0}
-                      max={1}
-                      step={0.05}
-                      value={sliderValue}
-                      aria-valuemin={0}
-                      aria-valuemax={1}
-                      aria-valuenow={Number(sliderValue.toFixed(2))}
-                      aria-label="Blend hopeful and cautionary story"
-                      className="h-[3px] w-full appearance-none rounded-full bg-slate/20 accent-indigo focus-visible:focus-ring"
-                      onChange={(event) =>
-                        handleSliderChange(Number(event.target.value))
-                      }
-                    />
-                  </div>
-
-                  <div className="relative">
-                    <StoryPane
-                      storyId={story.id}
-                      storyKey="hopeful"
-                      sentences={hopefulSentences}
-                      highlightEnabled={highlightEnabled}
-                      activeHighlightKey={activeHighlightKey}
-                      activeInfluences={activeInfluences}
-                      onSentenceFocus={handleSentenceFocus}
-                      onSentenceClear={handleSentenceClear}
-                      className="transition-opacity duration-400 ease-out-quart"
-                      style={{ opacity: hopefulOpacity }}
-                      pointerActive={hopefulOpacity >= 0.4}
-                      ariaHidden={cautionaryOpacity > 0.6}
-                    />
-                    <StoryPane
-                      storyId={story.id}
-                      storyKey="cautionary"
-                      sentences={cautionarySentences}
-                      highlightEnabled={highlightEnabled}
-                      activeHighlightKey={activeHighlightKey}
-                      activeInfluences={activeInfluences}
-                      onSentenceFocus={handleSentenceFocus}
-                      onSentenceClear={handleSentenceClear}
-                      className="mask-wavy absolute inset-0 border-l border-rust/25 bg-rust/5 pl-6 transition-opacity duration-400 ease-out-quart"
-                      style={
-                        {
-                          opacity: cautionaryOpacity,
-                          '--mask-position': `${Math.round(effectiveBlend * 100)}% 0`,
-                          pointerEvents:
-                            cautionaryOpacity > 0.4 ? 'auto' : 'none',
-                        } as CSSProperties
-                      }
-                      pointerActive={cautionaryOpacity > 0.4}
-                      ariaHidden={cautionaryOpacity <= 0.05}
-                    />
-                  </div>
-                </div>
-              )}
-              {activeTab === 'evidence' && (
-                <EvidencePanel
-                  storyId={story.id}
-                  evidence={story.ai.evidence}
-                  highlightEnabled={highlightEnabled}
-                  activeHighlightKey={activeHighlightKey}
-                  activeInfluences={activeInfluences}
-                  onHighlightToggle={(enabled) => {
-                    setHighlightEnabled(enabled)
-                    if (!enabled) clearHighlight()
-                  }}
-                  onActivateHighlight={handleHighlightActivate}
-                  onClearHighlight={clearHighlight}
-                />
-              )}
-              {activeTab === 'metrics' && <MetricsPanel story={story} />}
-            </div>
-          </div>
-          {activeTab !== 'evidence' && (
-            <p className="text-xs text-slate/60">
-              Tip: Switch to the Evidence tab to trace how the seed shapes each
-              sentence.
-            </p>
-          )}
+            {isFlipped ? 'View seed inputs' : 'View AI stories'}
+          </button>
+          <button
+            type="button"
+            onClick={handleCopyLink}
+            className="rounded-full border border-white/30 bg-white/18 px-3 py-2 font-medium text-slate/80 backdrop-blur-md transition hover:bg-white/28 focus-visible:focus-ring"
+          >
+            {copied ? 'Link copied' : 'Copy link'}
+          </button>
+          <a
+            href={`mailto:tomorrowvoices@example.com?subject=Removal request for ${story.id}`}
+            className="rounded-full border border-oxblood/50 bg-oxblood/20 px-3 py-2 font-medium text-oxblood transition hover:bg-oxblood/30 focus-visible:focus-ring"
+          >
+            Report / Remove
+          </a>
         </div>
       </div>
     </article>

@@ -76,6 +76,36 @@
     transition: transform 220ms ease;
   }
 
+  .flip-scene {
+    position: relative;
+    perspective: 1600px;
+  }
+
+  .flip-card {
+    position: relative;
+    min-height: 28rem;
+    transform-style: preserve-3d;
+    transition: transform 450ms ease;
+  }
+
+  .flip-card.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-face {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flip-face.flip-back {
+    transform: rotateY(180deg);
+  }
+
   .tilt-layer {
     --tilt-x: 0deg;
     --tilt-y: 0deg;
