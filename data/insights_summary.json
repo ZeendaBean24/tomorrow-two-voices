@@ -1,0 +1,2925 @@
+{
+  "keywords": {
+    "ai_future": {
+      "label": "Feelings about AI",
+      "unigrams": [
+        {
+          "term": "uncertain",
+          "count": 38
+        },
+        {
+          "term": "scary",
+          "count": 8
+        },
+        {
+          "term": "exciting",
+          "count": 8
+        },
+        {
+          "term": "changing",
+          "count": 8
+        },
+        {
+          "term": "future",
+          "count": 8
+        },
+        {
+          "term": "people",
+          "count": 7
+        },
+        {
+          "term": "jobs",
+          "count": 7
+        },
+        {
+          "term": "everything",
+          "count": 6
+        },
+        {
+          "term": "know",
+          "count": 6
+        },
+        {
+          "term": "fast",
+          "count": 5
+        },
+        {
+          "term": "hopeful",
+          "count": 5
+        },
+        {
+          "term": "possibilities",
+          "count": 5
+        },
+        {
+          "term": "don't",
+          "count": 5
+        },
+        {
+          "term": "full",
+          "count": 4
+        },
+        {
+          "term": "human",
+          "count": 4
+        },
+        {
+          "term": "it's",
+          "count": 4
+        },
+        {
+          "term": "promising",
+          "count": 4
+        },
+        {
+          "term": "job",
+          "count": 4
+        },
+        {
+          "term": "unpredictable",
+          "count": 4
+        },
+        {
+          "term": "society",
+          "count": 3
+        },
+        {
+          "term": "direction",
+          "count": 3
+        },
+        {
+          "term": "develop",
+          "count": 3
+        },
+        {
+          "term": "work",
+          "count": 3
+        },
+        {
+          "term": "lose",
+          "count": 3
+        },
+        {
+          "term": "feels",
+          "count": 3
+        },
+        {
+          "term": "going",
+          "count": 3
+        },
+        {
+          "term": "innovative",
+          "count": 3
+        },
+        {
+          "term": "something",
+          "count": 3
+        },
+        {
+          "term": "growing",
+          "count": 3
+        },
+        {
+          "term": "help",
+          "count": 3
+        },
+        {
+          "term": "advances",
+          "count": 3
+        },
+        {
+          "term": "real",
+          "count": 3
+        },
+        {
+          "term": "take",
+          "count": 2
+        },
+        {
+          "term": "bleak",
+          "count": 2
+        },
+        {
+          "term": "development",
+          "count": 2
+        },
+        {
+          "term": "bright",
+          "count": 2
+        },
+        {
+          "term": "solve",
+          "count": 2
+        },
+        {
+          "term": "problems",
+          "count": 2
+        },
+        {
+          "term": "advancing",
+          "count": 2
+        },
+        {
+          "term": "opportunities",
+          "count": 2
+        },
+        {
+          "term": "change",
+          "count": 2
+        },
+        {
+          "term": "dangerous",
+          "count": 2
+        },
+        {
+          "term": "limitless",
+          "count": 2
+        },
+        {
+          "term": "dystopian",
+          "count": 2
+        },
+        {
+          "term": "life",
+          "count": 2
+        },
+        {
+          "term": "things",
+          "count": 2
+        },
+        {
+          "term": "technological",
+          "count": 2
+        },
+        {
+          "term": "constant",
+          "count": 2
+        },
+        {
+          "term": "worrying",
+          "count": 2
+        },
+        {
+          "term": "potential",
+          "count": 2
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "uncertain everything",
+          "count": 4
+        },
+        {
+          "term": "everything changing",
+          "count": 4
+        },
+        {
+          "term": "don't know",
+          "count": 4
+        },
+        {
+          "term": "future feels",
+          "count": 3
+        },
+        {
+          "term": "full possibilities",
+          "count": 3
+        },
+        {
+          "term": "uncertain hopeful",
+          "count": 2
+        },
+        {
+          "term": "solve problems",
+          "count": 2
+        },
+        {
+          "term": "scary promising",
+          "count": 2
+        },
+        {
+          "term": "uncertain don't",
+          "count": 2
+        },
+        {
+          "term": "uncertain unpredictable",
+          "count": 2
+        },
+        {
+          "term": "lose jobs",
+          "count": 2
+        },
+        {
+          "term": "replacing jobs",
+          "count": 2
+        },
+        {
+          "term": "society dumbing",
+          "count": 1
+        },
+        {
+          "term": "dumbing down",
+          "count": 1
+        },
+        {
+          "term": "blade runner",
+          "count": 1
+        },
+        {
+          "term": "runner meets",
+          "count": 1
+        },
+        {
+          "term": "uncertain starting",
+          "count": 1
+        },
+        {
+          "term": "starting take",
+          "count": 1
+        },
+        {
+          "term": "scary people",
+          "count": 1
+        },
+        {
+          "term": "people trust",
+          "count": 1
+        },
+        {
+          "term": "trust themselves",
+          "count": 1
+        },
+        {
+          "term": "exciting scary",
+          "count": 1
+        },
+        {
+          "term": "direction fast",
+          "count": 1
+        },
+        {
+          "term": "fast develop",
+          "count": 1
+        },
+        {
+          "term": "wonderful say",
+          "count": 1
+        },
+        {
+          "term": "say thank",
+          "count": 1
+        },
+        {
+          "term": "thank chat",
+          "count": 1
+        },
+        {
+          "term": "chat gpt",
+          "count": 1
+        },
+        {
+          "term": "gpt safe",
+          "count": 1
+        },
+        {
+          "term": "safe taking",
+          "count": 1
+        },
+        {
+          "term": "extremely uncertain",
+          "count": 1
+        },
+        {
+          "term": "hopeful hopeful",
+          "count": 1
+        },
+        {
+          "term": "hopeful augment",
+          "count": 1
+        },
+        {
+          "term": "augment society",
+          "count": 1
+        },
+        {
+          "term": "society instead",
+          "count": 1
+        },
+        {
+          "term": "instead cause",
+          "count": 1
+        },
+        {
+          "term": "cause harms",
+          "count": 1
+        },
+        {
+          "term": "concerning satisfied",
+          "count": 1
+        },
+        {
+          "term": "satisfied enough",
+          "count": 1
+        },
+        {
+          "term": "enough guardrails",
+          "count": 1
+        },
+        {
+          "term": "guardrails prevent",
+          "count": 1
+        },
+        {
+          "term": "prevent abusing",
+          "count": 1
+        },
+        {
+          "term": "abusing involvement",
+          "count": 1
+        },
+        {
+          "term": "uncertain jobs",
+          "count": 1
+        },
+        {
+          "term": "jobs focussed",
+          "count": 1
+        },
+        {
+          "term": "focussed development",
+          "count": 1
+        },
+        {
+          "term": "always changing",
+          "count": 1
+        },
+        {
+          "term": "bright solve",
+          "count": 1
+        },
+        {
+          "term": "bleak hopeless",
+          "count": 1
+        },
+        {
+          "term": "hopeless people",
+          "count": 1
+        }
+      ]
+    },
+    "hope": {
+      "label": "Common Hopes",
+      "unigrams": [
+        {
+          "term": "hope",
+          "count": 29
+        },
+        {
+          "term": "family",
+          "count": 18
+        },
+        {
+          "term": "time",
+          "count": 16
+        },
+        {
+          "term": "life",
+          "count": 12
+        },
+        {
+          "term": "friends",
+          "count": 8
+        },
+        {
+          "term": "job",
+          "count": 7
+        },
+        {
+          "term": "having",
+          "count": 6
+        },
+        {
+          "term": "technology",
+          "count": 6
+        },
+        {
+          "term": "stable",
+          "count": 6
+        },
+        {
+          "term": "humans",
+          "count": 5
+        },
+        {
+          "term": "people",
+          "count": 5
+        },
+        {
+          "term": "live",
+          "count": 5
+        },
+        {
+          "term": "good",
+          "count": 4
+        },
+        {
+          "term": "happy",
+          "count": 4
+        },
+        {
+          "term": "work",
+          "count": 4
+        },
+        {
+          "term": "happiness",
+          "count": 4
+        },
+        {
+          "term": "freedom",
+          "count": 3
+        },
+        {
+          "term": "rich",
+          "count": 3
+        },
+        {
+          "term": "being",
+          "count": 3
+        },
+        {
+          "term": "money",
+          "count": 3
+        },
+        {
+          "term": "free",
+          "count": 3
+        },
+        {
+          "term": "improved",
+          "count": 3
+        },
+        {
+          "term": "world",
+          "count": 3
+        },
+        {
+          "term": "financial",
+          "count": 3
+        },
+        {
+          "term": "spend",
+          "count": 3
+        },
+        {
+          "term": "enjoy",
+          "count": 3
+        },
+        {
+          "term": "flying",
+          "count": 3
+        },
+        {
+          "term": "become",
+          "count": 3
+        },
+        {
+          "term": "peace",
+          "count": 3
+        },
+        {
+          "term": "travel",
+          "count": 3
+        },
+        {
+          "term": "living",
+          "count": 3
+        },
+        {
+          "term": "thing",
+          "count": 2
+        },
+        {
+          "term": "peaceful",
+          "count": 2
+        },
+        {
+          "term": "lives",
+          "count": 2
+        },
+        {
+          "term": "bed",
+          "count": 2
+        },
+        {
+          "term": "closer",
+          "count": 2
+        },
+        {
+          "term": "hobbies",
+          "count": 2
+        },
+        {
+          "term": "better",
+          "count": 2
+        },
+        {
+          "term": "home",
+          "count": 2
+        },
+        {
+          "term": "human",
+          "count": 2
+        },
+        {
+          "term": "equal",
+          "count": 2
+        },
+        {
+          "term": "successful",
+          "count": 2
+        },
+        {
+          "term": "relationships",
+          "count": 2
+        },
+        {
+          "term": "loving",
+          "count": 2
+        },
+        {
+          "term": "hopefully",
+          "count": 2
+        },
+        {
+          "term": "food",
+          "count": 2
+        },
+        {
+          "term": "succesful",
+          "count": 2
+        },
+        {
+          "term": "purpose",
+          "count": 2
+        },
+        {
+          "term": "cancer",
+          "count": 2
+        },
+        {
+          "term": "cool",
+          "count": 2
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "free time",
+          "count": 3
+        },
+        {
+          "term": "family friends",
+          "count": 3
+        },
+        {
+          "term": "improved technology",
+          "count": 2
+        },
+        {
+          "term": "spend time",
+          "count": 2
+        },
+        {
+          "term": "time family",
+          "count": 2
+        },
+        {
+          "term": "happy family",
+          "count": 2
+        },
+        {
+          "term": "enjoy life",
+          "count": 2
+        },
+        {
+          "term": "time relax",
+          "count": 2
+        },
+        {
+          "term": "relax enjoy",
+          "count": 2
+        },
+        {
+          "term": "loved ones",
+          "count": 2
+        },
+        {
+          "term": "hope stable",
+          "count": 2
+        },
+        {
+          "term": "advanced technology",
+          "count": 2
+        },
+        {
+          "term": "stable job",
+          "count": 2
+        },
+        {
+          "term": "time friends",
+          "count": 2
+        },
+        {
+          "term": "clean air",
+          "count": 1
+        },
+        {
+          "term": "freedom tyranny",
+          "count": 1
+        },
+        {
+          "term": "hope sucsessful",
+          "count": 1
+        },
+        {
+          "term": "sucsessful business",
+          "count": 1
+        },
+        {
+          "term": "time think",
+          "count": 1
+        },
+        {
+          "term": "hope i'm",
+          "count": 1
+        },
+        {
+          "term": "i'm alive",
+          "count": 1
+        },
+        {
+          "term": "alive thing",
+          "count": 1
+        },
+        {
+          "term": "having sailboat",
+          "count": 1
+        },
+        {
+          "term": "fully support",
+          "count": 1
+        },
+        {
+          "term": "support family",
+          "count": 1
+        },
+        {
+          "term": "being trillionare",
+          "count": 1
+        },
+        {
+          "term": "hope wars",
+          "count": 1
+        },
+        {
+          "term": "wars sudan",
+          "count": 1
+        },
+        {
+          "term": "sudan gaza",
+          "count": 1
+        },
+        {
+          "term": "gaza ukraine",
+          "count": 1
+        },
+        {
+          "term": "ukraine peaceful",
+          "count": 1
+        },
+        {
+          "term": "peaceful diplomatic",
+          "count": 1
+        },
+        {
+          "term": "diplomatic endings",
+          "count": 1
+        },
+        {
+          "term": "endings lives",
+          "count": 1
+        },
+        {
+          "term": "lives lost",
+          "count": 1
+        },
+        {
+          "term": "hope bed",
+          "count": 1
+        },
+        {
+          "term": "bed having",
+          "count": 1
+        },
+        {
+          "term": "having arrived",
+          "count": 1
+        },
+        {
+          "term": "arrived closer",
+          "count": 1
+        },
+        {
+          "term": "closer goals",
+          "count": 1
+        },
+        {
+          "term": "goals woke",
+          "count": 1
+        },
+        {
+          "term": "time hobbies",
+          "count": 1
+        },
+        {
+          "term": "hobbies example",
+          "count": 1
+        },
+        {
+          "term": "example volleyball",
+          "count": 1
+        },
+        {
+          "term": "volleyball valorant",
+          "count": 1
+        },
+        {
+          "term": "better flute",
+          "count": 1
+        },
+        {
+          "term": "technology around",
+          "count": 1
+        },
+        {
+          "term": "around home",
+          "count": 1
+        },
+        {
+          "term": "hope raise",
+          "count": 1
+        },
+        {
+          "term": "raise corrupt",
+          "count": 1
+        }
+      ]
+    },
+    "worry": {
+      "label": "Common Worries",
+      "unigrams": [
+        {
+          "term": "worry",
+          "count": 18
+        },
+        {
+          "term": "world",
+          "count": 12
+        },
+        {
+          "term": "being",
+          "count": 8
+        },
+        {
+          "term": "climate",
+          "count": 7
+        },
+        {
+          "term": "change",
+          "count": 7
+        },
+        {
+          "term": "human",
+          "count": 7
+        },
+        {
+          "term": "having",
+          "count": 6
+        },
+        {
+          "term": "job",
+          "count": 6
+        },
+        {
+          "term": "war",
+          "count": 5
+        },
+        {
+          "term": "people",
+          "count": 5
+        },
+        {
+          "term": "life",
+          "count": 5
+        },
+        {
+          "term": "things",
+          "count": 4
+        },
+        {
+          "term": "global",
+          "count": 4
+        },
+        {
+          "term": "technology",
+          "count": 4
+        },
+        {
+          "term": "family",
+          "count": 4
+        },
+        {
+          "term": "getting",
+          "count": 4
+        },
+        {
+          "term": "jobs",
+          "count": 4
+        },
+        {
+          "term": "rich",
+          "count": 3
+        },
+        {
+          "term": "going",
+          "count": 3
+        },
+        {
+          "term": "whether",
+          "count": 3
+        },
+        {
+          "term": "money",
+          "count": 3
+        },
+        {
+          "term": "health",
+          "count": 3
+        },
+        {
+          "term": "privacy",
+          "count": 3
+        },
+        {
+          "term": "point",
+          "count": 3
+        },
+        {
+          "term": "creativity",
+          "count": 3
+        },
+        {
+          "term": "humans",
+          "count": 3
+        },
+        {
+          "term": "major",
+          "count": 3
+        },
+        {
+          "term": "work",
+          "count": 3
+        },
+        {
+          "term": "weaponized",
+          "count": 2
+        },
+        {
+          "term": "current",
+          "count": 2
+        },
+        {
+          "term": "different",
+          "count": 2
+        },
+        {
+          "term": "stuff",
+          "count": 2
+        },
+        {
+          "term": "i'm",
+          "count": 2
+        },
+        {
+          "term": "day",
+          "count": 2
+        },
+        {
+          "term": "goals",
+          "count": 2
+        },
+        {
+          "term": "enough",
+          "count": 2
+        },
+        {
+          "term": "see",
+          "count": 2
+        },
+        {
+          "term": "environment",
+          "count": 2
+        },
+        {
+          "term": "divided",
+          "count": 2
+        },
+        {
+          "term": "intelligence",
+          "count": 2
+        },
+        {
+          "term": "issues",
+          "count": 2
+        },
+        {
+          "term": "poor",
+          "count": 2
+        },
+        {
+          "term": "greed",
+          "count": 2
+        },
+        {
+          "term": "earth",
+          "count": 2
+        },
+        {
+          "term": "disaster",
+          "count": 2
+        },
+        {
+          "term": "control",
+          "count": 2
+        },
+        {
+          "term": "tracking",
+          "count": 2
+        },
+        {
+          "term": "start",
+          "count": 2
+        },
+        {
+          "term": "take",
+          "count": 2
+        },
+        {
+          "term": "constant",
+          "count": 2
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "climate change",
+          "count": 5
+        },
+        {
+          "term": "worry climate",
+          "count": 2
+        },
+        {
+          "term": "having job",
+          "count": 2
+        },
+        {
+          "term": "enough money",
+          "count": 2
+        },
+        {
+          "term": "worry technology",
+          "count": 2
+        },
+        {
+          "term": "food scarcity",
+          "count": 1
+        },
+        {
+          "term": "oppression war",
+          "count": 1
+        },
+        {
+          "term": "prices things",
+          "count": 1
+        },
+        {
+          "term": "weaponized propaganda",
+          "count": 1
+        },
+        {
+          "term": "worry current",
+          "count": 1
+        },
+        {
+          "term": "current global",
+          "count": 1
+        },
+        {
+          "term": "global trends",
+          "count": 1
+        },
+        {
+          "term": "trends continue",
+          "count": 1
+        },
+        {
+          "term": "continue world",
+          "count": 1
+        },
+        {
+          "term": "world safe",
+          "count": 1
+        },
+        {
+          "term": "regretting old",
+          "count": 1
+        },
+        {
+          "term": "old decisions",
+          "count": 1
+        },
+        {
+          "term": "going different",
+          "count": 1
+        },
+        {
+          "term": "different activities",
+          "count": 1
+        },
+        {
+          "term": "activities stuff",
+          "count": 1
+        },
+        {
+          "term": "ill ask",
+          "count": 1
+        },
+        {
+          "term": "ask chatgpt",
+          "count": 1
+        },
+        {
+          "term": "i'm unemployed",
+          "count": 1
+        },
+        {
+          "term": "change whether",
+          "count": 1
+        },
+        {
+          "term": "whether change",
+          "count": 1
+        },
+        {
+          "term": "change world",
+          "count": 1
+        },
+        {
+          "term": "world worse",
+          "count": 1
+        },
+        {
+          "term": "worry experiencing",
+          "count": 1
+        },
+        {
+          "term": "experiencing day",
+          "count": 1
+        },
+        {
+          "term": "day don't",
+          "count": 1
+        },
+        {
+          "term": "don't arrive",
+          "count": 1
+        },
+        {
+          "term": "arrive closer",
+          "count": 1
+        },
+        {
+          "term": "closer goals",
+          "count": 1
+        },
+        {
+          "term": "goals started",
+          "count": 1
+        },
+        {
+          "term": "being rich",
+          "count": 1
+        },
+        {
+          "term": "overall health",
+          "count": 1
+        },
+        {
+          "term": "health planet",
+          "count": 1
+        },
+        {
+          "term": "jumped gangs",
+          "count": 1
+        },
+        {
+          "term": "gangs lose",
+          "count": 1
+        },
+        {
+          "term": "lose cyberware",
+          "count": 1
+        },
+        {
+          "term": "cyberware without",
+          "count": 1
+        },
+        {
+          "term": "without music",
+          "count": 1
+        },
+        {
+          "term": "music chip",
+          "count": 1
+        },
+        {
+          "term": "chip hour",
+          "count": 1
+        },
+        {
+          "term": "hour days",
+          "count": 1
+        },
+        {
+          "term": "days pure",
+          "count": 1
+        },
+        {
+          "term": "pure torture",
+          "count": 1
+        },
+        {
+          "term": "worry having",
+          "count": 1
+        },
+        {
+          "term": "having zero",
+          "count": 1
+        },
+        {
+          "term": "zero privacy",
+          "count": 1
+        }
+      ]
+    },
+    "technology": {
+      "label": "Top Technologies",
+      "unigrams": [
+        {
+          "term": "glasses",
+          "count": 17
+        },
+        {
+          "term": "phone",
+          "count": 10
+        },
+        {
+          "term": "flying",
+          "count": 8
+        },
+        {
+          "term": "car",
+          "count": 7
+        },
+        {
+          "term": "cars",
+          "count": 5
+        },
+        {
+          "term": "translation",
+          "count": 5
+        },
+        {
+          "term": "self",
+          "count": 4
+        },
+        {
+          "term": "driving",
+          "count": 4
+        },
+        {
+          "term": "computer",
+          "count": 3
+        },
+        {
+          "term": "solar",
+          "count": 3
+        },
+        {
+          "term": "drone",
+          "count": 3
+        },
+        {
+          "term": "brain",
+          "count": 3
+        },
+        {
+          "term": "smart",
+          "count": 3
+        },
+        {
+          "term": "electric",
+          "count": 2
+        },
+        {
+          "term": "robot",
+          "count": 2
+        },
+        {
+          "term": "assistant",
+          "count": 2
+        },
+        {
+          "term": "computers",
+          "count": 2
+        },
+        {
+          "term": "reality",
+          "count": 2
+        },
+        {
+          "term": "device",
+          "count": 2
+        },
+        {
+          "term": "drones",
+          "count": 2
+        },
+        {
+          "term": "suit",
+          "count": 2
+        },
+        {
+          "term": "teleportation",
+          "count": 2
+        },
+        {
+          "term": "machine",
+          "count": 2
+        },
+        {
+          "term": "biotechnology",
+          "count": 1
+        },
+        {
+          "term": "wheel",
+          "count": 1
+        },
+        {
+          "term": "vehicles",
+          "count": 1
+        },
+        {
+          "term": "laptops",
+          "count": 1
+        },
+        {
+          "term": "headset",
+          "count": 1
+        },
+        {
+          "term": "controlling",
+          "count": 1
+        },
+        {
+          "term": "bidet",
+          "count": 1
+        },
+        {
+          "term": "hoverboard",
+          "count": 1
+        },
+        {
+          "term": "chips",
+          "count": 1
+        },
+        {
+          "term": "grants",
+          "count": 1
+        },
+        {
+          "term": "abilities",
+          "count": 1
+        },
+        {
+          "term": "laptop",
+          "count": 1
+        },
+        {
+          "term": "personal",
+          "count": 1
+        },
+        {
+          "term": "communication",
+          "count": 1
+        },
+        {
+          "term": "teleporter",
+          "count": 1
+        },
+        {
+          "term": "cerebral",
+          "count": 1
+        },
+        {
+          "term": "implants",
+          "count": 1
+        },
+        {
+          "term": "biochips",
+          "count": 1
+        },
+        {
+          "term": "augmented",
+          "count": 1
+        },
+        {
+          "term": "extra",
+          "count": 1
+        },
+        {
+          "term": "arm",
+          "count": 1
+        },
+        {
+          "term": "mobile",
+          "count": 1
+        },
+        {
+          "term": "delivery",
+          "count": 1
+        },
+        {
+          "term": "toothbrush",
+          "count": 1
+        },
+        {
+          "term": "iron",
+          "count": 1
+        },
+        {
+          "term": "man",
+          "count": 1
+        },
+        {
+          "term": "advanced",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "self driving",
+          "count": 4
+        },
+        {
+          "term": "flying cars",
+          "count": 4
+        },
+        {
+          "term": "translation glasses",
+          "count": 4
+        },
+        {
+          "term": "driving car",
+          "count": 3
+        },
+        {
+          "term": "flying car",
+          "count": 3
+        },
+        {
+          "term": "solar drone",
+          "count": 2
+        },
+        {
+          "term": "smart glasses",
+          "count": 2
+        },
+        {
+          "term": "glasses computer",
+          "count": 1
+        },
+        {
+          "term": "electric vehicles",
+          "count": 1
+        },
+        {
+          "term": "headset controlling",
+          "count": 1
+        },
+        {
+          "term": "brain chips",
+          "count": 1
+        },
+        {
+          "term": "chips grants",
+          "count": 1
+        },
+        {
+          "term": "grants abilities",
+          "count": 1
+        },
+        {
+          "term": "personal assistant",
+          "count": 1
+        },
+        {
+          "term": "communication glasses",
+          "count": 1
+        },
+        {
+          "term": "cerebral implants",
+          "count": 1
+        },
+        {
+          "term": "augmented reality",
+          "count": 1
+        },
+        {
+          "term": "extra arm",
+          "count": 1
+        },
+        {
+          "term": "mobile device",
+          "count": 1
+        },
+        {
+          "term": "delivery drones",
+          "count": 1
+        },
+        {
+          "term": "electric toothbrush",
+          "count": 1
+        },
+        {
+          "term": "iron man",
+          "count": 1
+        },
+        {
+          "term": "man suit",
+          "count": 1
+        },
+        {
+          "term": "advanced phone",
+          "count": 1
+        },
+        {
+          "term": "glasses hud",
+          "count": 1
+        },
+        {
+          "term": "thermal powered",
+          "count": 1
+        },
+        {
+          "term": "powered fan",
+          "count": 1
+        },
+        {
+          "term": "holographic displays",
+          "count": 1
+        },
+        {
+          "term": "health tracking",
+          "count": 1
+        },
+        {
+          "term": "tracking device",
+          "count": 1
+        },
+        {
+          "term": "translation galsses",
+          "count": 1
+        },
+        {
+          "term": "metaverse glasses",
+          "count": 1
+        },
+        {
+          "term": "robotic hand",
+          "count": 1
+        },
+        {
+          "term": "virtual reality",
+          "count": 1
+        },
+        {
+          "term": "mini telepathic",
+          "count": 1
+        },
+        {
+          "term": "telepathic assistant",
+          "count": 1
+        },
+        {
+          "term": "transition glasses",
+          "count": 1
+        },
+        {
+          "term": "driving cars",
+          "count": 1
+        },
+        {
+          "term": "glasses sure",
+          "count": 1
+        },
+        {
+          "term": "solar panels",
+          "count": 1
+        },
+        {
+          "term": "high tech",
+          "count": 1
+        },
+        {
+          "term": "tech glasses",
+          "count": 1
+        },
+        {
+          "term": "flying axions",
+          "count": 1
+        },
+        {
+          "term": "improved suit",
+          "count": 1
+        },
+        {
+          "term": "smart phone",
+          "count": 1
+        },
+        {
+          "term": "brain comp",
+          "count": 1
+        },
+        {
+          "term": "comp interface",
+          "count": 1
+        },
+        {
+          "term": "map guiding",
+          "count": 1
+        },
+        {
+          "term": "guiding drone",
+          "count": 1
+        },
+        {
+          "term": "wearable memory",
+          "count": 1
+        }
+      ]
+    },
+    "place": {
+      "label": "Where We Are",
+      "unigrams": [
+        {
+          "term": "home",
+          "count": 11
+        },
+        {
+          "term": "office",
+          "count": 6
+        },
+        {
+          "term": "house",
+          "count": 6
+        },
+        {
+          "term": "rooftop",
+          "count": 5
+        },
+        {
+          "term": "beach",
+          "count": 5
+        },
+        {
+          "term": "park",
+          "count": 4
+        },
+        {
+          "term": "room",
+          "count": 4
+        },
+        {
+          "term": "library",
+          "count": 3
+        },
+        {
+          "term": "garden",
+          "count": 3
+        },
+        {
+          "term": "condo",
+          "count": 2
+        },
+        {
+          "term": "cottage",
+          "count": 2
+        },
+        {
+          "term": "ocean",
+          "count": 2
+        },
+        {
+          "term": "farm",
+          "count": 2
+        },
+        {
+          "term": "work",
+          "count": 2
+        },
+        {
+          "term": "canada",
+          "count": 2
+        },
+        {
+          "term": "floating",
+          "count": 2
+        },
+        {
+          "term": "island",
+          "count": 2
+        },
+        {
+          "term": "bedroom",
+          "count": 2
+        },
+        {
+          "term": "penthouse",
+          "count": 2
+        },
+        {
+          "term": "city",
+          "count": 2
+        },
+        {
+          "term": "kitchen",
+          "count": 2
+        },
+        {
+          "term": "japan",
+          "count": 2
+        },
+        {
+          "term": "school",
+          "count": 2
+        },
+        {
+          "term": "toronto",
+          "count": 2
+        },
+        {
+          "term": "near",
+          "count": 1
+        },
+        {
+          "term": "mountain",
+          "count": 1
+        },
+        {
+          "term": "central",
+          "count": 1
+        },
+        {
+          "term": "north",
+          "count": 1
+        },
+        {
+          "term": "america",
+          "count": 1
+        },
+        {
+          "term": "miami",
+          "count": 1
+        },
+        {
+          "term": "muskoka",
+          "count": 1
+        },
+        {
+          "term": "atlantic",
+          "count": 1
+        },
+        {
+          "term": "old",
+          "count": 1
+        },
+        {
+          "term": "place",
+          "count": 1
+        },
+        {
+          "term": "living",
+          "count": 1
+        },
+        {
+          "term": "moms",
+          "count": 1
+        },
+        {
+          "term": "basement",
+          "count": 1
+        },
+        {
+          "term": "hospital",
+          "count": 1
+        },
+        {
+          "term": "dubai",
+          "count": 1
+        },
+        {
+          "term": "peaceful",
+          "count": 1
+        },
+        {
+          "term": "personal",
+          "count": 1
+        },
+        {
+          "term": "big",
+          "count": 1
+        },
+        {
+          "term": "dowtown",
+          "count": 1
+        },
+        {
+          "term": "cloning",
+          "count": 1
+        },
+        {
+          "term": "bay",
+          "count": 1
+        },
+        {
+          "term": "mcdonalds",
+          "count": 1
+        },
+        {
+          "term": "streets",
+          "count": 1
+        },
+        {
+          "term": "lab",
+          "count": 1
+        },
+        {
+          "term": "camping",
+          "count": 1
+        },
+        {
+          "term": "above",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "floating island",
+          "count": 2
+        },
+        {
+          "term": "near mountain",
+          "count": 1
+        },
+        {
+          "term": "central north",
+          "count": 1
+        },
+        {
+          "term": "north america",
+          "count": 1
+        },
+        {
+          "term": "miami condo",
+          "count": 1
+        },
+        {
+          "term": "cottage muskoka",
+          "count": 1
+        },
+        {
+          "term": "atlantic ocean",
+          "count": 1
+        },
+        {
+          "term": "old farm",
+          "count": 1
+        },
+        {
+          "term": "living moms",
+          "count": 1
+        },
+        {
+          "term": "moms basement",
+          "count": 1
+        },
+        {
+          "term": "rooftop peaceful",
+          "count": 1
+        },
+        {
+          "term": "personal garden",
+          "count": 1
+        },
+        {
+          "term": "big office",
+          "count": 1
+        },
+        {
+          "term": "office dowtown",
+          "count": 1
+        },
+        {
+          "term": "cloning bay",
+          "count": 1
+        },
+        {
+          "term": "island above",
+          "count": 1
+        },
+        {
+          "term": "above seoul",
+          "count": 1
+        },
+        {
+          "term": "penthouse york",
+          "count": 1
+        },
+        {
+          "term": "penthouse office",
+          "count": 1
+        },
+        {
+          "term": "sky city",
+          "count": 1
+        },
+        {
+          "term": "magnetic floating",
+          "count": 1
+        },
+        {
+          "term": "city apartment",
+          "count": 1
+        },
+        {
+          "term": "bowling center",
+          "count": 1
+        },
+        {
+          "term": "condo balcony",
+          "count": 1
+        },
+        {
+          "term": "japan appartment",
+          "count": 1
+        },
+        {
+          "term": "community bbq",
+          "count": 1
+        },
+        {
+          "term": "bbq rooftop",
+          "count": 1
+        },
+        {
+          "term": "beach santorini",
+          "count": 1
+        },
+        {
+          "term": "flying spacecraft",
+          "count": 1
+        },
+        {
+          "term": "golf course",
+          "count": 1
+        },
+        {
+          "term": "private room",
+          "count": 1
+        },
+        {
+          "term": "space station",
+          "count": 1
+        },
+        {
+          "term": "school garden",
+          "count": 1
+        },
+        {
+          "term": "business office",
+          "count": 1
+        },
+        {
+          "term": "rooftop farm",
+          "count": 1
+        }
+      ]
+    },
+    "value": {
+      "label": "Values We Lean On",
+      "unigrams": [
+        {
+          "term": "safety",
+          "count": 19
+        },
+        {
+          "term": "privacy",
+          "count": 11
+        },
+        {
+          "term": "happiness",
+          "count": 8
+        },
+        {
+          "term": "fairness",
+          "count": 8
+        },
+        {
+          "term": "honesty",
+          "count": 6
+        },
+        {
+          "term": "equality",
+          "count": 5
+        },
+        {
+          "term": "fun",
+          "count": 3
+        },
+        {
+          "term": "truth",
+          "count": 2
+        },
+        {
+          "term": "justice",
+          "count": 2
+        },
+        {
+          "term": "discipline",
+          "count": 2
+        },
+        {
+          "term": "love",
+          "count": 2
+        },
+        {
+          "term": "intelligence",
+          "count": 2
+        },
+        {
+          "term": "empathy",
+          "count": 2
+        },
+        {
+          "term": "respect",
+          "count": 2
+        },
+        {
+          "term": "freedom",
+          "count": 2
+        },
+        {
+          "term": "kindness",
+          "count": 1
+        },
+        {
+          "term": "trueness",
+          "count": 1
+        },
+        {
+          "term": "artificial",
+          "count": 1
+        },
+        {
+          "term": "moneypowerpoliticalstance",
+          "count": 1
+        },
+        {
+          "term": "equity",
+          "count": 1
+        },
+        {
+          "term": "uncertainty",
+          "count": 1
+        },
+        {
+          "term": "priva",
+          "count": 1
+        },
+        {
+          "term": "working",
+          "count": 1
+        },
+        {
+          "term": "time",
+          "count": 1
+        },
+        {
+          "term": "independance",
+          "count": 1
+        },
+        {
+          "term": "focus",
+          "count": 1
+        },
+        {
+          "term": "leadership",
+          "count": 1
+        },
+        {
+          "term": "innovation",
+          "count": 1
+        },
+        {
+          "term": "romance",
+          "count": 1
+        },
+        {
+          "term": "loyalty",
+          "count": 1
+        },
+        {
+          "term": "reliability",
+          "count": 1
+        },
+        {
+          "term": "advancement",
+          "count": 1
+        },
+        {
+          "term": "wealth",
+          "count": 1
+        },
+        {
+          "term": "patience",
+          "count": 1
+        },
+        {
+          "term": "health",
+          "count": 1
+        },
+        {
+          "term": "accountability",
+          "count": 1
+        },
+        {
+          "term": "hard",
+          "count": 1
+        },
+        {
+          "term": "work",
+          "count": 1
+        },
+        {
+          "term": "disciplined",
+          "count": 1
+        },
+        {
+          "term": "calm",
+          "count": 1
+        },
+        {
+          "term": "cozy",
+          "count": 1
+        },
+        {
+          "term": "friend",
+          "count": 1
+        },
+        {
+          "term": "protection",
+          "count": 1
+        },
+        {
+          "term": "laziness",
+          "count": 1
+        },
+        {
+          "term": "trust",
+          "count": 1
+        },
+        {
+          "term": "determination",
+          "count": 1
+        },
+        {
+          "term": "pluralism",
+          "count": 1
+        },
+        {
+          "term": "friendship",
+          "count": 1
+        },
+        {
+          "term": "creativity",
+          "count": 1
+        },
+        {
+          "term": "change",
+          "count": 1
+        }
+      ],
+      "bigrams": [
+        {
+          "term": "discipline working",
+          "count": 1
+        },
+        {
+          "term": "working time",
+          "count": 1
+        },
+        {
+          "term": "equality privacy",
+          "count": 1
+        },
+        {
+          "term": "fairness happiness",
+          "count": 1
+        },
+        {
+          "term": "hard work",
+          "count": 1
+        },
+        {
+          "term": "calm cozy",
+          "count": 1
+        },
+        {
+          "term": "change action",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "hope_vs_worry": {
+    "overlap": [
+      {
+        "term": "family",
+        "count": 22
+      },
+      {
+        "term": "worry",
+        "count": 19
+      },
+      {
+        "term": "life",
+        "count": 17
+      },
+      {
+        "term": "world",
+        "count": 15
+      },
+      {
+        "term": "job",
+        "count": 13
+      },
+      {
+        "term": "having",
+        "count": 12
+      },
+      {
+        "term": "being",
+        "count": 11
+      },
+      {
+        "term": "people",
+        "count": 10
+      },
+      {
+        "term": "technology",
+        "count": 10
+      },
+      {
+        "term": "friends",
+        "count": 9
+      },
+      {
+        "term": "human",
+        "count": 9
+      },
+      {
+        "term": "humans",
+        "count": 8
+      },
+      {
+        "term": "work",
+        "count": 7
+      },
+      {
+        "term": "money",
+        "count": 6
+      },
+      {
+        "term": "rich",
+        "count": 6
+      },
+      {
+        "term": "getting",
+        "count": 5
+      },
+      {
+        "term": "health",
+        "count": 5
+      },
+      {
+        "term": "global",
+        "count": 5
+      },
+      {
+        "term": "things",
+        "count": 5
+      },
+      {
+        "term": "jobs",
+        "count": 5
+      },
+      {
+        "term": "point",
+        "count": 4
+      },
+      {
+        "term": "enjoy",
+        "count": 4
+      },
+      {
+        "term": "whether",
+        "count": 4
+      },
+      {
+        "term": "see",
+        "count": 4
+      },
+      {
+        "term": "day",
+        "count": 4
+      },
+      {
+        "term": "cool",
+        "count": 3
+      },
+      {
+        "term": "regrets",
+        "count": 3
+      },
+      {
+        "term": "closer",
+        "count": 3
+      },
+      {
+        "term": "think",
+        "count": 3
+      },
+      {
+        "term": "different",
+        "count": 3
+      },
+      {
+        "term": "i'm",
+        "count": 3
+      },
+      {
+        "term": "successful",
+        "count": 3
+      },
+      {
+        "term": "loved",
+        "count": 3
+      },
+      {
+        "term": "society",
+        "count": 3
+      },
+      {
+        "term": "clean",
+        "count": 3
+      },
+      {
+        "term": "home",
+        "count": 3
+      },
+      {
+        "term": "food",
+        "count": 3
+      },
+      {
+        "term": "issues",
+        "count": 3
+      },
+      {
+        "term": "goals",
+        "count": 3
+      },
+      {
+        "term": "ones",
+        "count": 3
+      },
+      {
+        "term": "start",
+        "count": 3
+      },
+      {
+        "term": "around",
+        "count": 3
+      },
+      {
+        "term": "connection",
+        "count": 3
+      },
+      {
+        "term": "want",
+        "count": 3
+      },
+      {
+        "term": "lead",
+        "count": 2
+      },
+      {
+        "term": "cyberware",
+        "count": 2
+      },
+      {
+        "term": "wars",
+        "count": 2
+      },
+      {
+        "term": "communities",
+        "count": 2
+      },
+      {
+        "term": "without",
+        "count": 2
+      },
+      {
+        "term": "alive",
+        "count": 2
+      }
+    ],
+    "hope_unique": [
+      {
+        "term": "hope",
+        "count": 29
+      },
+      {
+        "term": "time",
+        "count": 16
+      },
+      {
+        "term": "stable",
+        "count": 6
+      },
+      {
+        "term": "live",
+        "count": 5
+      },
+      {
+        "term": "good",
+        "count": 4
+      },
+      {
+        "term": "happy",
+        "count": 4
+      },
+      {
+        "term": "happiness",
+        "count": 4
+      },
+      {
+        "term": "freedom",
+        "count": 3
+      },
+      {
+        "term": "free",
+        "count": 3
+      },
+      {
+        "term": "improved",
+        "count": 3
+      },
+      {
+        "term": "financial",
+        "count": 3
+      },
+      {
+        "term": "spend",
+        "count": 3
+      },
+      {
+        "term": "flying",
+        "count": 3
+      },
+      {
+        "term": "become",
+        "count": 3
+      },
+      {
+        "term": "peace",
+        "count": 3
+      },
+      {
+        "term": "travel",
+        "count": 3
+      },
+      {
+        "term": "living",
+        "count": 3
+      },
+      {
+        "term": "thing",
+        "count": 2
+      },
+      {
+        "term": "peaceful",
+        "count": 2
+      },
+      {
+        "term": "lives",
+        "count": 2
+      },
+      {
+        "term": "bed",
+        "count": 2
+      },
+      {
+        "term": "hobbies",
+        "count": 2
+      },
+      {
+        "term": "better",
+        "count": 2
+      },
+      {
+        "term": "equal",
+        "count": 2
+      },
+      {
+        "term": "relationships",
+        "count": 2
+      },
+      {
+        "term": "loving",
+        "count": 2
+      },
+      {
+        "term": "hopefully",
+        "count": 2
+      },
+      {
+        "term": "succesful",
+        "count": 2
+      },
+      {
+        "term": "purpose",
+        "count": 2
+      },
+      {
+        "term": "cancer",
+        "count": 2
+      },
+      {
+        "term": "focus",
+        "count": 2
+      },
+      {
+        "term": "relax",
+        "count": 2
+      },
+      {
+        "term": "children",
+        "count": 2
+      },
+      {
+        "term": "parents",
+        "count": 2
+      },
+      {
+        "term": "retired",
+        "count": 2
+      },
+      {
+        "term": "next",
+        "count": 2
+      },
+      {
+        "term": "healthy",
+        "count": 2
+      },
+      {
+        "term": "advanced",
+        "count": 2
+      },
+      {
+        "term": "love",
+        "count": 2
+      },
+      {
+        "term": "grandparents",
+        "count": 2
+      },
+      {
+        "term": "great",
+        "count": 2
+      },
+      {
+        "term": "air",
+        "count": 1
+      },
+      {
+        "term": "tyranny",
+        "count": 1
+      },
+      {
+        "term": "sucsessful",
+        "count": 1
+      },
+      {
+        "term": "business",
+        "count": 1
+      },
+      {
+        "term": "sailboat",
+        "count": 1
+      },
+      {
+        "term": "fully",
+        "count": 1
+      },
+      {
+        "term": "support",
+        "count": 1
+      },
+      {
+        "term": "trillionare",
+        "count": 1
+      },
+      {
+        "term": "sudan",
+        "count": 1
+      }
+    ],
+    "worry_unique": [
+      {
+        "term": "climate",
+        "count": 7
+      },
+      {
+        "term": "change",
+        "count": 7
+      },
+      {
+        "term": "war",
+        "count": 5
+      },
+      {
+        "term": "going",
+        "count": 3
+      },
+      {
+        "term": "privacy",
+        "count": 3
+      },
+      {
+        "term": "creativity",
+        "count": 3
+      },
+      {
+        "term": "major",
+        "count": 3
+      },
+      {
+        "term": "weaponized",
+        "count": 2
+      },
+      {
+        "term": "current",
+        "count": 2
+      },
+      {
+        "term": "stuff",
+        "count": 2
+      },
+      {
+        "term": "enough",
+        "count": 2
+      },
+      {
+        "term": "environment",
+        "count": 2
+      },
+      {
+        "term": "divided",
+        "count": 2
+      },
+      {
+        "term": "intelligence",
+        "count": 2
+      },
+      {
+        "term": "poor",
+        "count": 2
+      },
+      {
+        "term": "greed",
+        "count": 2
+      },
+      {
+        "term": "earth",
+        "count": 2
+      },
+      {
+        "term": "disaster",
+        "count": 2
+      },
+      {
+        "term": "control",
+        "count": 2
+      },
+      {
+        "term": "tracking",
+        "count": 2
+      },
+      {
+        "term": "take",
+        "count": 2
+      },
+      {
+        "term": "constant",
+        "count": 2
+      },
+      {
+        "term": "worried",
+        "count": 2
+      },
+      {
+        "term": "pollution",
+        "count": 2
+      },
+      {
+        "term": "schools",
+        "count": 2
+      },
+      {
+        "term": "middle",
+        "count": 2
+      },
+      {
+        "term": "school",
+        "count": 2
+      },
+      {
+        "term": "survive",
+        "count": 2
+      },
+      {
+        "term": "face",
+        "count": 2
+      },
+      {
+        "term": "decline",
+        "count": 2
+      },
+      {
+        "term": "scarcity",
+        "count": 1
+      },
+      {
+        "term": "oppression",
+        "count": 1
+      },
+      {
+        "term": "prices",
+        "count": 1
+      },
+      {
+        "term": "propaganda",
+        "count": 1
+      },
+      {
+        "term": "trends",
+        "count": 1
+      },
+      {
+        "term": "safe",
+        "count": 1
+      },
+      {
+        "term": "unemployment",
+        "count": 1
+      },
+      {
+        "term": "regretting",
+        "count": 1
+      },
+      {
+        "term": "old",
+        "count": 1
+      },
+      {
+        "term": "decisions",
+        "count": 1
+      },
+      {
+        "term": "ill",
+        "count": 1
+      },
+      {
+        "term": "ask",
+        "count": 1
+      },
+      {
+        "term": "chatgpt",
+        "count": 1
+      },
+      {
+        "term": "unemployed",
+        "count": 1
+      },
+      {
+        "term": "worse",
+        "count": 1
+      },
+      {
+        "term": "experiencing",
+        "count": 1
+      },
+      {
+        "term": "don't",
+        "count": 1
+      },
+      {
+        "term": "arrive",
+        "count": 1
+      },
+      {
+        "term": "started",
+        "count": 1
+      },
+      {
+        "term": "overall",
+        "count": 1
+      }
+    ]
+  },
+  "distributions": {
+    "agency": [
+      {
+        "label": "Me",
+        "count": 53,
+        "percent": 50.0
+      },
+      {
+        "label": "Family/Peers",
+        "count": 21,
+        "percent": 19.81
+      },
+      {
+        "label": "Shared (human + AI)",
+        "count": 19,
+        "percent": 17.92
+      },
+      {
+        "label": "AI tools",
+        "count": 7,
+        "percent": 6.6
+      },
+      {
+        "label": "Community",
+        "count": 4,
+        "percent": 3.77
+      },
+      {
+        "label": "Teacher/Employer",
+        "count": 2,
+        "percent": 1.89
+      }
+    ],
+    "age_band": [
+      {
+        "label": "14-18",
+        "count": 90,
+        "percent": 84.91
+      },
+      {
+        "label": "Under 14",
+        "count": 8,
+        "percent": 7.55
+      },
+      {
+        "label": "30-49",
+        "count": 4,
+        "percent": 3.77
+      },
+      {
+        "label": "50",
+        "count": 3,
+        "percent": 2.83
+      },
+      {
+        "label": "19-29",
+        "count": 1,
+        "percent": 0.94
+      }
+    ],
+    "themes": [
+      {
+        "label": "Identity",
+        "count": 34,
+        "percent": 32.08
+      },
+      {
+        "label": "Work",
+        "count": 32,
+        "percent": 30.19
+      },
+      {
+        "label": "Creativity",
+        "count": 27,
+        "percent": 25.47
+      },
+      {
+        "label": "Health",
+        "count": 25,
+        "percent": 23.58
+      },
+      {
+        "label": "Education",
+        "count": 23,
+        "percent": 21.7
+      },
+      {
+        "label": "Care",
+        "count": 21,
+        "percent": 19.81
+      },
+      {
+        "label": "Civic Life",
+        "count": 17,
+        "percent": 16.04
+      },
+      {
+        "label": "Mobility",
+        "count": 6,
+        "percent": 5.66
+      }
+    ]
+  }
+}
