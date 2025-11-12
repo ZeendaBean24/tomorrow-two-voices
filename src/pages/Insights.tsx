@@ -262,10 +262,6 @@ const Insights = () => {
               records. Italic entries are bigrams.
             </li>
             <li>
-              Hope vs. worry tables highlight the shared vocabulary and the words
-              unique to each feeling.
-            </li>
-            <li>
               Distributions stack each population share so you can see who is
               most represented in the archive.
             </li>
@@ -278,28 +274,6 @@ const Insights = () => {
           Keyword analysis
         </h2>
         <KeywordDeck sections={keywordSections} />
-      </section>
-
-      <section aria-labelledby="hope-vs-worry" className="space-y-6">
-        <h2 id="hope-vs-worry" className="glass-heading text-2xl">
-          Hope vs. worry language
-        </h2>
-        <div className="glass-panel rounded-3xl border border-white/20 bg-white/18 p-6">
-          <div className="glass-scrim grid gap-6 md:grid-cols-3">
-            <ComparisonList
-              title="Shared"
-              items={insightsSummary.hope_vs_worry.overlap}
-            />
-            <ComparisonList
-              title="Hope-only"
-              items={insightsSummary.hope_vs_worry.hope_unique}
-            />
-            <ComparisonList
-              title="Worry-only"
-              items={insightsSummary.hope_vs_worry.worry_unique}
-            />
-          </div>
-        </div>
       </section>
 
       <section aria-labelledby="distributions" className="space-y-6">
