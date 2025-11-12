@@ -30,11 +30,16 @@ export const Header = () => (
             key={to}
             to={to}
             className={({ isActive }) =>
-              `rounded-full px-4 py-2 text-sm font-medium backdrop-blur-md transition focus-visible:focus-ring ring-1 ring-white/25 ${
+              `rounded-full px-4 py-2 text-sm font-medium backdrop-blur-md transition focus-visible:focus-ring ring-1 ring-white/25 transform-gpu duration-200 ease-out hover:-translate-y-0.5 ${
                 isActive
                   ? 'bg-white/30 text-indigo-700 shadow ring-indigo-500/30'
                   : 'bg-white/18 text-slate/80 hover:bg-white/24'
               }`
+            }
+            style={({ isActive }) =>
+              isActive
+                ? { transform: 'translateY(-2px)' }
+                : undefined
             }
           >
             {label}
