@@ -49,7 +49,7 @@ const KeywordCloud = ({
       ? [
           ...section.unigrams.map((entry) => ({ ...entry, type: 'unigram' })),
           ...section.bigrams.map((entry) => ({ ...entry, type: 'bigram' })),
-        ]
+        ].sort((a, b) => b.count - a.count)
       : section[mode === 'unigram' ? 'unigrams' : 'bigrams'].map((entry) => ({
           ...entry,
           type: mode === 'unigram' ? 'unigram' : 'bigram',
@@ -72,7 +72,7 @@ const KeywordCloud = ({
         <div className="keyword-cloud" aria-label={`${section.label} keywords`}>
           {entries.map((entry) => {
             const weight = entry.count / maxCount
-            const fontSize = 0.75 + weight * 1.1
+            const fontSize = 0.7 + weight * 1.45
             return (
               <span
                 key={`${entry.type}-${entry.term}`}
@@ -94,14 +94,14 @@ const KeywordCloud = ({
 }
 
 const keywordModes = [
-  { id: 'mixed', label: 'Mix' },
   { id: 'unigram', label: 'Words' },
   { id: 'bigram', label: 'Phrases' },
+  { id: 'mixed', label: 'Mix' },
 ] as const
 
 const KeywordDeck = ({ sections }: { sections: KeywordSection[] }) => {
   const initialModes = useMemo(
-    () => Object.fromEntries(sections.map((section) => [section.label, 'mixed'])) as Record<string, 'mixed' | 'unigram' | 'bigram'>,
+    () => Object.fromEntries(sections.map((section) => [section.label, 'unigram'])) as Record<string, 'mixed' | 'unigram' | 'bigram'>,
     [sections],
   )
   const [modes, setModes] = useState(initialModes)
@@ -120,31 +120,36 @@ const KeywordDeck = ({ sections }: { sections: KeywordSection[] }) => {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       {sections.map((section) => {
-        const currentMode = modes[section.label] ?? 'mixed'
+        const isValuesSection = section.label === 'Values We Lean On'
+        const currentMode = isValuesSection
+          ? 'unigram'
+          : modes[section.label] ?? 'unigram'
         return (
           <div key={section.label} className="space-y-3">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <h3 className="glass-heading text-xl">{section.label}</h3>
-              <div className="flex rounded-full bg-white/40 p-1 text-xs font-semibold text-slate/70">
-                {keywordModes.map((option) => {
-                  const active = option.id === currentMode
-                  return (
-                    <button
-                      key={`${section.label}-${option.id}`}
-                      type="button"
-                      onClick={() => handleModeChange(section.label, option.id)}
-                      className={`rounded-full px-3 py-1 transition focus-visible:focus-ring ${
-                        active
-                          ? 'bg-indigo-600 text-white shadow'
-                          : 'bg-transparent text-slate-600 hover:text-slate'
-                      }`}
-                      aria-pressed={active}
-                    >
-                      {option.label}
-                    </button>
-                  )
-                })}
-              </div>
+              {!isValuesSection && (
+                <div className="flex rounded-full bg-white/40 p-1 text-xs font-semibold text-slate/70">
+                  {keywordModes.map((option) => {
+                    const active = option.id === currentMode
+                    return (
+                      <button
+                        key={`${section.label}-${option.id}`}
+                        type="button"
+                        onClick={() => handleModeChange(section.label, option.id)}
+                        className={`rounded-full px-3 py-1 transition focus-visible:focus-ring ${
+                          active
+                            ? 'bg-indigo-600 text-white shadow'
+                            : 'bg-transparent text-slate-600 hover:text-slate'
+                        }`}
+                        aria-pressed={active}
+                      >
+                        {option.label}
+                      </button>
+                    )
+                  })}
+                </div>
+              )}
             </div>
             <KeywordCloud section={section} mode={currentMode} />
           </div>
@@ -239,7 +244,7 @@ const Insights = () => {
         </p>
       </header>
 
-      <div className="glass-panel glass-border-gold relative overflow-hidden rounded-3xl border border-white/20 bg-white/18 p-10 text-slate/85">
+      <div className="glass-panel glass-border-gold relative flex min-h-[260px] flex-col items-center justify-center overflow-hidden rounded-3xl border border-white/20 bg-white/18 p-10 text-center text-slate/85">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
